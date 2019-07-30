@@ -1,0 +1,95 @@
+@import "variables.scss";
+
+.App {
+  height: 100vh;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+
+  .img-fluid {
+    //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    //filter: grayscale(100%);
+  }
+
+  a{
+    color: $primary_color;
+
+    &:hover {
+      text-decoration: none;
+      color: $button_active_background_color;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary_color;
+    border-color: $primary_color;
+    color: $solid_button_text_color;
+
+    &:hover {
+      background-color: $button_active_background_color;
+      border-color: $button_active_background_color;
+      color: $solid_button_text_color;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+      background-color: darken($button_active_background_color, 10%);
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: $primary_color;
+    color: $primary_color;
+
+    &:hover {
+      @extend .btn-primary;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+      @extend .btn-primary;
+    }
+  }
+
+  .background-container {
+    position: relative;
+
+    .media-overlay {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom, $light_color, rgba(0, 0, 0, 0));
+        opacity: .5;
+      }
+    }
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {  }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {  }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .navbar {
+    top: 30px;
+  }
+
+  .pagewide {
+    height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .buffer-content {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }

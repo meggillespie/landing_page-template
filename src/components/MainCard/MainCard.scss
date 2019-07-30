@@ -1,0 +1,32 @@
+.card-block {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  .card-img-top {
+    width: 15%;
+    height: 20%;
+    border-radius: 0;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  .card-block {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-block {
+    visibility: hidden;
+  }
+}
