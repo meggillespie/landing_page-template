@@ -155,7 +155,7 @@ export class NavigationBar extends Component {
 						</UncontrolledDropdown>
 
 						<NavItem>
-							<NavLink href="/blog" rel="preconnect">Blog</NavLink>
+							<NavLink href="/mortgage-blog" rel="preconnect">Blog</NavLink>
 						</NavItem>
 						<NavItem>
 							<NavLink href="/mortgage-rates" rel="preconnect">Low Rates</NavLink>
@@ -169,8 +169,11 @@ export class NavigationBar extends Component {
 								<DropdownItem href="/mortgage-calculators" rel="preconnect">
 									Calculators
 								</DropdownItem>
-								<DropdownItem href="/blog" rel="preconnect">
+								<DropdownItem href="/mortgage-blog" rel="preconnect">
 									Video Gallery
+								</DropdownItem>
+								<DropdownItem href="/mortgage-faqs" rel="preconnect">
+									Faqs
 								</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>

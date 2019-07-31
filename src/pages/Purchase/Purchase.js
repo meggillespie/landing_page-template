@@ -64,7 +64,7 @@ export class Purchase extends Component {
 
 							<div className="row">
 								<div className="col-md-3 mx-auto mb-5">
-									<a href="/jumbo" className="btn btn-lg btn-block btn-outline-primary" role="button" aria-pressed="true">Jumbo</a>
+									<a href="/jumbo-mortgage" className="btn btn-lg btn-block btn-outline-primary" role="button" aria-pressed="true">Jumbo</a>
 								</div>
 								<div className="col-md-3 mx-auto mb-5">
 									<button type="button" className="btn btn-lg btn-block btn-outline-primary">Condo</button>

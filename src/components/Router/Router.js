@@ -14,6 +14,7 @@ import { Rates } from '../../pages/Rates/Rates';
 import { Contact } from '../../pages/Contact/Contact';
 import { Testimonials } from '../../pages/Testimonials/Testimonials';
 import { Jumbo } from '../../pages/Jumbo/Jumbo';
+import { Faq } from '../../pages/Faq/Faq';
 import { NoMatch } from '../../pages/NoMatch/NoMatch';
 
 export class Router extends Component {
@@ -30,13 +31,14 @@ export class Router extends Component {
 							<Route path="/veterans-loan" component={ Veterans } />
 							<Route path="/home-refinance" component={ Refinance } />
 							<Route path="/reverse-mortgage" component={ Reverse } />
-							<Route path="/blog" component={ Blog } />
+							<Route path="/mortgage-blog" component={ Blog } />
 							<Route path="/mortgage-calculators" component={ Calculators } />
 							<Route path="/mortgage-rates" component={ Rates } />
 							<Route path="/about" component={ About } />
 							<Route path="/contact" component={ Contact } />
 							<Route path="/testimonials" component={ Testimonials } />
-							<Route path="/jumbo" component={ Jumbo } />
+							<Route path="/jumbo-mortgage" component={ Jumbo } />
+							<Route path="/mortgage-faqs" component={ Faq } />
 							<Route component={ NoMatch } />
 						</Switch>
 					</main>

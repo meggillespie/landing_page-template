@@ -27,13 +27,13 @@ export class Footer extends Component {
 							<div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
 								<h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
 								<p>
-									<a href="home-loans">Home Loans</a>
+									<a href="/home-loans">Home Loans</a>
 								</p>
 								<p>
-									<a href="refinance">Refinance</a>
+									<a href="/home-refinance">Refinance</a>
 								</p>
 								<p>
-									<a href="veterans-loan">VA Loans</a>
+									<a href="/veterans-loan">VA Loans</a>
 								</p>
 								<p>
 									<a href="/reverse-mortgage">Reverse Mortgage</a>
@@ -51,7 +51,7 @@ export class Footer extends Component {
 										<a href="/mortgage-calculators">Calculators</a>
 									</p>
 									<p>
-										<a href="/blog">Video Blog</a>
+										<a href="/mortgage-blog">Video Blog</a>
 									</p>
 										<p>
 											<a href="/contact">Contact</a>
