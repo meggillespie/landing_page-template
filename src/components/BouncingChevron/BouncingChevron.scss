@@ -20,10 +20,10 @@
 }
 
 @keyframes bounceAlpha {
-  0% {opacity: 1; transform: translateX(0px) scale(1);}
-  25%{opacity: 0; transform:translateX(10px) scale(0.9);}
-  26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
-  55% {opacity: 1; transform: translateX(0px) scale(1);}
+  0% { opacity: 1; transform: translateX(0px) scale(1); }
+  25% { opacity: 0; transform:translateX(10px) scale(0.9); }
+  26% { opacity: 0; transform:translateX(-10px) scale(0.9); }
+  55% { opacity: 1; transform: translateX(0px) scale(1); }
 }
 
 .bounceAlpha {

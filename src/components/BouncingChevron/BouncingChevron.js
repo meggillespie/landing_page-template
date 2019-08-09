@@ -10,8 +10,8 @@ export class BouncingChevron extends Component {
 					<small>Scroll Down</small>
 					<div className="round">
 						<div id="cta">
-							<span className="arrow first next "></span>
-							<span className="arrow second next "></span>
+							<span className="arrow first next"></span>
+							<span className="arrow second next"></span>
 						</div>
 					</div>
 				</div>
