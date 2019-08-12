@@ -16,11 +16,11 @@ export class Home extends Component {
 			<div>
 				<div className="row background-container">
 					<div className="col-md-12">
-						<div className="media-overlay">
-							<img src={ homeBckgrd } alt="home page background" className="img-fluid" style={{ width: '100%' }} />
+						<div className="media-overlay" style={{ height: '100vh', overflowY: 'hidden' }}>
+							<img src={ homeBckgrd } alt="home page background" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
 							<MainCard
 								textAlignment="text-left"
-								top="41%"
+								top="45%"
 								left="50%"
 								heading="Purchase or refinance"
 								subHeading="your home easily."
