@@ -65,6 +65,14 @@
       }
     }
   }
+
+  .navbar-brand {
+    padding: 0;
+  }
+  .navbar-nav .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -76,7 +84,7 @@
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   .navbar {
-    top: 30px;
+    //top: 30px;
   }
 
   .pagewide {

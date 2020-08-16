@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../../media/brand-logo.png';
 import './NavigationBar.scss';
 import {
 	Collapse, Navbar, NavbarToggler,
-	NavbarBrand, Nav, NavItem, NavLink,
-	UncontrolledDropdown, DropdownToggle,
-	DropdownMenu, DropdownItem
+	NavbarBrand, Nav, NavItem, NavLink
 } from 'reactstrap'
 
 export class NavigationBar extends Component {
@@ -19,8 +18,8 @@ export class NavigationBar extends Component {
 				backgroundColor: 'transparent',
 			},
 			fontWeight: 'bold',
-			fontSize: '20px',
-			logoWidth: '190',
+			fontSize: '16px',
+			logoWidth: '175',
 			logoHeight: '75'
 		};
 
@@ -62,12 +61,6 @@ export class NavigationBar extends Component {
 				navStyle: {
 					background: 'rgba(255, 255, 255)',
 					boxShadow: '0px 5px 5px grey',
-					// WebkitTransitionProperty: 'background',
-					// WebkitTransitionDuration: '1s',
-					// WebkitTransitionTimingFunction: 'ease',
-					// transitionProperty: 'background',
-					// transitionDuration: '1s',
-					// transitionTimingFunction: 'ease'
 				}
 			});
 		}
@@ -77,40 +70,26 @@ export class NavigationBar extends Component {
 					background: 'rgba(255, 255, 255)',
 					boxShadow: '0px 5px 5px grey',
 					WebkitTransitionProperty: 'background',
-					WebkitTransitionDuration: '1s',
-					WebkitTransitionTimingFunction: 'ease',
+					WebkitTransitionDuration: '1.75s',
+					WebkitTransitionTimingFunction: 'linear',
 					transitionProperty: 'background',
-					transitionDuration: '1s',
-					transitionTimingFunction: 'ease'
+					transitionDuration: '1.75s',
+					transitionTimingFunction: 'linear'
 				},
 				scrollTopArr: this.state.scrollTopArr.concat(e.target.scrollTop)
 			});
 		}
-		// else if ( e.target.scrollTop >= 80 && this.state.navStyle.backgroundColor !== 'rgba(255, 255, 255)') {
-		// 	this.setState({
-		// 		fontWeight: 'bold',
-		// 		fontSize: '14px',
-		// 		logoWidth: '100',
-		// 		logoHeight: '50',
-		// 		navStyle: {
-		// 			background: 'rgba(255, 255, 255)',
-		// 			boxShadow: '0px 5px 5px grey',
-		// 			height: '55px'
-		// 		},
-		// 		scrollTopArr: this.state.scrollTopArr.concat(e.target.scrollTop)
-		// 	});
-		// }
 		else {
 			this.setState({
 				navStyle: {
 					background: 'rgba(255, 255, 255, 0)',
 					boxShadow: 'none',
 					WebkitTransitionProperty: 'background',
-					WebkitTransitionDuration: '1.5s',
-					WebkitTransitionTimingFunction: 'ease',
+					WebkitTransitionDuration: '1.75s',
+					WebkitTransitionTimingFunction: 'linear',
 					transitionProperty: 'background',
-					transitionDuration: '1.5s',
-					transitionTimingFunction: 'ease'
+					transitionDuration: '1.75s',
+					transitionTimingFunction: 'linear'
 				}
 			});
 		}
@@ -125,7 +104,7 @@ export class NavigationBar extends Component {
 	render () {
 		return(
 			<Navbar style={ this.state.navStyle } expand="lg" fixed={`top`}>
-				<NavbarBrand href="/" rel="preconnect">
+				<NavbarBrand href="/" rel="preconnect" className="my-2">
 					<img
 						alt="Lakeway Lending Logo"
 						src={ logo }
@@ -137,73 +116,68 @@ export class NavigationBar extends Component {
 				<NavbarToggler className="custom-toggler" onClick={this.toggleNav} />
 				<Collapse navbar isOpen={ this.state.isOpen } style={{ 'backgroundColor': this.state.isOpen && this.state.navStyle.backgroundColor === 'rgba(255, 255, 255)' ? '#fff' : 'transparent' }} >
 					<Nav className="ml-auto my-md-3" navbar style={{ fontSize: this.state.fontSize, fontWeight: this.state.fontWeight }}>
-						<UncontrolledDropdown nav inNavbar>
-							<DropdownToggle nav caret>
-								Loan Programs
-							</DropdownToggle>
-							<DropdownMenu right>
-								<DropdownItem href="/home-loans" rel="preconnect">
-									Home Loans
-								</DropdownItem>
-								<DropdownItem href="/home-refinance" rel="preconnect">
-									Refinance
-								</DropdownItem>
-								<DropdownItem href="/reverse-mortgage" rel="preconnect">
-									Reverse
-								</DropdownItem>
-							</DropdownMenu>
-						</UncontrolledDropdown>
 
 						<NavItem>
-							<NavLink href="/mortgage-blog" rel="preconnect">Blog</NavLink>
+							<NavLink href="#" rel="preconnect" className="mr-3">
+								<a href="tel:+15126428688">
+									<ul className="list-inline">
+										<li className="list-inline-item">
+											<FontAwesomeIcon icon="phone" className=" text-xs-center mr-1" size="2x" rotation={90} />
+										</li>
+
+										<li className="list-inline-item">
+											<span>Call Now</span>
+											<br/>
+											<span style={{ fontWeight: '400' }}>(512) 642-8688</span>
+										</li>
+									</ul>
+								</a>
+							</NavLink>
 						</NavItem>
-						<NavItem>
-							<NavLink href="/mortgage-rates" rel="preconnect">Low Rates</NavLink>
+
+						<NavItem className="align-middle">
+							<NavLink href="#" rel="preconnect" className="mr-3">
+								<a href="sms:+15126428688">
+									<ul className="list-inline">
+										<li className="list-inline-item">
+											<FontAwesomeIcon icon="comments" className="mr-1" size="2x"/>
+										</li>
+
+										<li className="list-inline-item">
+											<span>Message Our</span>
+											<br/>
+											<span style={{ fontWeight: '400' }}>Loan Advisors</span>
+										</li>
+									</ul>
+								</a>
+
+								{/*<a href="mailto:megan@lakewaylending.com">*/}
+									{/*<ul className="list-inline">*/}
+										{/*<li className="list-inline-item">*/}
+											{/*<FontAwesomeIcon icon="envelope" className="align-self-center text-xs-center mr-1" size="2x"/>*/}
+										{/*</li>*/}
+
+										{/*<li className="list-inline-item">*/}
+											{/*<span>Message Our</span>*/}
+											{/*<br/>*/}
+											{/*<span style={{ fontWeight: '400' }}>Loan Advisors</span>*/}
+										{/*</li>*/}
+									{/*</ul>*/}
+								{/*</a>*/}
+
+
+							</NavLink>
 						</NavItem>
 
-						<UncontrolledDropdown nav inNavbar>
-							<DropdownToggle nav caret>
-								Resources
-							</DropdownToggle>
-							<DropdownMenu right>
-								<DropdownItem href="/mortgage-calculators" rel="preconnect">
-									Calculators
-								</DropdownItem>
-								<DropdownItem href="/mortgage-blog" rel="preconnect">
-									Video Gallery
-								</DropdownItem>
-								<DropdownItem href="/mortgage-faqs" rel="preconnect">
-									Faqs
-								</DropdownItem>
-							</DropdownMenu>
-						</UncontrolledDropdown>
-
-						<UncontrolledDropdown nav inNavbar>
-							<DropdownToggle nav caret className="mr-lg-3">
-								Company
-							</DropdownToggle>
-							<DropdownMenu right>
-								<DropdownItem href="/about" rel="preconnect">
-									About
-								</DropdownItem>
-								<DropdownItem href="/testimonials" rel="preconnect">
-									Testimonials
-								</DropdownItem>
-								<DropdownItem href="/contact" rel="preconnect">
-									Contact
-								</DropdownItem>
-							</DropdownMenu>
-						</UncontrolledDropdown>
-
-						<a href="https://raycerobinson.floify.com/apply" rel="noopener noreferrer preconnect" target="_blank">
+						<a href="https://www.blink.mortgage/app/signup/p/lakewaylendingllc/megangillespie" rel="noopener noreferrer preconnect" target="_blank">
 							{ this.state.fontSize === '14px' ? (
 								<button
-									className="btn btn-outline-primary btn-sm mt-md-3 mt-lg-1"
+									className="btn btn-outline-primary btn-sm my-auto mx-4"
 									type="button"
 								>Apply</button>
 							) : (
 								<button
-									className="btn btn-outline-primary btn-lg mt-md-3 mt-lg-1"
+									className="btn btn-outline-primary btn-lg my-auto mx-4"
 									type="button"
 								>Apply</button>)
 							}

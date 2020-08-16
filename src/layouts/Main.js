@@ -7,10 +7,10 @@ import { Footer } from './../components/Footer/Footer';
 export class Main extends Component {
 	render() {
 		return (
-			<div className="App container-fluid main-container">
+			<div className="App container-fluid">
 				<div className="row">
 					<div className="col-md-12">
-						<SocialBar />
+						{/*<SocialBar />*/}
 						<NavigationBar />
 						<Router />
 						<Footer />
