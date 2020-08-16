@@ -2,45 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ec744c-6f3b-451c-a59b-3804a29d9630" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/SideNav/SideNav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/SideNav/SideNav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Blog/Blog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Condo/Condo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Conventional/Conventional.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/CreditConcerns/CreditConcerns.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Divorced/Divorced.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Faq/Faq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Fha/Fha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/GivingBack/GivingBack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Heloc/Heloc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/HelpfulFinancing/HelpfulFinancing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/HerosAmongUs/HerosAmongUs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Jumbo/Jumbo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/LowDownPayment/LowDownPayment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Manufactured/Manufactured.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/MortgageCrush/MortgageCrush.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/MortgageDosDonts/MortgageDosDonts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Rates/Rates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/RealtorInfo/RealtorInfo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Renovation/Renovation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/RentToOwn/RentToOwn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Reverse/Reverse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/SecondHome/SecondHome.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Testimonials/Testimonials.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Usda/Usda.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/VaIrrl/VaIrrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Veterans/Veterans.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Relocation/Relocation.js" afterPath="$PROJECT_DIR$/src/components/RefinanceForm/RefinanceForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/Room8.jpeg" afterPath="$PROJECT_DIR$/src/media/Room8.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.scss" afterPath="$PROJECT_DIR$/src/App.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MainCard/MainCard.js" afterPath="$PROJECT_DIR$/src/components/MainCard/MainCard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js" afterPath="$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Router/Router.js" afterPath="$PROJECT_DIR$/src/components/Router/Router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SocialBar/SocialBar.js" afterPath="$PROJECT_DIR$/src/components/SocialBar/SocialBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/Main.js" afterPath="$PROJECT_DIR$/src/layouts/Main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/About/About.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Calculators/Calculators.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Contact/Contact.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Purchase/Purchase.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Refinance/Refinance.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,7 +35,7 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
+            <state relative-caret-position="234">
               <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -89,13 +56,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavigationBar.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NavigationBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="179" column="72" lean-forward="false" selection-start-line="179" selection-start-column="72" selection-end-line="179" selection-end-column="72" />
+            <state relative-caret-position="1605">
+              <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Router/Router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -272,6 +273,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Router" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -426,12 +467,12 @@
       <workItem from="1565454126731" duration="2048000" />
       <workItem from="1565800167841" duration="1000" />
       <workItem from="1597540713968" duration="6000" />
-      <workItem from="1597541823756" duration="21240000" />
+      <workItem from="1597541823756" duration="21795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276193000" />
+    <option name="totallyTimeSpent" value="276748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,9 +639,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
           <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-          <folding>
-            <element signature="e#248#301#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,26 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -819,22 +838,6 @@
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Router/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/RefinanceForm/RefinanceForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,21 +857,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Home/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SocialBar/SocialBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="41" lean-forward="true" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RefinanceForm/RefinanceForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Home/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -884,11 +895,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="179" column="72" lean-forward="false" selection-start-line="179" selection-start-column="72" selection-end-line="179" selection-end-column="72" />
+        <state relative-caret-position="1605">
+          <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Router/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
