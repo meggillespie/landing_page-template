@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 import { MainCard } from '../../components/MainCard/MainCard';
+import { RefinanceForm } from '../../components/RefinanceForm/RefinanceForm';
+
 import homeBckgrd from '../../media/Room8.jpeg';
 import './Home.scss';
 
@@ -41,21 +44,31 @@ export class Home extends Component {
 				<div className="row mb-5 mt-5">
 					<div className="col-md-8 offset-md-2">
 						<div className="embed-responsive embed-responsive-16by9 border border-dark rounded-sm">
-							https://www.youtube.com/v/VIDEO_ID?
-							version=3
-							&loop=1
-							&playlist=VIDEO_ID
 							<iframe title="intro-video" className="embed-responsive-item" src="https://www.youtube.com/embed/Z5bVH4vvsyk?version=3&loop=0&playlist=Z5bVH4vvsyk"></iframe>
 						</div>
 					</div>
 				</div>
 
-				<div className="row mb-5 mt-5">
-					<div className="col-md-8 offset-md-2">
 
-						<button type="button" className="btn btn-primary btn-lg">Get A Quote</button>
+				<div className="jumbotron jumbotron-fluid mb-0 bg-light">
+					<div className="container-fluid">
+						<h2 className="display-4 pt-5">Get Your Free Online Quote Now</h2>
+						<p className="lead mb-0">Answer a few questions to get your custom loan options.</p>
+						<p className="lead mt-0">We never share information with 3rd parties.</p>
+						<Button href={ this.props.button1Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
+						<Button href={ this.props.button2Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
 					</div>
 				</div>
+
+
+				<div className="row mb-5 mt-5">
+					<div className="col-md-8 offset-md-2">
+						<RefinanceForm />
+					</div>
+				</div>
+
+
+
 			</div>
 		);
 	}

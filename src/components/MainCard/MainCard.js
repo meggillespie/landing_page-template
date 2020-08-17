@@ -2,7 +2,7 @@ import React, { Component }  from 'react';
 import graphic from '../../media/graphic.png';
 import logoImg from '../../media/logo-iconOnly-black.png';
 import { Card, CardImg, CardBody,
-	CardTitle, CardText,  Button, Image } from 'reactstrap';
+	CardTitle, CardText,  Button } from 'reactstrap';
 import './MainCard.scss';
 
 export class MainCard extends Component {
@@ -22,16 +22,10 @@ export class MainCard extends Component {
 								{ this.props.subHeading }
 							</h1>
 						</CardTitle>
-						<CardText className="lead mb-0"> {this.props.text1} </CardText>
-						<CardText className="lead mb-2"> {this.props.text2} </CardText>
-						{ this.props.numberOfButtons < 2 ? (
-							<Button href={ this.props.button1Link } color="primary" size="lg" className="m-2" style={{ position: 'relative', zIndex: '10' }}>{ this.props.button1Text }</Button>
-						) : (
-							<div>
-								<Button href={ this.props.button1Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>{ this.props.button1Text }</Button>
-								<Button href={ this.props.button2Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>{ this.props.button2Text }</Button>
-							</div>
-						)}
+						<CardText className="lead mb-0" style={{ fontWeight: '400' }}> {this.props.text1} </CardText>
+						<CardText className="lead mb-2" style={{ fontWeight: '400' }}> {this.props.text2} </CardText>
+							<Button href={ this.props.button1Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>{ this.props.button1Text }</Button>
+							<Button href={ this.props.button2Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>{ this.props.button2Text }</Button>
 					</CardBody>
 				</Card>
 			</div>
