@@ -19,8 +19,8 @@ export class NavigationBar extends Component {
 			},
 			fontWeight: 'bold',
 			fontSize: '16px',
-			logoWidth: '175',
-			logoHeight: '75'
+			logoWidth: '150',
+			logoHeight: '65'
 		};
 
 		this.controlNavStyle = this.controlNavStyle.bind(this);
@@ -56,7 +56,7 @@ export class NavigationBar extends Component {
 	}
 
 	controlNavStyle(e) {
-		if ( (e.currentTarget && e.currentTarget.innerWidth < 1024) || e.target.clientWidth < 1024  ) {
+		if ( ( e.currentTarget && e.currentTarget.innerWidth < 1024 ) || e.target.clientWidth < 1024  ) {
 			this.setState({
 				navStyle: {
 					background: 'rgba(255, 255, 255)',

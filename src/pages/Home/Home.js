@@ -15,12 +15,13 @@ export class Home extends Component {
 						<div className="media-overlay" style={{ height: '100vh', overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
 							<img src={ homeBckgrd } alt="home page background" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
 							<MainCard
-								textAlignment="text-left"
+								textAlignment="text-center"
 								top="45%"
 								left="50%"
 								heading="How much can you save?"
-								text1="We compare rates from multiple lenders."
-								text2="Get your quote now!"
+								text1="Purchase & Refinance Home Loans"
+								text2="We compare rates from multiple lenders."
+								text3="Get your quote now!"
 								numberOfButtons="2"
 							  button1Text="Home Purchase"
 								button1Link="/home-loans"
@@ -31,7 +32,7 @@ export class Home extends Component {
 					</div>
 				</div>
 
-				<div className="row mx-3" id="anchorTag" style={{  paddingTop: '110px', marginTop: '-70px' }}>
+				<div className="row mx-3" id="anchorTag" style={{ paddingTop: '110px', marginTop: '-70px' }}>
 					<div className="col-md-10 offset-md-1">
 						<h2 className="display-4 pt-3">Our Mission</h2>
 						<p className="lead mt-4">Your home is more than a roof over your head. It's a place to call your own,
@@ -52,9 +53,9 @@ export class Home extends Component {
 
 				<div className="jumbotron jumbotron-fluid mb-0 bg-light">
 					<div className="container-fluid">
-						<h2 className="display-4 pt-5">Get Your Free Online Quote Now</h2>
-						<p className="lead mb-0">Answer a few questions to get your custom loan options.</p>
-						<p className="lead mt-0">We never share information with 3rd parties.</p>
+						<h2 className="display-4 pt-5">What We Do</h2>
+						<p className="lead mb-0">We make the mortgages fast, easy, and stress free.</p>
+						<p className="lead mt-0">Online quotes and approval in the same day.</p>
 						<Button href={ this.props.button1Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
 						<Button href={ this.props.button2Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
 					</div>
