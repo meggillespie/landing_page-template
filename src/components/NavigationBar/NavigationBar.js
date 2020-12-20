@@ -122,7 +122,7 @@ export class NavigationBar extends Component {
 								<a href="tel:+15126428688">
 									<ul className="list-inline">
 										<li className="list-inline-item">
-											<FontAwesomeIcon icon="phone" className=" text-xs-center mr-1" size="2x" rotation={90} />
+											<FontAwesomeIcon icon="phone" className=" text-xs-center mr-1" size="2x" rotation={ 90 } />
 										</li>
 
 										<li className="list-inline-item">
