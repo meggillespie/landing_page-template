@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom'
 import { MainCard } from '../../components/MainCard/MainCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { RefinanceForm } from '../../components/RefinanceForm/RefinanceForm';
 
 import homeBckgrd from '../../media/Room8.jpeg';
 import './Home.scss';
@@ -111,18 +111,17 @@ export class Home extends Component {
 							</div>
 						</div>
 
-						<Button href={ this.props.button1Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
-						<Button href={ this.props.button2Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
+						<Link to="/purchase">
+							<Button color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
+						</Link>
+
+						<Link to="/refinance">
+							<Button color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
+						</Link>
+
 
 					</div>
 				</div>
-
-
-				{/*<div className="row mb-5 mt-5">*/}
-					{/*<div className="col-md-8 offset-md-2">*/}
-						{/*<RefinanceForm />*/}
-					{/*</div>*/}
-				{/*</div>*/}
 
 			</div>
 		);
