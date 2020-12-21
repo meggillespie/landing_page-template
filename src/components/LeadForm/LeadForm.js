@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import { RefinanceFormPersonal } from '../../layouts/RefinanceFormPersonal';
 
 
 export class LeadForm extends Component {
@@ -7,9 +8,28 @@ export class LeadForm extends Component {
 
 		this.state = {
 			currentStep: 1,
-			email:  '',
+			email: '',
 			name: '',
 			zipcode: '',
+			propertyType: '',
+			estimatedValue: '',
+			originalPurchasePrice: '',
+			dateOfPurchase: '',
+			dateOfLastRefi: '',
+			loanAmount: '',
+			currentLoanType: '',
+			currentRate: '',
+			mortgageBalance: '',
+			monthlyPiti: '',
+			currentEscrow: '',
+			escrowFwd: '',
+			secondMortgage: '',
+			lateMortgagePayments: '',
+			cashOut: '',
+			employmentStatus: '',
+			monthlyExpenses: '',
+			creditScore: '',
+			monthlyIncome: ''
 		}
 	}
 
@@ -74,13 +94,7 @@ export class LeadForm extends Component {
 		})
 	};
 
-	// _submit = () => {
-	// 	let currentStep = 1;
-	//
-	// 	this.setState({
-	// 		currentStep: currentStep
-	// 	})
-	// };
+	
 
 	/*
 	 * the functions for our button
@@ -116,49 +130,45 @@ export class LeadForm extends Component {
 		return null;
 	}
 
-
-	// submitsButton() {
-	// 	let currentStep = this.state.currentStep;
-	//
-	// 	if (currentStep === 4) {
-	// 		return (
-	// 			<button
-	// 				className="btn btn-primary float-right"
-	// 				type="button" onClick={this._submit}>
-	// 				Submit
-	// 			</button>
-	// 		)
-	// 	}
-	// 	return null;
-	// }
-
-
 	render() {
 		return (
 			<div>
 				<p>Step {this.state.currentStep} </p>
 
 				<form onSubmit={this.handleSubmit}>
-					{/*
-					 render the form steps and pass required props in
-					 */}
-					<PersonalInfo
-						currentStep={this.state.currentStep}
-						handleChange={this.handleChange}
-						email={this.state.email}
-					/>
-					<Step2
-						currentStep={this.state.currentStep}
-						handleChange={this.handleChange}
-						name={this.state.name}
-					/>
-					<Step3
-						currentStep={this.state.currentStep}
-						handleChange={this.handleChange}
-						zipcode={this.state.zipcode}
-					/>
+					{(() => {
+						switch(this.state.currentStep) {
+							case  1:
+								return < RefinanceFormPersonal />;
+							case 2:
+								return <h2># 2</h2>;
+							case  3:
+								return <h2># 3</h2>;
+							default:
+								return null;
+						}
+					})()}
+
 					{ this.previousButton() }
 					{ this.nextButton() }
+
+
+					{/**/}
+					{/*<PersonalInfo*/}
+					{/*currentStep={this.state.currentStep}*/}
+					{/*handleChange={this.handleChange}*/}
+					{/*email={this.state.email}*/}
+					{/*/>*/}
+					{/*<Step2*/}
+					{/*currentStep={this.state.currentStep}*/}
+					{/*handleChange={this.handleChange}*/}
+					{/*name={this.state.name}*/}
+					{/*/>*/}
+					{/*<Step3*/}
+					{/*currentStep={this.state.currentStep}*/}
+					{/*handleChange={this.handleChange}*/}
+					{/*zipcode={this.state.zipcode}*/}
+					{/*/>*/}
 
 				</form>
 			</div>
@@ -166,66 +176,66 @@ export class LeadForm extends Component {
 	}
 }
 
-function PersonalInfo(props) {
-	if (props.currentStep !== 1) {
-		return null
-	}
-	return(
-		<div className="form-group">
-			<label htmlFor="email">Email Address</label>
-			<input
-				className="form-control"
-				id="email"
-				name="email"
-				type="text"
-				placeholder="example@domain.com"
-				value={props.email}
-				onChange={props.handleChange}
-			/>
-		</div>
-	);
-}
-
-function Step2(props) {
-	if (props.currentStep !== 2) {
-		return null
-	}
-	return(
-		<div className="form-group">
-			<label htmlFor="name">Name</label>
-			<input
-				className="form-control"
-				id="name"
-				name="name"
-				type="text"
-				placeholder="John Doe"
-				value={props.name}
-				onChange={props.handleChange}
-			/>
-		</div>
-	);
-}
-
-function Step3(props) {
-	if (props.currentStep !== 3) {
-		return null
-	}
-	return(
-		<React.Fragment>
-			<div className="form-group">
-				<label htmlFor="password">Monthly Income</label>
-				<input
-					className="form-control"
-					id="income"
-					name="income"
-					type="text"
-					placeholder="Gross Monthly Income"
-					value={props.monthlyIncome}
-					onChange={props.handleChange}
-				/>
-			</div>
-			<button className="btn btn-primary float-right">Submit</button>
-		</React.Fragment>
-	);
-}
+// function PersonalInfo(props) {
+// 	if (props.currentStep !== 1) {
+// 		return null
+// 	}
+// 	return(
+// 		<div className="form-group">
+// 			<label htmlFor="email">Email Address</label>
+// 			<input
+// 				className="form-control"
+// 				id="email"
+// 				name="email"
+// 				type="text"
+// 				placeholder="example@domain.com"
+// 				value={props.email}
+// 				onChange={props.handleChange}
+// 			/>
+// 		</div>
+// 	);
+// }
+//
+// function Step2(props) {
+// 	if (props.currentStep !== 2) {
+// 		return null
+// 	}
+// 	return(
+// 		<div className="form-group">
+// 			<label htmlFor="name">Name</label>
+// 			<input
+// 				className="form-control"
+// 				id="name"
+// 				name="name"
+// 				type="text"
+// 				placeholder="John Doe"
+// 				value={props.name}
+// 				onChange={props.handleChange}
+// 			/>
+// 		</div>
+// 	);
+// }
+//
+// function Step3(props) {
+// 	if (props.currentStep !== 3) {
+// 		return null
+// 	}
+// 	return(
+// 		<React.Fragment>
+// 			<div className="form-group">
+// 				<label htmlFor="password">Monthly Income</label>
+// 				<input
+// 					className="form-control"
+// 					id="income"
+// 					name="income"
+// 					type="text"
+// 					placeholder="Gross Monthly Income"
+// 					value={props.monthlyIncome}
+// 					onChange={props.handleChange}
+// 				/>
+// 			</div>
+// 			<button className="btn btn-primary float-right">Submit</button>
+// 		</React.Fragment>
+// 	);
+// }
 

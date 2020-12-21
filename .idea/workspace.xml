@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ec744c-6f3b-451c-a59b-3804a29d9630" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/Refinance/Refinance.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/RefinanceForm/RefinanceForm.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/RefinanceFormPersonal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/MainCard/MainCard.js" afterPath="$PROJECT_DIR$/src/components/MainCard/MainCard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Router/Router.js" afterPath="$PROJECT_DIR$/src/components/Router/Router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/NoMatch/NoMatch.js" afterPath="$PROJECT_DIR$/src/pages/NoMatch/NoMatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" afterPath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,12 +19,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RefinanceFormPersonal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layouts/RefinanceFormPersonal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LeadForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-433">
+              <caret line="96" column="2" lean-forward="true" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,11 +46,9 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="39">
+              <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,8 +56,8 @@
       <file leaf-file-name="Purchase.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Purchase/Purchase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="52">
+              <caret line="6" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
               <folding>
                 <element signature="e#39#80#0" expanded="true" />
               </folding>
@@ -103,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/Videos/Videos.js" />
         <option value="$PROJECT_DIR$/src/pages/Purchase/Purchase.scss" />
         <option value="$PROJECT_DIR$/src/pages/Contact/Contact.scss" />
         <option value="$PROJECT_DIR$/src/pages/Contact/Contact.js" />
@@ -153,6 +158,7 @@
         <option value="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" />
         <option value="$PROJECT_DIR$/src/pages/Refinance/Refinance.js" />
         <option value="$PROJECT_DIR$/src/pages/Home/Home.js" />
+        <option value="$PROJECT_DIR$/src/layouts/RefinanceFormPersonal.js" />
         <option value="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
       </list>
     </option>
@@ -172,7 +178,7 @@
     <option name="x" value="-1920" />
     <option name="y" value="90" />
     <option name="width" value="1920" />
-    <option name="height" value="1055" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -298,24 +304,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,12 +480,12 @@
       <workItem from="1597541823756" duration="21943000" />
       <workItem from="1597610657958" duration="3324000" />
       <workItem from="1608412690467" duration="8084000" />
-      <workItem from="1608495492082" duration="9924000" />
+      <workItem from="1608495492082" duration="14196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298228000" />
+    <option name="totallyTimeSpent" value="302500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,7 +497,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="90" width="1920" height="1055" extended-state="6" />
+    <frame x="-1920" y="90" width="1920" height="998" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123222746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -563,7 +551,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/media/home.jpeg" />
     <entry file="file://$PROJECT_DIR$/src/components/MapContainer/MapContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -689,7 +676,7 @@
         <state relative-caret-position="169">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -699,7 +686,7 @@
         <state relative-caret-position="182">
           <caret line="14" column="57" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -736,16 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Purchase/Purchase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Refinance/Refinance.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -774,21 +751,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Purchase/Purchase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#39#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+        <state relative-caret-position="39">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/RefinanceFormPersonal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-433">
+          <caret line="96" column="2" lean-forward="true" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
