@@ -1,16 +1,23 @@
-/**
- * Created by meg on 12/20/20.
- */
 import React, { Component } from 'react';
 
-export class RefinanceFormPersonal extends Component {
+export class RefinanceFormPersonalDetails extends Component {
+	constructor(props) {
+		super(props);
+
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(e) {
+		this.props.onChange(e);
+	}
+
 	render () {
 		return(
 		<div style={{ marginTop: '25vh'}}>
 			<div className="form-row">
 				<div className="form-group col-md-6">
 					<label htmlFor="inputEmail4">Email</label>
-					<input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
+					<input type="email" className="form-control" id="inputEmail4" name="email" placeholder="Email"  onChange={this.handleChange} />
 				</div>
 				<div className="form-group col-md-6">
 					<label htmlFor="inputPassword4">Password</label>
@@ -57,18 +64,15 @@ export class RefinanceFormPersonal extends Component {
 					<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
 				</div>
 			</div>
-			<button type="submit" className="btn btn-primary">Sign in</button>
-
 
 			<div className="row">
-				<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh'}}>
+				<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh' }}>
 					<div className="row mb-5 mt-5">
 						<div className="col-md-8 offset-md-2">
 						</div>
 					</div>
 				</div>
 			</div>
-
 
 		</div>
 		);

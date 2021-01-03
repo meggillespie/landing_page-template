@@ -1,5 +1,7 @@
 import React, { Component }  from 'react';
-import { RefinanceFormPersonal } from '../../layouts/RefinanceFormPersonal';
+import { RefinanceFormPersonalDetails } from '../../layouts/RefinanceForm/RefinanceFormPersonalDetails';
+import { RefinanceFormLoanDetails } from '../../layouts/RefinanceForm/RefinanceFormLoanDetails';
+import { RefinanceFormPropertyDetails } from '../../layouts/RefinanceForm/RefinanceFormPropertyDetails';
 
 
 export class LeadForm extends Component {
@@ -9,7 +11,7 @@ export class LeadForm extends Component {
 		this.state = {
 			currentStep: 1,
 			email: '',
-			name: '',
+			firstname: '',
 			zipcode: '',
 			propertyType: '',
 			estimatedValue: '',
@@ -30,27 +32,32 @@ export class LeadForm extends Component {
 			monthlyExpenses: '',
 			creditScore: '',
 			monthlyIncome: ''
-		}
+		};
+
+		this.handleChange = this.handleChange.bind(this);
 	}
 
-	handleChange = event => {
-		const {name, value} = event.target;
+	handleChange = e => {
+		console.log('change called');
+		console.log(e);
+
+		const {name, value} = e.target;
 		this.setState({
 			[name]: value
 		})
 	};
 
-	handleSubmit = event => {
-		event.preventDefault();
+	handleSubmit = e => {
+		e.preventDefault();
 
-		const { email, name, phone, zipcode, propertyType, estimatedValue, originalPurchasePrice, dateOfPurchase,
+		const { email, firstname, phone, zipcode, propertyType, estimatedValue, originalPurchasePrice, dateOfPurchase,
 			dateOfLastRefi, loanAmount, currentLoanType, currentRate, mortgageBalance, monthlyPiti, currentEscrow,
 			escrowFwd, secondMortgage, lateMortgagePayments, cashOut, employmentStatus, monthlyExpenses, creditScore,
 			monthlyIncome } = this.state;
 
 		alert(`Your Refinance Details: \n 
            Email: ${email} \n 
-           Name: ${name} \n
+           First Name: ${firstname} \n
            Phone Number: ${phone} \n
            Zipcode: ${zipcode} \n 
            Employment Status: ${employmentStatus} \n
@@ -94,7 +101,7 @@ export class LeadForm extends Component {
 		})
 	};
 
-	
+
 
 	/*
 	 * the functions for our button
@@ -114,7 +121,7 @@ export class LeadForm extends Component {
 		return null;
 	}
 
-	nextButton(){
+	nextButton() {
 		let currentStep = this.state.currentStep;
 
 		if( currentStep < 3 ){
@@ -130,112 +137,64 @@ export class LeadForm extends Component {
 		return null;
 	}
 
+	submitButton() {
+		let currentStep = this.state.currentStep;
+
+		if ( currentStep > 2 ) {
+			return (
+				<button className="btn btn-primary float-right">Submit</button>
+			)
+		}
+	}
+
+
+	/*
+	 * Render function
+	 */
+
 	render() {
+		console.log(this.state);
+
 		return (
 			<div>
 				<p>Step {this.state.currentStep} </p>
 
 				<form onSubmit={this.handleSubmit}>
-					{(() => {
-						switch(this.state.currentStep) {
-							case  1:
-								return < RefinanceFormPersonal />;
-							case 2:
-								return <h2># 2</h2>;
-							case  3:
-								return <h2># 3</h2>;
-							default:
-								return null;
-						}
-					})()}
+						{ (() => {
+
+							if ( this.props.formIndicator === 'refinance' ) {
+
+								switch(this.state.currentStep) {
+									case  1:
+										return < RefinanceFormPersonalDetails onChange={this.handleChange} />;
+									case 2:
+										return <RefinanceFormLoanDetails onChange={this.handleChange} />;
+									case  3:
+										return <RefinanceFormPropertyDetails onChange={this.handleChange} />;
+									default:
+										return null;
+								}
+							} else {
+
+								switch(this.state.currentStep) {
+									case  1:
+										return < RefinanceFormPersonalDetails onChange={this.handleChange} />;
+									case 2:
+										return <RefinanceFormLoanDetails onChange={this.handleChange} />;
+									case  3:
+										return <RefinanceFormPropertyDetails onChange={this.handleChange} />;
+									default:
+										return null;
+								}
+							}
+						}) () }
+
 
 					{ this.previousButton() }
 					{ this.nextButton() }
-
-
-					{/**/}
-					{/*<PersonalInfo*/}
-					{/*currentStep={this.state.currentStep}*/}
-					{/*handleChange={this.handleChange}*/}
-					{/*email={this.state.email}*/}
-					{/*/>*/}
-					{/*<Step2*/}
-					{/*currentStep={this.state.currentStep}*/}
-					{/*handleChange={this.handleChange}*/}
-					{/*name={this.state.name}*/}
-					{/*/>*/}
-					{/*<Step3*/}
-					{/*currentStep={this.state.currentStep}*/}
-					{/*handleChange={this.handleChange}*/}
-					{/*zipcode={this.state.zipcode}*/}
-					{/*/>*/}
-
+					{ this.submitButton() }
 				</form>
 			</div>
 		);
 	}
 }
-
-// function PersonalInfo(props) {
-// 	if (props.currentStep !== 1) {
-// 		return null
-// 	}
-// 	return(
-// 		<div className="form-group">
-// 			<label htmlFor="email">Email Address</label>
-// 			<input
-// 				className="form-control"
-// 				id="email"
-// 				name="email"
-// 				type="text"
-// 				placeholder="example@domain.com"
-// 				value={props.email}
-// 				onChange={props.handleChange}
-// 			/>
-// 		</div>
-// 	);
-// }
-//
-// function Step2(props) {
-// 	if (props.currentStep !== 2) {
-// 		return null
-// 	}
-// 	return(
-// 		<div className="form-group">
-// 			<label htmlFor="name">Name</label>
-// 			<input
-// 				className="form-control"
-// 				id="name"
-// 				name="name"
-// 				type="text"
-// 				placeholder="John Doe"
-// 				value={props.name}
-// 				onChange={props.handleChange}
-// 			/>
-// 		</div>
-// 	);
-// }
-//
-// function Step3(props) {
-// 	if (props.currentStep !== 3) {
-// 		return null
-// 	}
-// 	return(
-// 		<React.Fragment>
-// 			<div className="form-group">
-// 				<label htmlFor="password">Monthly Income</label>
-// 				<input
-// 					className="form-control"
-// 					id="income"
-// 					name="income"
-// 					type="text"
-// 					placeholder="Gross Monthly Income"
-// 					value={props.monthlyIncome}
-// 					onChange={props.handleChange}
-// 				/>
-// 			</div>
-// 			<button className="btn btn-primary float-right">Submit</button>
-// 		</React.Fragment>
-// 	);
-// }
-
