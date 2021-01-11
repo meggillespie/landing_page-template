@@ -27,16 +27,16 @@ export class RefinanceFormPersonalDetails extends Component {
 
 			<div className="form-row">
 				<div className="form-group col-md-4">
-					<label htmlFor="phone">Phone Number</label>
-					<input type="tel" className="form-control" id="phone" name="phone" placeholder="512-555-1234" />
+					<label htmlFor="inputPhone">Phone Number</label>
+					<input type="tel" className="form-control" id="inputPhone" name="phone" placeholder="512-555-1234" onChange={ this.handleChange } />
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="zipcode">Zipcode</label>
-					<input type="number" className="form-control" id="zipcode" name="zipcode" placeholder="78738" />
+					<input type="number" className="form-control" id="zipcode" name="zipcode" placeholder="78738" onChange={ this.handleChange } />
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="creditScore">FICO Score</label>
-					<input type="number" className="form-control" id="creditScore" name="creditScore" placeholder="710" />
+					<input type="number" className="form-control" id="creditScore" name="creditScore" placeholder="710" onChange={ this.handleChange } />
 				</div>
 			</div>
 
@@ -54,11 +54,11 @@ export class RefinanceFormPersonalDetails extends Component {
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="monthlyIncome">Gross Monthly Income</label>
-					<input type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$6,250" />
+					<input type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$6,250" onChange={ this.handleChange } />
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="expenses">Monthly Credit Expenses</label>
-					<input type="number" className="form-control" id="expenses" name="expenses" placeholder="$1,150" />
+					<input type="number" className="form-control" id="expenses" name="expenses" placeholder="$1,150" onChange={ this.handleChange } />
 				</div>
 			</div>
 

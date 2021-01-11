@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class PurchaseFormPropertyDetails extends Component {
+export class PurchaseFormLoanDetailsCont extends Component {
 	constructor(props) {
 		super(props);
 

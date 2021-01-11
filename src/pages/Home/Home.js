@@ -35,12 +35,12 @@ export class Home extends Component {
 				<div className="row mx-3" id="anchorTag" style={{ paddingTop: '100px', marginTop: '-70px' }}>
 					<div className="col-md-10 offset-md-1">
 						<h2 className="display-4 pt-2">What We Do</h2>
-						<p className="lead text-muted mb-0" style={{ fontWeight: '600' }}>We Make Mortgages Fast, Easy, & Stress Free</p>
+						<p className="lead text-muted mb-0" style={{ fontWeight: '600' }}>Fast, Easy, Stress Free Mortgage Process</p>
 						<p className="lead text-muted mt-0" style={{ fontWeight: '600' }}>Online Quotes & Same Day Approval</p>
 					</div>
 				</div>
 
-				<div className="row mx-3">
+				<div className="row mx-3 my-4">
 					<div className="col-md-10 offset-md-1">
 						<Button href="/home-purchase" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
 						<Button href="/home-refinance" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>

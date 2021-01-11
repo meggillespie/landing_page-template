@@ -1,10 +1,10 @@
 import React, { Component }  from 'react';
 import { RefinanceFormPersonalDetails } from '../../templates/RefinanceForm/RefinanceFormPersonalDetails';
 import { RefinanceFormLoanDetails } from '../../templates/RefinanceForm/RefinanceFormLoanDetails';
-import { RefinanceFormPropertyDetails } from '../../templates/RefinanceForm/RefinanceFormPropertyDetails';
+import { RefinanceFormLoanDetailsCont } from '../../templates/RefinanceForm/RefinanceFormLoanDetailsCont';
 import { PurchaseFormPersonalDetails } from '../../templates/PurchaseForm/PurchaseFormPersonalDetails';
 import { PurchaseFormLoanDetails } from '../../templates/PurchaseForm/PurchaseFormLoanDetails';
-import { PurchaseFormPropertyDetails } from '../../templates/PurchaseForm/PurchaseFormPropertyDetails';
+import { PurchaseFormLoanDetailsCont } from '../../templates/PurchaseForm/PurchaseFormLoanDetailsCont';
 
 export class LeadForm extends Component {
 	constructor(props) {
@@ -12,6 +12,9 @@ export class LeadForm extends Component {
 
 		this.state = {
 			currentStep: 1,
+			refinancedBefore: false,
+			cashOut: false,
+
 			name: '',
 			email: '',
 			phone: '',
@@ -22,25 +25,25 @@ export class LeadForm extends Component {
 			monthlyExpenses: '',
 
 			propertyType: '',
-			estimatedValue: '',
 			currentLoanType: '',
-			originalPurchasePrice: '',
+			estimatedValue: '',
 			dateOfPurchase: '',
 			dateOfLastRefi: '',
 			originalLoanAmount: '',
+			cashOutAmount: '',
+
 			currentRate: '',
 			mortgageBalance: '',
-			monthlyPI: '',
-
 			currentEscrow: '',
-			escrowFwd: '',
+			monthlyPI: '',
 			hoi: '',
 			tax: '',
-
+			escrowFwd: '',
 			secondMortgage: '',
 			foreclosure: '',
 			lateMortgagePayments: '',
-			cashOut: ''
+
+			originalPurchasePrice: ''
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -50,7 +53,13 @@ export class LeadForm extends Component {
 		console.log('change called');
 		console.log(e);
 
-		const {name, value} = e.target;
+		const target = e.target;
+		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const name = target.name;
+		console.log('value ' + value);
+
+
+		//const {name, value} = e.target;
 		this.setState({ [name]: value })
 	};
 
@@ -58,34 +67,40 @@ export class LeadForm extends Component {
 		e.preventDefault();
 
 		const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
-			propertyType, estimatedValue, originalPurchasePrice, dateOfPurchase, dateOfLastRefi, originalLoanAmount,
-			currentLoanType, currentRate, mortgageBalance, monthlyPiti, currentEscrow,
-			escrowFwd, secondMortgage, lateMortgagePayments, cashOut } = this.state;
+			propertyType, estimatedValue, currentLoanType, dateOfPurchase, dateOfLastRefi, originalLoanAmount, cashOutAmount,
+			currentRate, mortgageBalance, currentEscrow, monthlyPI, hoi, tax, escrowFwd, secondMortgage, lateMortgagePayments,
+			foreclosure, originalPurchasePrice, } = this.state;
 
 		alert(`Your Refinance Details: \n 
            Email: ${email} \n 
-           First Name: ${name} \n
+           Name: ${name} \n
            Phone Number: ${phone} \n
            Zipcode: ${zipcode} \n 
+           Credit Score: ${creditScore} \n
            Employment Status: ${employmentStatus} \n
            Monthly Income: ${monthlyIncome} \n 
-           Monthly Expenses: ${monthlyExpenses} \n 
-           Credit Score: ${creditScore} \n
+           Monthly Expenses: ${monthlyExpenses} \n \n 
+           
            Property Type: ${propertyType} \n
            Estimated Value: ${estimatedValue} \n
-           Original Purchase Price: ${originalPurchasePrice} \n
+           Current Loan Type: ${currentLoanType} \n
            Date of Purchase: ${dateOfPurchase} \n
            Date of Last Refi: ${dateOfLastRefi} \n
            Orig. Loan Amount: ${originalLoanAmount} \n
-           Current Loan Type: ${currentLoanType} \n
+           Cash Out: ${cashOutAmount} \n\n
+           
            Current Interest Rate: ${currentRate} \n
            Mortgage Balance: ${mortgageBalance} \n
-           Monthly PITI (Principal, Interest, Taxes, Insr): ${monthlyPiti} \n
            Current Escrow Account: ${currentEscrow} \n
+           Monthly PI: ${monthlyPI} \n
+           HOI: ${hoi} \n
+           TAX: ${tax} \n      
            Escrow Moving Forward: ${escrowFwd} \n
            Second Mortgage: ${secondMortgage} \n
+           Foreclosure: ${foreclosure} \n
            Late Mortgage Payments: ${lateMortgagePayments} \n
-           Cash Out: ${cashOut} `)
+           
+           Original Purchase Price: ${originalPurchasePrice} `);
 	};
 
 	_next = () => {
@@ -101,7 +116,6 @@ export class LeadForm extends Component {
 
 		this.setState({ currentStep: currentStep })
 	};
-
 
 
 	/*
@@ -154,11 +168,11 @@ export class LeadForm extends Component {
 		{ (() => {
 			switch(this.state.currentStep) {
 				case  1:
-					return formSubHeading = 'Personal Details';
+					return formSubHeading = 'PERSONAL DETAILS';
 				case 2:
-					return formSubHeading = 'Loan Details';
+					return formSubHeading = 'CURRENT LOAN DETAILS';
 				case  3:
-					return formSubHeading = 'Loan Details Cont.';
+					return formSubHeading = 'LOAN DETAILS CONT...';
 				default:
 					return formSubHeading += '';
 			}
@@ -166,7 +180,7 @@ export class LeadForm extends Component {
 
 		return (
 			<div>
-				<p className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</p>
+				<h3 className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</h3>
 
 				<form onSubmit={ this.handleSubmit } style={{ marginBottom: '15vh'}} className="text-left">
 						{ (() => {
@@ -177,9 +191,12 @@ export class LeadForm extends Component {
 									case  1:
 										return <RefinanceFormPersonalDetails onChange={ this.handleChange } />;
 									case 2:
-										return <RefinanceFormLoanDetails onChange={ this.handleChange } />;
+										return <RefinanceFormLoanDetails
+															refinancedBefore={ this.state.refinancedBefore }
+										          cashOut={ this.state.cashOut }
+										          onChange={ this.handleChange } />;
 									case  3:
-										return <RefinanceFormPropertyDetails onChange={ this.handleChange } />;
+										return <RefinanceFormLoanDetailsCont onChange={ this.handleChange } />;
 									default:
 										return null;
 								}
@@ -191,7 +208,7 @@ export class LeadForm extends Component {
 									case 2:
 										return <PurchaseFormLoanDetails onChange={ this.handleChange } />;
 									case  3:
-										return <PurchaseFormPropertyDetails onChange={ this.handleChange } />;
+										return <PurchaseFormLoanDetailsCont onChange={ this.handleChange } />;
 									default:
 										return null;
 								}
