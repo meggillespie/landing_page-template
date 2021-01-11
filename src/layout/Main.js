@@ -1,7 +1,7 @@
 import React,  { Component } from 'react';
 import { SocialBar } from '../components/SocialBar/SocialBar';
 import { NavigationBar } from '../components/NavigationBar/NavigationBar';
-import { Router } from '../components/Router/Router';
+import { Router } from './Router';
 import { Footer } from './../components/Footer/Footer';
 
 export class Main extends Component {

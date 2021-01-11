@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class RefinanceFormPropertyDetails extends Component {
+export class PurchaseFormLoanDetails extends Component {
 	constructor(props) {
 		super(props);
 
@@ -20,8 +20,8 @@ export class RefinanceFormPropertyDetails extends Component {
 						<input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
 					</div>
 					<div className="form-group col-md-6">
-						<label htmlFor="inputFirstName">FirstName</label>
-						<input type="text" className="form-control" id="inputFirstName" placeholder="firstname" name="firstname" onChange={this.handleChange} />
+						<label htmlFor="inputPassword4">Password</label>
+						<input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
 					</div>
 				</div>
 				<div className="form-group">
@@ -46,7 +46,7 @@ export class RefinanceFormPropertyDetails extends Component {
 					</div>
 					<div className="form-group col-md-2">
 						<label htmlFor="inputZip">Zip</label>
-						<input type="text" className="form-control" id="inputZip" />
+						<input type="text" className="form-control" id="inputZip" name="zipcode" onChange={this.handleChange} />
 					</div>
 				</div>
 
@@ -64,8 +64,6 @@ export class RefinanceFormPropertyDetails extends Component {
 						<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
 					</div>
 				</div>
-				{/*<button className="btn btn-primary float-right">Submit</button>*/}
-
 
 				<div className="row">
 					<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh'}}>

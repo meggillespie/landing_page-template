@@ -1,8 +1,10 @@
 import React, { Component }  from 'react';
-import { RefinanceFormPersonalDetails } from '../../layouts/RefinanceForm/RefinanceFormPersonalDetails';
-import { RefinanceFormLoanDetails } from '../../layouts/RefinanceForm/RefinanceFormLoanDetails';
-import { RefinanceFormPropertyDetails } from '../../layouts/RefinanceForm/RefinanceFormPropertyDetails';
-
+import { RefinanceFormPersonalDetails } from '../../templates/RefinanceForm/RefinanceFormPersonalDetails';
+import { RefinanceFormLoanDetails } from '../../templates/RefinanceForm/RefinanceFormLoanDetails';
+import { RefinanceFormPropertyDetails } from '../../templates/RefinanceForm/RefinanceFormPropertyDetails';
+import { PurchaseFormPersonalDetails } from '../../templates/PurchaseForm/PurchaseFormPersonalDetails';
+import { PurchaseFormLoanDetails } from '../../templates/PurchaseForm/PurchaseFormLoanDetails';
+import { PurchaseFormPropertyDetails } from '../../templates/PurchaseForm/PurchaseFormPropertyDetails';
 
 export class LeadForm extends Component {
 	constructor(props) {
@@ -10,28 +12,35 @@ export class LeadForm extends Component {
 
 		this.state = {
 			currentStep: 1,
+			name: '',
 			email: '',
-			firstname: '',
+			phone: '',
 			zipcode: '',
+			creditScore: '',
+			employmentStatus: '',
+			monthlyIncome: '',
+			monthlyExpenses: '',
+
 			propertyType: '',
 			estimatedValue: '',
+			currentLoanType: '',
 			originalPurchasePrice: '',
 			dateOfPurchase: '',
 			dateOfLastRefi: '',
-			loanAmount: '',
-			currentLoanType: '',
+			originalLoanAmount: '',
 			currentRate: '',
 			mortgageBalance: '',
-			monthlyPiti: '',
+			monthlyPI: '',
+
 			currentEscrow: '',
 			escrowFwd: '',
+			hoi: '',
+			tax: '',
+
 			secondMortgage: '',
+			foreclosure: '',
 			lateMortgagePayments: '',
-			cashOut: '',
-			employmentStatus: '',
-			monthlyExpenses: '',
-			creditScore: '',
-			monthlyIncome: ''
+			cashOut: ''
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -42,22 +51,20 @@ export class LeadForm extends Component {
 		console.log(e);
 
 		const {name, value} = e.target;
-		this.setState({
-			[name]: value
-		})
+		this.setState({ [name]: value })
 	};
 
 	handleSubmit = e => {
 		e.preventDefault();
 
-		const { email, firstname, phone, zipcode, propertyType, estimatedValue, originalPurchasePrice, dateOfPurchase,
-			dateOfLastRefi, loanAmount, currentLoanType, currentRate, mortgageBalance, monthlyPiti, currentEscrow,
-			escrowFwd, secondMortgage, lateMortgagePayments, cashOut, employmentStatus, monthlyExpenses, creditScore,
-			monthlyIncome } = this.state;
+		const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
+			propertyType, estimatedValue, originalPurchasePrice, dateOfPurchase, dateOfLastRefi, originalLoanAmount,
+			currentLoanType, currentRate, mortgageBalance, monthlyPiti, currentEscrow,
+			escrowFwd, secondMortgage, lateMortgagePayments, cashOut } = this.state;
 
 		alert(`Your Refinance Details: \n 
            Email: ${email} \n 
-           First Name: ${firstname} \n
+           First Name: ${name} \n
            Phone Number: ${phone} \n
            Zipcode: ${zipcode} \n 
            Employment Status: ${employmentStatus} \n
@@ -69,7 +76,7 @@ export class LeadForm extends Component {
            Original Purchase Price: ${originalPurchasePrice} \n
            Date of Purchase: ${dateOfPurchase} \n
            Date of Last Refi: ${dateOfLastRefi} \n
-           Loan Amount: ${loanAmount} \n
+           Orig. Loan Amount: ${originalLoanAmount} \n
            Current Loan Type: ${currentLoanType} \n
            Current Interest Rate: ${currentRate} \n
            Mortgage Balance: ${mortgageBalance} \n
@@ -83,22 +90,16 @@ export class LeadForm extends Component {
 
 	_next = () => {
 		let currentStep = this.state.currentStep;
-
 		currentStep = currentStep >= 2 ? 3 : currentStep + 1;
 
-		this.setState({
-			currentStep: currentStep
-		})
+		this.setState({ currentStep: currentStep })
 	};
 
 	_prev = () => {
 		let currentStep = this.state.currentStep;
-
 		currentStep = currentStep <= 1 ? 1 : currentStep - 1;
 
-		this.setState({
-			currentStep: currentStep
-		})
+		this.setState({ currentStep: currentStep })
 	};
 
 
@@ -109,11 +110,9 @@ export class LeadForm extends Component {
 	previousButton() {
 		let currentStep = this.state.currentStep;
 
-		if ( currentStep !==1 ) {
+		if (currentStep !==1) {
 			return (
-				<button
-					className="btn btn-secondary"
-					type="button" onClick={this._prev}>
+				<button className="btn btn-secondary" type="button" onClick={ this._prev }>
 					Previous
 				</button>
 			)
@@ -124,11 +123,9 @@ export class LeadForm extends Component {
 	nextButton() {
 		let currentStep = this.state.currentStep;
 
-		if( currentStep < 3 ){
+		if (currentStep < 3){
 			return (
-				<button
-					className="btn btn-primary float-right"
-					type="button" onClick={this._next}>
+				<button className="btn btn-primary float-right" type="button" onClick={ this._next }>
 					Next
 				</button>
 			)
@@ -140,7 +137,7 @@ export class LeadForm extends Component {
 	submitButton() {
 		let currentStep = this.state.currentStep;
 
-		if ( currentStep > 2 ) {
+		if (currentStep > 2) {
 			return (
 				<button className="btn btn-primary float-right">Submit</button>
 			)
@@ -151,26 +148,38 @@ export class LeadForm extends Component {
 	/*
 	 * Render function
 	 */
-
 	render() {
-		console.log(this.state);
+		let formSubHeading = '';
+
+		{ (() => {
+			switch(this.state.currentStep) {
+				case  1:
+					return formSubHeading = 'Personal Details';
+				case 2:
+					return formSubHeading = 'Loan Details';
+				case  3:
+					return formSubHeading = 'Loan Details Cont.';
+				default:
+					return formSubHeading += '';
+			}
+		}) () }
 
 		return (
 			<div>
-				<p>Step {this.state.currentStep} </p>
+				<p className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</p>
 
-				<form onSubmit={this.handleSubmit}>
+				<form onSubmit={ this.handleSubmit } style={{ marginBottom: '15vh'}} className="text-left">
 						{ (() => {
 
-							if ( this.props.formIndicator === 'refinance' ) {
+							if (this.props.formIndicator === 'refinance') {
 
 								switch(this.state.currentStep) {
 									case  1:
-										return < RefinanceFormPersonalDetails onChange={this.handleChange} />;
+										return <RefinanceFormPersonalDetails onChange={ this.handleChange } />;
 									case 2:
-										return <RefinanceFormLoanDetails onChange={this.handleChange} />;
+										return <RefinanceFormLoanDetails onChange={ this.handleChange } />;
 									case  3:
-										return <RefinanceFormPropertyDetails onChange={this.handleChange} />;
+										return <RefinanceFormPropertyDetails onChange={ this.handleChange } />;
 									default:
 										return null;
 								}
@@ -178,17 +187,16 @@ export class LeadForm extends Component {
 
 								switch(this.state.currentStep) {
 									case  1:
-										return < RefinanceFormPersonalDetails onChange={this.handleChange} />;
+										return <PurchaseFormPersonalDetails onChange={ this.handleChange } />;
 									case 2:
-										return <RefinanceFormLoanDetails onChange={this.handleChange} />;
+										return <PurchaseFormLoanDetails onChange={ this.handleChange } />;
 									case  3:
-										return <RefinanceFormPropertyDetails onChange={this.handleChange} />;
+										return <PurchaseFormPropertyDetails onChange={ this.handleChange } />;
 									default:
 										return null;
 								}
 							}
 						}) () }
-
 
 					{ this.previousButton() }
 					{ this.nextButton() }

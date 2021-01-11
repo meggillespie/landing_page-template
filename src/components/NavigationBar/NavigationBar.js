@@ -70,10 +70,10 @@ export class NavigationBar extends Component {
 					background: 'rgba(255, 255, 255)',
 					boxShadow: '0px 5px 5px grey',
 					WebkitTransitionProperty: 'background',
-					WebkitTransitionDuration: '1.75s',
+					WebkitTransitionDuration: '1s',
 					WebkitTransitionTimingFunction: 'linear',
 					transitionProperty: 'background',
-					transitionDuration: '1.75s',
+					transitionDuration: '1s',
 					transitionTimingFunction: 'linear'
 				},
 				scrollTopArr: this.state.scrollTopArr.concat(e.target.scrollTop)
@@ -85,10 +85,10 @@ export class NavigationBar extends Component {
 					background: 'rgba(255, 255, 255, 0)',
 					boxShadow: 'none',
 					WebkitTransitionProperty: 'background',
-					WebkitTransitionDuration: '1.75s',
+					WebkitTransitionDuration: '1s',
 					WebkitTransitionTimingFunction: 'linear',
 					transitionProperty: 'background',
-					transitionDuration: '1.75s',
+					transitionDuration: '1s',
 					transitionTimingFunction: 'linear'
 				}
 			});
@@ -144,9 +144,9 @@ export class NavigationBar extends Component {
 										</li>
 
 										<li className="list-inline-item">
-											<span>Message Our</span>
+											<span>Text</span>
 											<br/>
-											<span style={{ fontWeight: '400' }}>Loan Advisors</span>
+											<span style={{ fontWeight: '400' }}>Loan Expert</span>
 										</li>
 									</ul>
 								</a>

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import { Link } from 'react-router-dom'
 import { MainCard } from '../../components/MainCard/MainCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import homeBckgrd from '../../media/Room8.jpeg';
 import './Home.scss';
 
@@ -19,13 +17,13 @@ export class Home extends Component {
 								textAlignment="text-center"
 								top="45%"
 								left="50%"
-								heading="How much can you save?"
-								text1="Purchase & Refinance Home Loans"
-								text2="We compare rates from multiple lenders."
-								text3="Get your quote now!"
+								heading="How Much Can You Save?"
+								text1="Get Your Rate & Qualify Today For Free"
+								text2="Low Rates & Fast Closings"
+								text3="Get Your Quote Now!"
 								numberOfButtons="2"
 							  button1Text="Home Purchase"
-								button1Link="/home-loans"
+								button1Link="/home-purchase"
 								button2Text="Home Refinance"
 								button2Link="/home-refinance"
 							/>
@@ -34,19 +32,18 @@ export class Home extends Component {
 				</div>
 
 
-
 				<div className="row mx-3" id="anchorTag" style={{ paddingTop: '100px', marginTop: '-70px' }}>
 					<div className="col-md-10 offset-md-1">
 						<h2 className="display-4 pt-2">What We Do</h2>
-						<p className="lead mb-0">We make the mortgages fast, easy, and stress free.</p>
-						<p className="lead mt-0">Online quotes and approval in the same day.</p>
+						<p className="lead text-muted mb-0" style={{ fontWeight: '600' }}>We Make Mortgages Fast, Easy, & Stress Free</p>
+						<p className="lead text-muted mt-0" style={{ fontWeight: '600' }}>Online Quotes & Same Day Approval</p>
 					</div>
 				</div>
 
 				<div className="row mx-3">
 					<div className="col-md-10 offset-md-1">
-						<Button href={ this.props.button1Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
-						<Button href={ this.props.button2Link } color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
+						<Button href="/home-purchase" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
+						<Button href="/home-refinance" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
 					</div>
 				</div>
 
@@ -93,7 +90,7 @@ export class Home extends Component {
 				<div className="jumbotron jumbotron-fluid mb-0"  style={{ backgroundColor: '#0b143d', color: '#f5f5f5' }}>
 					<div className="container-fluid">
 
-						<div className="row mb-3 mt-3">
+						<div className="row mb-3">
 							<div className="col-md-10 offset-md-1">
 								<h2 className="display-4">Our Mission</h2>
 								<p className="lead mt-4 mb-0" style={{ fontWeight: '500' }} >A mortgage provides more than four walls and a roof over your head.</p>
@@ -103,22 +100,21 @@ export class Home extends Component {
 							</div>
 						</div>
 
-						<div className="row mb-3 mt-4">
+						<div className="row mx-3">
+							<div className="col-md-10 offset-md-1">
+								<Button href="/home-purchase" color="light" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
+
+								<Button href="/home-refinance" color="light" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
+							</div>
+						</div>
+
+						<div className="row mt-4">
 							<div className="col-md-8 offset-md-2">
-								<div className="embed-responsive embed-responsive-16by9 border border-dark rounded-sm">
+								<div className="embed-responsive embed-responsive-16by9 border border-light rounded-sm">
 									<iframe title="intro-video" className="embed-responsive-item" src="https://www.youtube.com/embed/Z5bVH4vvsyk?version=3&loop=0&playlist=Z5bVH4vvsyk"></iframe>
 								</div>
 							</div>
 						</div>
-
-						<Link to="/purchase">
-							<Button color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
-						</Link>
-
-						<Link to="/refinance">
-							<Button color="primary" size="lg" className="m-4" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
-						</Link>
-
 
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class RefinanceFormLoanDetails extends Component {
+export class RefinanceFormPropertyDetails extends Component {
 	constructor(props) {
 		super(props);
 
@@ -13,15 +13,15 @@ export class RefinanceFormLoanDetails extends Component {
 
 	render () {
 		return(
-			<div style={{ marginTop: '25vh'}}>
+			<div>
 				<div className="form-row">
 					<div className="form-group col-md-6">
 						<label htmlFor="inputEmail4">Email</label>
 						<input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
 					</div>
 					<div className="form-group col-md-6">
-						<label htmlFor="inputPassword4">Password</label>
-						<input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
+						<label htmlFor="inputFirstName">FirstName</label>
+						<input type="text" className="form-control" id="inputFirstName" placeholder="firstname" name="firstname" onChange={this.handleChange} />
 					</div>
 				</div>
 				<div className="form-group">
@@ -46,7 +46,7 @@ export class RefinanceFormLoanDetails extends Component {
 					</div>
 					<div className="form-group col-md-2">
 						<label htmlFor="inputZip">Zip</label>
-						<input type="text" className="form-control" id="inputZip" name="zipcode" onChange={this.handleChange} />
+						<input type="text" className="form-control" id="inputZip" />
 					</div>
 				</div>
 
@@ -64,9 +64,11 @@ export class RefinanceFormLoanDetails extends Component {
 						<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
 					</div>
 				</div>
+				{/*<button className="btn btn-primary float-right">Submit</button>*/}
+
 
 				<div className="row">
-					<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh'}}>
+					<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh'}} >
 						<div className="row mb-5 mt-5">
 							<div className="col-md-8 offset-md-2">
 							</div>
