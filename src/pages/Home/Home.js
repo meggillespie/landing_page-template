@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import { MainCard } from '../../components/MainCard/MainCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import homeBckgrd from '../../media/Room8.jpeg';
+import homeBckgrd from '../../media/home-min.jpeg';
 import './Home.scss';
 
 export class Home extends Component {
@@ -51,17 +51,17 @@ export class Home extends Component {
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="home" className="text-xs-center mr-1" size="3x"/>
 						<h4>Home Loans</h4>
-						<p className="lead">Secure a home purchase loan that utilizes today’s great mortgage rates to make your dream home affordable.</p>
+						<p className="lead">Stop paying rent, or buy your ideal home. Get a home purchase loan that benefits from today’s low mortgage rates and make your dream a reality.</p>
 					</div>
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1" size="3x"/>
 						<h4>Low Rates</h4>
-						<p className="lead">Lock in great terms with current interest rates to ensure your home remains affordable—or build more equity with an update!</p>
+						<p className="lead">Secure great terms with today's interest rates to guarantee your home remains budget-friendly, and builds equity faster over a shorter span.</p>
 					</div>
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="dollar-sign" className="text-xs-center mr-1" size="3x"/>
 						<h4>Home Refinance</h4>
-						<p className="lead">Lower your rate to save money or take advantage of your home’s equity with a cash-out refinance. It’s your cash — spend it how you see fit.</p>
+						<p className="lead">Lower your rate to save money. Payoff debt at historically low rates, or just take advantage of your home’s equity with a cash-out refinance.</p>
 					</div>
 				</div>
 
@@ -69,12 +69,12 @@ export class Home extends Component {
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="vote-yea" className="text-xs-center mr-1" size="3x" />
 						<h4>Quick Approvals</h4>
-						<p className="lead">Our process is fully digital, user friendly, and we can secure your loan approval the same day.</p>
+						<p className="lead">Our process is fully digital, and user friendly. We can secure your loan approval in the same day - What are you waiting for?</p>
 					</div>
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="search-location" className="text-xs-center mr-1" size="3x" />
 						<h4>Property Evaluation</h4>
-						<p className="lead">Know where you stand. With a property evaluation in hand, you’ll have better access to your options so you can see the next move.</p>
+						<p className="lead">Having a home value report puts you in the best position to assess all your options before moving forward.</p>
 					</div>
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="money-check-alt" className="text-xs-center mr-1" size="3x" />
@@ -82,9 +82,6 @@ export class Home extends Component {
 						<p className="lead">Seize opportunity as soon as you can with our fast funding options, giving you the freedom to cure that house fever.</p>
 					</div>
 				</div>
-
-
-
 
 
 				<div className="jumbotron jumbotron-fluid mb-0"  style={{ backgroundColor: '#0b143d', color: '#f5f5f5' }}>
@@ -96,7 +93,7 @@ export class Home extends Component {
 								<p className="lead mt-4 mb-0" style={{ fontWeight: '500' }} >A mortgage provides more than four walls and a roof over your head.</p>
 								<p className="lead mt-0 mb-0" style={{ fontWeight: '500' }} >It's a place to call home, to raise your family, make memories with friends, and build communities.</p>
 								<p className="lead mt-0" style={{ fontWeight: '500' }} >It's meeting personal financial goals and an investment in your future.</p>
-								<p className="lead mt-4" style={{ fontWeight: '500' }} >We compare rates and terms from various lenders to craft a mortgage and experience to uniquely fit your needs and goals.</p>
+								<p className="lead mt-4" style={{ fontWeight: '500' }} >At Lakeway Lending, we tailor your mortgage to uniquely fit your needs and goals.</p>
 							</div>
 						</div>
 

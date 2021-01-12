@@ -21,7 +21,8 @@ export class RefinanceFormLoanDetailsCont extends Component {
 					</div>
 					<div className="form-group col-md-6">
 						<label htmlFor="inputFirstName">FirstName</label>
-						<input type="text" className="form-control" id="inputFirstName" placeholder="firstname" name="firstname" onChange={this.handleChange} />
+						<input type="text" className="form-control" id="inputFirstName" placeholder="firstname" name="firstname"
+						       onChange={this.handleChange} />
 					</div>
 				</div>
 				<div className="form-group">
@@ -64,18 +65,6 @@ export class RefinanceFormLoanDetailsCont extends Component {
 						<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
 					</div>
 				</div>
-				{/*<button className="btn btn-primary float-right">Submit</button>*/}
-
-
-				<div className="row">
-					<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh'}} >
-						<div className="row mb-5 mt-5">
-							<div className="col-md-8 offset-md-2">
-							</div>
-						</div>
-					</div>
-				</div>
-
 
 			</div>
 		);

@@ -1,0 +1,45 @@
+@import "../../variables";
+
+.navbar-toggler {
+  background-color: $primary_color;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+  text-align: left;
+}
+
+.dropdown-item:active {
+  background-color: $primary_color;
+}
+
+//.dropdown:hover > .dropdown-menu {
+//  display: block;
+//}
+//
+//.dropdown > .dropdown-toggle:active {
+//  /*Without this, clicking will make it sticky*/
+//  pointer-events: none;
+//}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  .navbar {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 5px grey;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-block {
+    visibility: hidden;
+  }
+}
