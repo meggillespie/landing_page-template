@@ -7,8 +7,8 @@ import { LeadForm } from '../../components/LeadForm/LeadForm';
 export class Purchase extends Component {
 	render () {
 		return(
-			<div className="row">
-				<div className="col-md-10 offset-md-1" style={{ marginTop: '21vh'}}>
+			<div className="row" >
+				<div className="col-md-10 offset-md-1" style={{ marginTop: '21vh' }}>
 					<h2 className="display-4 pt-2">Home Purchase Qualifier</h2>
 					<div className="row mb-2 mt-3 ">
 						<div className="col-md-10 offset-md-1"

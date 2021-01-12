@@ -54,7 +54,6 @@ export class LeadForm extends Component {
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		const name = target.name;
 
-		//const {name, value} = e.target;
 		this.setState({ [name]: value })
 	};
 

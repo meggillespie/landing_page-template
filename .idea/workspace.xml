@@ -2,78 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ec744c-6f3b-451c-a59b-3804a29d9630" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/media/eho.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/media/home-min.jpeg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/SocialBar/SocialBar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Austin_skyline_blur.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Austin_skyline_path.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Family_In_LiveRm.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Family_In_LiveRm2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Family_In_LiveRm3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Family_In_LiveRm4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Family_In_LiveRm5.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Family_In_LiveRm6.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/LoneStar.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room10.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room11.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room12.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room13.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room14.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room15.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room16.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room5.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room6.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room7.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/Room9.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/conventional.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home18.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home19.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home5.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home6-blur.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home6.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home7.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/home8.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/ll-logo-8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/loan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/local.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/military-2.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/military-3.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/military.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/military.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/moving.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/porch.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/porch2.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home5.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home6.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase-home7.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/purchase2.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/refinance.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/reverse.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/reverse.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/reverse2.mov" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/reverse3.mov" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterPath="$PROJECT_DIR$/src/layout/Footer/Footer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Footer/Footer.scss" afterPath="$PROJECT_DIR$/src/layout/Footer/Footer.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js" afterPath="$PROJECT_DIR$/src/layout/NavigationBar/NavigationBar.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.scss" afterPath="$PROJECT_DIR$/src/layout/NavigationBar/NavigationBar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" afterPath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layout/Main.js" afterPath="$PROJECT_DIR$/src/layout/Main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js" afterPath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js" afterPath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js" afterPath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" afterPath="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -87,14 +17,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42001408">
+    <splitter split-orientation="horizontal" split-proportion="0.6946058">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="LeadForm.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="LeadForm.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="533">
-                  <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+                <state relative-caret-position="-1476">
+                  <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#42#0" expanded="true" />
                   </folding>
@@ -102,7 +32,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RefinanceFormPersonalDetails.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="RefinanceFormPersonalDetails.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="559">
@@ -168,6 +98,16 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="variables.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/variables.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="39">
+                  <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-second>
     </splitter>
@@ -225,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/layouts/PurchaseForm/PurchaseFormPropertyDetails.js" />
         <option value="$PROJECT_DIR$/src/layouts/PurchaseForm/PurchaseFormLoanDetails.js" />
         <option value="$PROJECT_DIR$/src/layouts/PurchaseForm/PurhcaseFormPersonalDetails.js" />
-        <option value="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" />
         <option value="$PROJECT_DIR$/src/pages/Refinance/Refinance.js" />
         <option value="$PROJECT_DIR$/src/templates/PurchaseForm/PurchaseFormPersonalDetails.js" />
         <option value="$PROJECT_DIR$/src/App.scss" />
@@ -235,12 +174,13 @@
         <option value="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js" />
         <option value="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js" />
         <option value="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js" />
-        <option value="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js" />
         <option value="$PROJECT_DIR$/src/layout/Main.js" />
         <option value="$PROJECT_DIR$/src/layout/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/pages/Home/Home.js" />
         <option value="$PROJECT_DIR$/src/layout/NavigationBar/NavigationBar.js" />
+        <option value="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" />
+        <option value="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
       </list>
     </option>
   </component>
@@ -317,104 +257,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RefinanceForm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -433,11 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NavigationBar" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,11 +293,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Footer" />
+              <option name="myItemId" value="LeadForm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,12 +463,12 @@
       <workItem from="1608495492082" duration="14320000" />
       <workItem from="1609634040108" duration="6557000" />
       <workItem from="1610318818882" duration="27980000" />
-      <workItem from="1610379996171" duration="10296000" />
+      <workItem from="1610379996171" duration="11102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347457000" />
+    <option name="totallyTimeSpent" value="348263000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,7 +483,7 @@
     <frame x="0" y="25" width="1440" height="818" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15081044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15081044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -731,25 +569,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/layout/NavigationBar/NavigationBar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Purchase/Purchase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -941,16 +765,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/layout/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
@@ -969,14 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="43" column="49" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -987,11 +793,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Purchase/Purchase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#39#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="43" column="49" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1476">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
