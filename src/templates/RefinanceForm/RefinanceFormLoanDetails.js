@@ -48,17 +48,16 @@ export class RefinanceFormLoanDetails extends Component {
 					</div>
 				</div>
 
-
 				<div className="form-row">
 					<div className="form-group col-md-3">
 						<label htmlFor="yearPurchased"><strong>Year Purchased</strong></label>
 						<input type="number" className="form-control" id="yearPurchased" name="yearPurchased" placeholder="1999"
-						       onChange={ this.handleChange } required/>
+						       onChange={ this.handleChange } required />
 					</div>
 
 					<div className="form-check form-check-inline mx-auto">
 						<input className="form-check-input" type="checkbox" id="refinancedBefore" name="refinancedBefore"
-						       checked={ this.props.refinancedBefore } onChange={ this.handleChange }  />
+						       checked={ this.props.refinancedBefore } onChange={ this.handleChange } />
 						<label className="form-check-label" htmlFor="refinancedBefore"><strong><u>Check If You've Refinanced Previously</u></strong></label>
 					</div>
 

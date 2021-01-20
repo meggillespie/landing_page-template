@@ -20,12 +20,12 @@ export class LeadForm extends Component {
 			phone: '',
 			zipcode: '',
 			creditScore: '',
-			employmentStatus: 'choose',
+			employmentStatus: '',
 			monthlyIncome: '',
 			monthlyExpenses: '',
 
-			propertyType: 'choose',
-			currentLoanType: 'choose',
+			propertyType: '',
+			currentLoanType: '',
 			estimatedValue: '',
 			yearPurchased: '',
 			dateOfLastRefi: '',
@@ -63,7 +63,7 @@ export class LeadForm extends Component {
 		const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
 			propertyType, estimatedValue, currentLoanType, yearPurchased, dateOfLastRefi, originalLoanAmount, cashOutAmount,
 			currentRate, mortgageBalance, currentEscrow, monthlyPI, hoi, tax, escrowFwd, secondMortgage, lateMortgagePayments,
-			foreclosure, originalPurchasePrice, } = this.state;
+			foreclosure, originalPurchasePrice, } = this.state.formFields;
 
 		alert(`Your Refinance Details: \n 
            Email: ${email} \n 
@@ -85,12 +85,12 @@ export class LeadForm extends Component {
            
            Current Interest Rate: ${currentRate} \n
            Mortgage Balance: ${mortgageBalance} \n
-           Current Escrow Account: ${currentEscrow} \n
+           Second Mortgage: ${secondMortgage} \n
            Monthly PI: ${monthlyPI} \n
            HOI: ${hoi} \n
            TAX: ${tax} \n      
+           Current Escrow Account: ${currentEscrow} \n
            Escrow Moving Forward: ${escrowFwd} \n
-           Second Mortgage: ${secondMortgage} \n
            Foreclosure: ${foreclosure} \n
            Late Mortgage Payments: ${lateMortgagePayments} \n
            
@@ -99,9 +99,15 @@ export class LeadForm extends Component {
 
 	_next = () => {
 		let currentStep = this.state.currentStep;
-		currentStep = currentStep >= 2 ? 3 : currentStep + 1;
+		let formComplete = this._checkFields();
 
-		this.setState({ currentStep: currentStep })
+		if ( formComplete ) {
+			currentStep = currentStep >= 2 ? 3 : currentStep + 1;
+
+			this.setState({ currentStep: currentStep })
+		} else {
+			alert(`All Fields Must Be Completed`);
+		}
 	};
 
 	_prev = () => {
@@ -109,6 +115,28 @@ export class LeadForm extends Component {
 		currentStep = currentStep <= 1 ? 1 : currentStep - 1;
 
 		this.setState({ currentStep: currentStep })
+	};
+
+	_checkFields = () => {
+		let formValues = Object.values(this.state);
+		let emptyFieldIndicator = { empty: [], present: [] };
+
+		if ( this.state.currentStep === 1 ) {
+			for (let i = 2; i <= 10; i++) {
+				console.log(emptyFieldIndicator.empty);
+				formValues[i] === "" ? emptyFieldIndicator.empty.push(formValues[i]) : emptyFieldIndicator.present.push(formValues[i]);
+				console.log(emptyFieldIndicator.empty);
+			}
+
+		} else if ( this.state.currentStep === 2) {
+
+		} else if ( this.state.currentStep === 3 ) {
+
+		}
+
+		console.log(emptyFieldIndicator.empty);
+
+		return emptyFieldIndicator.empty.length === 0;
 	};
 
 
@@ -185,9 +213,14 @@ export class LeadForm extends Component {
 										return <RefinanceFormLoanDetails
 															refinancedBefore={ this.state.refinancedBefore }
 										          cashOut={ this.state.cashOut }
+															propertyType = { this.state.propertyType }
+															currentLoanType = { this.state.currentLoanType }
 										          onChange={ this.handleChange } />;
 									case  3:
-										return <RefinanceFormLoanDetailsCont onChange={ this.handleChange } />;
+										return <RefinanceFormLoanDetailsCont
+															currentEscrow={ this.state.currentEscrow }
+															escrowFwd={ this.state.escrowFwd }
+															onChange={ this.handleChange } />;
 									default:
 										return null;
 								}

@@ -18,7 +18,7 @@ export class RefinanceFormPersonalDetails extends Component {
 				<div className="form-group col-md-6">
 					<label htmlFor="inputName"><strong>Name</strong></label>
 					<input type="name" className="form-control" id="inputName" name="name" placeholder="Name"
-					       onChange={ this.handleChange }  required/>
+					       onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-6">
 					<label htmlFor="inputEmail"><strong>Email</strong></label>

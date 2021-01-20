@@ -15,57 +15,66 @@ export class RefinanceFormLoanDetailsCont extends Component {
 		return(
 			<div>
 				<div className="form-row">
-					<div className="form-group col-md-6">
-						<label htmlFor="inputEmail4">Email</label>
-						<input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
-					</div>
-					<div className="form-group col-md-6">
-						<label htmlFor="inputFirstName">FirstName</label>
-						<input type="text" className="form-control" id="inputFirstName" placeholder="firstname" name="firstname"
-						       onChange={this.handleChange} />
-					</div>
-				</div>
-				<div className="form-group">
-					<label htmlFor="inputAddress">Address</label>
-					<input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-				</div>
-				<div className="form-group">
-					<label htmlFor="inputAddress2">Address 2</label>
-					<input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-				</div>
-				<div className="form-row">
-					<div className="form-group col-md-6">
-						<label htmlFor="inputCity">City</label>
-						<input type="text" className="form-control" id="inputCity" />
+					<div className="form-group col-md-4">
+						<label htmlFor="currentRate"><strong>Current Interest Rate</strong></label>
+						<input type="number" className="form-control" id="currentRate" name="currentRate" placeholder="4.5"
+						       onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="inputState">State</label>
-						<select id="inputState" className="form-control">
-							<option selected>Choose...</option>
-							<option>...</option>
-						</select>
+						<label htmlFor="mortgageBalance"><strong>Mortgage Balance</strong></label>
+						<input type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
+						       onChange={ this.handleChange } />
 					</div>
-					<div className="form-group col-md-2">
-						<label htmlFor="inputZip">Zip</label>
-						<input type="text" className="form-control" id="inputZip" />
-					</div>
-				</div>
-
-				<div className="form-group">
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-						<label className="form-check-label" htmlFor="inlineCheckbox1">1</label>
-					</div>
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-						<label className="form-check-label" htmlFor="inlineCheckbox2">2</label>
-					</div>
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-						<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
+					<div className="form-group col-md-4">
+						<label htmlFor="secondMortgage"><strong>Second Mortgage Balance</strong></label>
+						<input type="number" className="form-control" id="secondMortgage" name="secondMortgage" placeholder="$0"
+						       onChange={ this.handleChange } />
 					</div>
 				</div>
 
+				<div className="form-row">
+					<div className="form-group col-md-4">
+						<label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></label>
+						<input type="number" className="form-control" id="monthlyPI" name="monthlyPI" placeholder="$2,700"
+						       onChange={ this.handleChange } required/>
+					</div>
+					<div className="form-group col-md-4">
+						<label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></label>
+						<input type="number" className="form-control" id="hoi" name="hoi" placeholder="$125"
+						       onChange={ this.handleChange } required/>
+					</div>
+					<div className="form-group col-md-4">
+						<label htmlFor="tax"><strong>Annual Property Tax</strong></label>
+						<input type="number" className="form-control" id="tax" name="tax" placeholder="$6,000"
+						       onChange={ this.handleChange } required/>
+					</div>
+				</div>
+
+				<div className="form-row">
+					<div className="form-check form-check-inline mx-auto my-4">
+						<input className="form-check-input" type="checkbox" id="currentEscrow" name="currentEscrow"
+						       checked={ this.props.currentEscrow } onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="currentEscrow"><strong><u>Check If You're Currently Escrowing</u></strong></label>
+					</div>
+					<div className="form-check form-check-inline mx-auto my-4">
+						<input className="form-check-input" type="checkbox" id="escrowFwd" name="escrowFwd"
+						       checked={ this.props.escrowFwd } onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="escrowFwd"><strong><u>Check If Want To Escrow Moving Forward</u></strong></label>
+					</div>
+				</div>
+
+				<div className="form-row">
+					<div className="form-check form-check-inline mx-auto my-4">
+						<input className="form-check-input" type="checkbox" id="foreclosure" name="foreclosure"
+						       checked={ this.props.foreclosure } onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="foreclosure"><strong><u>Check If You've Foreclosed Since 2018</u></strong></label>
+					</div>
+					<div className="form-check form-check-inline mx-auto my-4">
+						<input className="form-check-input" type="checkbox" id="lateMortgagePayments" name="lateMortgagePayments"
+						       checked={ this.props.lateMortgagePayments } onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="lateMortgagePayments"><strong><u>Check If You Have Any Late Mortgage Payments</u></strong></label>
+					</div>
+				</div>
 			</div>
 		);
 	}
