@@ -18,17 +18,17 @@ export class RefinanceFormLoanDetailsCont extends Component {
 					<div className="form-group col-md-4">
 						<label htmlFor="currentRate"><strong>Current Interest Rate</strong></label>
 						<input type="number" className="form-control" id="currentRate" name="currentRate" placeholder="4.5"
-						       onChange={ this.handleChange } required/>
+						       value={this.props.currentRate} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
 						<label htmlFor="mortgageBalance"><strong>Mortgage Balance</strong></label>
 						<input type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
-						       onChange={ this.handleChange } />
+						       value={this.props.mortgageBalance} onChange={ this.handleChange } />
 					</div>
 					<div className="form-group col-md-4">
 						<label htmlFor="secondMortgage"><strong>Second Mortgage Balance</strong></label>
 						<input type="number" className="form-control" id="secondMortgage" name="secondMortgage" placeholder="$0"
-						       onChange={ this.handleChange } />
+						       value={this.props.secondMortgage} onChange={ this.handleChange } />
 					</div>
 				</div>
 
@@ -36,17 +36,17 @@ export class RefinanceFormLoanDetailsCont extends Component {
 					<div className="form-group col-md-4">
 						<label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></label>
 						<input type="number" className="form-control" id="monthlyPI" name="monthlyPI" placeholder="$2,700"
-						       onChange={ this.handleChange } required/>
+						       value={this.props.monthlyPI} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
 						<label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></label>
 						<input type="number" className="form-control" id="hoi" name="hoi" placeholder="$125"
-						       onChange={ this.handleChange } required/>
+						       value={this.props.hoi} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
 						<label htmlFor="tax"><strong>Annual Property Tax</strong></label>
 						<input type="number" className="form-control" id="tax" name="tax" placeholder="$6,000"
-						       onChange={ this.handleChange } required/>
+						       value={this.props.tax} onChange={ this.handleChange } required/>
 					</div>
 				</div>
 

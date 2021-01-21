@@ -18,12 +18,12 @@ export class RefinanceFormPersonalDetails extends Component {
 				<div className="form-group col-md-6">
 					<label htmlFor="inputName"><strong>Name</strong></label>
 					<input type="name" className="form-control" id="inputName" name="name" placeholder="Name"
-					       onChange={ this.handleChange } required/>
+					       value={this.props.name} onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-6">
 					<label htmlFor="inputEmail"><strong>Email</strong></label>
 					<input type="email" className="form-control" id="inputEmail" name="email" placeholder="Email"
-					       onChange={ this.handleChange } />
+					       value={this.props.email} onChange={ this.handleChange } required/>
 				</div>
 			</div>
 
@@ -31,17 +31,17 @@ export class RefinanceFormPersonalDetails extends Component {
 				<div className="form-group col-md-4">
 					<label htmlFor="inputPhone"><strong>Phone Number</strong></label>
 					<input type="tel" className="form-control" id="inputPhone" name="phone" placeholder="512-555-1234"
-					       onChange={ this.handleChange } />
+					       value={this.props.phone} onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="zipcode"><strong>Zipcode</strong></label>
 					<input type="number" className="form-control" id="zipcode" name="zipcode" placeholder="78738"
-					       onChange={ this.handleChange } />
+					       value={this.props.zipcode} onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="creditScore"><strong>FICO Score</strong></label>
-					<input type="number" className="form-control" id="creditScore" name="creditScore" placeholder="670"
-					       onChange={ this.handleChange } />
+					<input type="number" className="form-control" id="creditScore" name="creditScore" placeholder="680"
+					       value={this.props.creditScore} onChange={ this.handleChange } required/>
 				</div>
 			</div>
 
@@ -49,7 +49,7 @@ export class RefinanceFormPersonalDetails extends Component {
 				<div className="form-group col-md-4">
 					<label htmlFor="employmentStatus"><strong>Employment Status</strong></label>
 					<select id="employmentStatus" className="form-control" name="employmentStatus"
-					        value={this.props.employmentStatus} onChange={ this.handleChange } >
+					        value={this.props.employmentStatus} onChange={ this.handleChange } required>
 						<option value="choose">Choose...</option>
 						<option value="salary">Salaried</option>
 						<option value="commission">Commission</option>
@@ -61,12 +61,12 @@ export class RefinanceFormPersonalDetails extends Component {
 				<div className="form-group col-md-4">
 					<label htmlFor="monthlyIncome"><strong>Gross Monthly Income</strong></label>
 					<input type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$6,250"
-					       onChange={ this.handleChange } />
+					       value={this.props.monthlyIncome} onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-4">
-					<label htmlFor="expenses"><strong>Monthly Credit Expenses</strong></label>
-					<input type="number" className="form-control" id="expenses" name="expenses" placeholder="$1,150"
-					       onChange={ this.handleChange } />
+					<label htmlFor="monthlyExpenses"><strong>Monthly Credit Expenses</strong></label>
+					<input type="number" className="form-control" id="monthlyExpenses" name="monthlyExpenses" placeholder="$1,150"
+					       value={this.props.monthlyExpenses} onChange={ this.handleChange } required/>
 				</div>
 			</div>
 		</div>

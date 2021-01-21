@@ -63,7 +63,7 @@ export class LeadForm extends Component {
 		const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
 			propertyType, estimatedValue, currentLoanType, yearPurchased, dateOfLastRefi, originalLoanAmount, cashOutAmount,
 			currentRate, mortgageBalance, currentEscrow, monthlyPI, hoi, tax, escrowFwd, secondMortgage, lateMortgagePayments,
-			foreclosure, originalPurchasePrice, } = this.state.formFields;
+			foreclosure, originalPurchasePrice, } = this.state;
 
 		alert(`Your Refinance Details: \n 
            Email: ${email} \n 
@@ -122,19 +122,21 @@ export class LeadForm extends Component {
 		let emptyFieldIndicator = { empty: [], present: [] };
 
 		if ( this.state.currentStep === 1 ) {
-			for (let i = 2; i <= 10; i++) {
-				console.log(emptyFieldIndicator.empty);
-				formValues[i] === "" ? emptyFieldIndicator.empty.push(formValues[i]) : emptyFieldIndicator.present.push(formValues[i]);
-				console.log(emptyFieldIndicator.empty);
+			for (let i = 3; i <= 10; i++) {
+				//console.log(formValues[i]);
+				if(	formValues[i] === "" || formValues[i] === "choose" ) {
+					emptyFieldIndicator.empty.push(formValues[i])
+				}
 			}
 
-		} else if ( this.state.currentStep === 2) {
-
-		} else if ( this.state.currentStep === 3 ) {
-
 		}
+			// else if ( this.state.currentStep === 2) {
+			//
+			// } else if ( this.state.currentStep === 3 ) {
+			//
+			// }
 
-		console.log(emptyFieldIndicator.empty);
+		//console.log(emptyFieldIndicator.empty);
 
 		return emptyFieldIndicator.empty.length === 0;
 	};
@@ -207,17 +209,35 @@ export class LeadForm extends Component {
 								switch(this.state.currentStep) {
 									case  1:
 										return <RefinanceFormPersonalDetails
+															name={ this.state.name }
+															email={ this.state.email }
+															phone={ this.state.phone }
+															zipcode={ this.state.zipcode }
+															creditScore={ this.state.creditScore }
 															employmentStatus={ this.state.employmentStatus }
+															monthlyIncome={ this.state.monthlyIncome }
+															monthlyExpenses={ this.state.monthlyExpenses }
 															onChange={ this.handleChange } />;
 									case 2:
 										return <RefinanceFormLoanDetails
-															refinancedBefore={ this.state.refinancedBefore }
-										          cashOut={ this.state.cashOut }
 															propertyType = { this.state.propertyType }
 															currentLoanType = { this.state.currentLoanType }
-										          onChange={ this.handleChange } />;
+															estimatedValue = { this.state.estimatedValue }
+															yearPurchased = { this.state.yearPurchased }
+															refinancedBefore={ this.state.refinancedBefore }
+															dateOfLastRefi = { this.state.dateOfLastRefi }
+															originalLoanAmount = { this.state.originalLoanAmount }
+															cashOut={ this.state.cashOut }
+															cashOutAmount={ this.state.cashOutAmount }
+															onChange={ this.handleChange } />;
 									case  3:
 										return <RefinanceFormLoanDetailsCont
+															currentRate={ this.state.currentRate }
+															mortgageBalance={ this.state.mortgageBalance }
+															secondMortgage={ this.state.secondMortgage }
+															monthlyPI={ this.state.monthlyPI }
+															hoi={ this.state.hoi }
+															tax={ this.state.tax }
 															currentEscrow={ this.state.currentEscrow }
 															escrowFwd={ this.state.escrowFwd }
 															onChange={ this.handleChange } />;

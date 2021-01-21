@@ -20,7 +20,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-4">
 						<label htmlFor="propertyType"><strong>Property Type</strong></label>
 						<select id="propertyType" className="form-control" name="propertyType"
-						        value={this.props.propertyType} onChange={ this.handleChange } >
+						        value={this.props.propertyType} onChange={ this.handleChange } required>
 							<option value="choose">Choose...</option>
 							<option value="SFR">Single Family</option>
 							<option value="townhome">Townhome</option>
@@ -32,7 +32,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-4">
 						<label htmlFor="currentLoanType"><strong>Current Loan Type</strong></label>
 						<select id="currentLoanType" className="form-control" name="currentLoanType"
-						        value={this.props.currentLoanType} onChange={ this.handleChange } >
+						        value={this.props.currentLoanType} onChange={ this.handleChange } required>
 							<option value="choose">Choose...</option>
 							<option value="CONV">Conventional</option>
 							<option value="FHA">FHA</option>
@@ -44,7 +44,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-4">
 						<label htmlFor="estimatedValue"><strong>Estimated Home Value</strong></label>
 						<input type="number" className="form-control" id="estimatedValue" name="estimatedValue"
-						       placeholder="$350,000" onChange={ this.handleChange } />
+						       value={this.props.estimatedValue} placeholder="$350,000" onChange={ this.handleChange } required/>
 					</div>
 				</div>
 
@@ -52,7 +52,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-3">
 						<label htmlFor="yearPurchased"><strong>Year Purchased</strong></label>
 						<input type="number" className="form-control" id="yearPurchased" name="yearPurchased" placeholder="1999"
-						       onChange={ this.handleChange } required />
+						       value={this.props.yearPurchased} onChange={ this.handleChange } required />
 					</div>
 
 					<div className="form-check form-check-inline mx-auto">
@@ -64,8 +64,8 @@ export class RefinanceFormLoanDetails extends Component {
 					{ this.props.refinancedBefore ? (
 							<div className="form-group col-md-3">
 								<label htmlFor="dateOfLastRefi"><strong>Year Refinanced</strong></label>
-								<input type="number" className="form-control" id="dateOfLastRefi" name="dateOfLastRefi"
-								       placeholder="2005" onChange={ this.handleChange } required/>
+								<input type="number" className="form-control" id="dateOfLastRefi" name="dateOfLastRefi" placeholder="2005"
+								       value={this.props.dateOfLastRefi} onChange={ this.handleChange } required/>
 							</div>
 						) : (
 							<div className="form-group col-md-3"></div>
@@ -76,8 +76,8 @@ export class RefinanceFormLoanDetails extends Component {
 				<div className="form-row">
 					<div className="form-group col-md-3">
 						<label htmlFor="originalLoanAmount"><strong>{ loanType } Loan Amount</strong></label>
-						<input type="number" className="form-control" id="originalLoanAmount" name="originalLoanAmount"
-						       placeholder="$305,000" onChange={ this.handleChange } required/>
+						<input type="number" className="form-control" id="originalLoanAmount" name="originalLoanAmount" placeholder="$305,000"
+						       value={this.props.originalLoanAmount} onChange={ this.handleChange } required/>
 					</div>
 
 					<div className="form-check form-check-inline mx-auto">
@@ -90,7 +90,7 @@ export class RefinanceFormLoanDetails extends Component {
 							<div className="form-group col-md-3">
 								<label htmlFor="cashOutAmount"><strong>Cash Out Amount</strong></label>
 								<input type="number" className="form-control" id="cashOutAmount" name="cashOutAmount" placeholder="$25,000"
-								       onChange={ this.handleChange } required/>
+								       value={this.props.cashOutAmount} onChange={ this.handleChange } required/>
 							</div>
 						) : (
 							<div className="form-group col-md-3"></div>
