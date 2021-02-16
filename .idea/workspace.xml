@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ec744c-6f3b-451c-a59b-3804a29d9630" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/media/lakewayLending_MF_Logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" afterPath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js" afterPath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js" afterPath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js" afterPath="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layout/Footer/Footer.js" afterPath="$PROJECT_DIR$/src/layout/Footer/Footer.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,14 +18,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5687104">
+    <splitter split-orientation="horizontal" split-proportion="0.16099586">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="LeadForm.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1092">
-                  <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+                <state relative-caret-position="13">
+                  <caret line="90" column="31" lean-forward="false" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -80,19 +78,31 @@
           <file leaf-file-name="RefinanceFormLoanDetails.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
+                <state relative-caret-position="286">
                   <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RefinanceFormLoanDetailsCont.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="RefinanceFormLoanDetailsCont.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="175">
                   <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Footer.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/layout/Footer/Footer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+                  <folding>
+                    <element signature="e#0#42#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -162,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/components/MainCard/MainCard.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationBar/NavigationBar.js" />
         <option value="$PROJECT_DIR$/src/layout/Main.js" />
-        <option value="$PROJECT_DIR$/src/layout/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/pages/Home/Home.js" />
         <option value="$PROJECT_DIR$/src/layout/NavigationBar/NavigationBar.js" />
         <option value="$PROJECT_DIR$/src/pages/Purchase/Purchase.js" />
@@ -170,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormPersonalDetails.js" />
         <option value="$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetailsCont.js" />
         <option value="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
+        <option value="$PROJECT_DIR$/src/layout/Footer/Footer.js" />
       </list>
     </option>
   </component>
@@ -204,6 +214,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,29 +256,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RefinanceForm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,7 +292,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Footer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,15 +317,9 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeadForm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,18 +334,18 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/meg/Apps/webApps/landing page/src/pages/Refinance/Refinance.js" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/media" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/layout" />
       <recent name="$PROJECT_DIR$/src/templates" />
       <recent name="$PROJECT_DIR$/src/layouts/RefinanceForm" />
       <recent name="$PROJECT_DIR$/src/pages/Testimonials" />
       <recent name="$PROJECT_DIR$/src/components/SideNav" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/media" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -494,12 +482,13 @@
       <workItem from="1610318818882" duration="27980000" />
       <workItem from="1610379996171" duration="11135000" />
       <workItem from="1611113388460" duration="11711000" />
-      <workItem from="1611206031359" duration="4413000" />
+      <workItem from="1611206031359" duration="4585000" />
+      <workItem from="1613445208192" duration="1473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364420000" />
+    <option name="totallyTimeSpent" value="366065000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,15 +500,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="818" extended-state="0" />
+    <frame x="0" y="25" width="1440" height="818" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15081044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15081044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872927" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -709,18 +698,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layout/Footer/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/layout/NavigationBar/NavigationBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="155" column="23" lean-forward="true" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,15 +731,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="718">
           <caret line="61" column="37" lean-forward="false" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/RefinanceForm/RefinanceFormLoanDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="286">
           <caret line="22" column="91" lean-forward="false" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
           <folding />
         </state>
@@ -782,9 +760,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        <state relative-caret-position="13">
+          <caret line="90" column="31" lean-forward="false" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layout/Footer/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

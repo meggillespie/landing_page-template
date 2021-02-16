@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import logo from '../../media/brand-logo.png';
+import logo from '../../media/lakewayLending_MF_Logo.png';
 import eho from '../../media/eho.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Footer.scss';
@@ -13,24 +13,17 @@ export class Footer extends Component {
 
 				<div className="container text-center text-md-left">
 
-					<div className="row text-center text-md-left mt-3 pb-3">
+					<div className="row text-center text-md-left mt-3 py-3">
 
-						<div className="col-md-3 col-lg-3 col-xl-3 mx-auto">
+						<div className="col-md-3 col-lg-3 col-xl-3 border-right">
 							<a href="/">
-								<img src={logo} width="155" height="50" className="img-fluid mb-3" alt="Lakeway Lending Logo" style={{ filter: 'none' }}/>
+								<img src={logo} width="auto" className="img-fluid mb-3 my-auto" alt="Lakeway Lending Logo" style={{ filter: 'none' }}/>
 							</a>
-							<p>Buy a home, or refinance with Lakeway Lending, LLC. Your online resource for personalized mortgage solutions, fast customized quotes, great rates,
+						</div>
+
+						<div className="col-md-3 col-lg-3 col-xl-3 ml-0 my-auto">
+							<p>Buy a home, or refinance with Lakeway Lending, Power by The Mortgage Firm. Your online resource for personalized mortgage solutions, fast customized quotes, great rates,
 								& service with integrity.</p>
-						</div>
-
-						<hr className="w-100 clearfix d-md-none" />
-
-						<div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-						</div>
-
-						<hr className="w-100 clearfix d-md-none" />
-
-						<div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
 						</div>
 
 						<hr className="w-100 clearfix d-md-none" />
@@ -54,7 +47,7 @@ export class Footer extends Component {
 							<div className="col-md-10 offset-md-1">
 
 								<span>
-									<p className="text-center text-md-center">&copy; { currentYear.getFullYear() } Lakeway Lending, LLC NMLS# 1916745 | Megan Gillespie NMLS# 1845419 | All Rights Reserved.</p>
+									<p className="text-center text-md-center">&copy; { currentYear.getFullYear() } Lakeway Lending, Powered by The Mortgage Firm NMLS# 189233 | Megan Gillespie NMLS# 1845419 | All Rights Reserved.</p>
 									<img src={ eho } className="mt-3" alt="embossed logo background" style={{ height: '7vh', width: 'auto' }}/>
 								</span>
 							</div>
