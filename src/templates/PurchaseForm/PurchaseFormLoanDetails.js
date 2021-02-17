@@ -13,68 +13,82 @@ export class PurchaseFormLoanDetails extends Component {
 
 	render () {
 		return(
-			<div style={{ marginTop: '25vh'}}>
+			<div>
 				<div className="form-row">
-					<div className="form-group col-md-6">
-						<label htmlFor="inputEmail4">Email</label>
-						<input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
-					</div>
-					<div className="form-group col-md-6">
-						<label htmlFor="inputPassword4">Password</label>
-						<input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
-					</div>
-				</div>
-				<div className="form-group">
-					<label htmlFor="inputAddress">Address</label>
-					<input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-				</div>
-				<div className="form-group">
-					<label htmlFor="inputAddress2">Address 2</label>
-					<input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-				</div>
-				<div className="form-row">
-					<div className="form-group col-md-6">
-						<label htmlFor="inputCity">City</label>
-						<input type="text" className="form-control" id="inputCity" />
-					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="inputState">State</label>
-						<select id="inputState" className="form-control">
-							<option selected>Choose...</option>
-							<option>...</option>
+						<label htmlFor="purchaseStage"><strong>Current Stage of Purchase</strong></label>
+						<select id="purchaseStage" className="form-control" name="purchaseStage"
+						        value={this.props.purchaseStage} onChange={ this.handleChange } required>
+							<option value="choose">Choose...</option>
+							<option value="Signed Purchase Contract">Signed Purchase Contract</option>
+							<option value="Offer Pending/Found Property">Offer Pending/Found Property</option>
+							<option value="1-3 Months">Buying in 1-3 Months</option>
+							<option value="4+ Months">Buying in 4+ Months</option>
 						</select>
 					</div>
-					<div className="form-group col-md-2">
-						<label htmlFor="inputZip">Zip</label>
-						<input type="text" className="form-control" id="inputZip" name="zipcode" onChange={this.handleChange} />
+					<div className="form-group col-md-4">
+						<label htmlFor="propertyType"><strong>Property Type</strong></label>
+						<select id="propertyType" className="form-control" name="propertyType"
+						        value={this.props.propertyType} onChange={ this.handleChange } required>
+							<option value="choose">Choose...</option>
+							<option value="SFR">Single Family</option>
+							<option value="Townhome">Townhome</option>
+							<option value="Condo">Condo</option>
+							<option value="muli-family">Multi-Family</option>
+						</select>
+					</div>
+					<div className="form-group col-md-4">
+						<label htmlFor="propertyUse"><strong>Property Use</strong></label>
+						<select id="propertyUse" className="form-control" name="propertyUse"
+						        value={this.props.propertyUse} onChange={ this.handleChange } required>
+							<option value="choose">Choose...</option>
+							<option value="Primary Home">Primary Home</option>
+							<option value="Secondary Home">Secondary Home</option>
+							<option value="Rental Property">Rental Property</option>
+						</select>
 					</div>
 				</div>
 
-				<div className="form-group">
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-						<label className="form-check-label" htmlFor="inlineCheckbox1">1</label>
+				<div className="form-row">
+					<div className="form-group col-md-4">
+						<label htmlFor="purchasePrice"><strong>Purchase Price</strong></label>
+						<input type="number" className="form-control" id="purchasePrice" name="purchasePrice" placeholder="$305,000"
+						       value={this.props.purchasePrice} onChange={ this.handleChange } required/>
 					</div>
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-						<label className="form-check-label" htmlFor="inlineCheckbox2">2</label>
+					<div className="form-group col-md-4">
+						<label htmlFor="estimatedDownPayment"><strong>Estimated Down Payment</strong></label>
+						<input type="number" className="form-control" id="estimatedDownPayment" name="estimatedDownPayment"
+						       value={this.props.estimatedDownPayment} placeholder="$40,000" onChange={ this.handleChange } required/>
 					</div>
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-						<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
-					</div>
-				</div>
-
-				<div className="row">
-					<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh'}}>
-						<div className="row mb-5 mt-5">
-							<div className="col-md-8 offset-md-2">
-							</div>
-						</div>
+					<div className="form-group col-md-4">
+						<label htmlFor="ratePreference"><strong>Rate Preference</strong></label>
+						<select id="ratePreference" className="form-control" name="ratePreference"
+						        value={this.props.ratePreference} onChange={ this.handleChange } required>
+							<option value="choose">Choose...</option>
+							<option value="Fixed">Fixed</option>
+							<option value="Variable">Variable</option>
+						</select>
 					</div>
 				</div>
 
+				<div className="form-row">
+					<div className="form-check form-check-inline mx-auto py-2">
+						<input className="form-check-input" type="checkbox" id="firstTimeHomeBuyer" name="firstTimeHomeBuyer" checked={ this.props.firstTimeHomeBuyer }
+						       onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="firstTimeHomeBuyer"><strong><u>Check If This Is Your First Purchase</u></strong></label>
+					</div>
+					<div className="form-check form-check-inline mx-auto py-2">
+						<input className="form-check-input" type="checkbox" id="realEstateAgent" name="realEstateAgent" checked={ this.props.realEstateAgent }
+						       onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="realEstateAgent"><strong><u>Check If Working With A Realtor?</u></strong></label>
+					</div>
+					<div className="form-check form-check-inline mx-auto py-2">
+						<input className="form-check-input" type="checkbox" id="bankruptcyShortsaleForeclosure" name="bankruptcyShortsaleForeclosure" checked={ this.props.bankruptcyShortsaleForeclosure }
+						       onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="bankruptcyShortsaleForeclosure"><strong><u>Check For Bankruptcy/Foreclosure/Short Sale in Last 3yrs?</u></strong></label>
+					</div>
 
+				</div>
 			</div>
 		);
 	}

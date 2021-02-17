@@ -40,8 +40,14 @@ export class RefinanceFormPersonalDetails extends Component {
 				</div>
 				<div className="form-group col-md-4">
 					<label htmlFor="creditScore"><strong>FICO Score</strong></label>
-					<input type="number" className="form-control" id="creditScore" name="creditScore" placeholder="680"
-					       value={this.props.creditScore} onChange={ this.handleChange } required/>
+					<select id="creditScore" className="form-control" name="creditScore"
+					        value={this.props.creditScore} onChange={ this.handleChange } required>
+						<option value="choose">Choose...</option>
+						<option value="Excellent 720+">Excellent (720+)</option>
+						<option value="Good 680 - 719">Good 680 - 719</option>
+						<option value="Fair 640 - 680">Fair 640 - 679</option>
+						<option value="Under 640">Under 640</option>
+					</select>
 				</div>
 			</div>
 
@@ -64,7 +70,7 @@ export class RefinanceFormPersonalDetails extends Component {
 					       value={this.props.monthlyIncome} onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-4">
-					<label htmlFor="monthlyExpenses"><strong>Monthly Credit Expenses</strong></label>
+					<label htmlFor="monthlyExpenses"><strong>Minimum Monthly Debt Payments</strong></label>
 					<input type="number" className="form-control" id="monthlyExpenses" name="monthlyExpenses" placeholder="$1,150"
 					       value={this.props.monthlyExpenses} onChange={ this.handleChange } required/>
 				</div>

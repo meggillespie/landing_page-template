@@ -157,7 +157,7 @@ class NavigationBar extends Component {
 							</NavLink>
 						</NavItem>
 
-						<a href="https://www.blink.mortgage/app/signup/p/lakewaylendingllc/megangillespie" rel="noopener noreferrer preconnect" target="_blank">
+						<a href="https://mfi.mymortgage-online.com/?loanapp&siteid=4590388205&lar=mgillespie&workFlowId=30028" rel="noopener noreferrer preconnect" target="_blank">
 							{ this.state.fontSize === '14px' ? (
 								<button
 									className="btn btn-outline-primary btn-sm my-auto mx-4"

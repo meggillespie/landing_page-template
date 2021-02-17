@@ -26,7 +26,6 @@ export class RefinanceFormLoanDetails extends Component {
 							<option value="townhome">Townhome</option>
 							<option value="condo">Condo</option>
 							<option value="muli-family">Multi-Family</option>
-							<option value="manufactured">Manufactured</option>
 						</select>
 					</div>
 					<div className="form-group col-md-4">
@@ -63,7 +62,7 @@ export class RefinanceFormLoanDetails extends Component {
 
 					{ this.props.refinancedBefore ? (
 							<div className="form-group col-md-3">
-								<label htmlFor="dateOfLastRefi"><strong>Year Refinanced</strong></label>
+								<label htmlFor="dateOfLastRefi"><strong>Year of Last Refinance</strong></label>
 								<input type="number" className="form-control" id="dateOfLastRefi" name="dateOfLastRefi" placeholder="2005"
 								       value={this.props.dateOfLastRefi} onChange={ this.handleChange } required/>
 							</div>
@@ -75,7 +74,7 @@ export class RefinanceFormLoanDetails extends Component {
 
 				<div className="form-row">
 					<div className="form-group col-md-3">
-						<label htmlFor="originalLoanAmount"><strong>{ loanType } Loan Amount</strong></label>
+						<label htmlFor="originalLoanAmount"><strong>Orig. Loan Amount for { loanType }</strong></label>
 						<input type="number" className="form-control" id="originalLoanAmount" name="originalLoanAmount" placeholder="$305,000"
 						       value={this.props.originalLoanAmount} onChange={ this.handleChange } required/>
 					</div>
@@ -88,7 +87,7 @@ export class RefinanceFormLoanDetails extends Component {
 
 					{ this.props.cashOut ? (
 							<div className="form-group col-md-3">
-								<label htmlFor="cashOutAmount"><strong>Cash Out Amount</strong></label>
+								<label htmlFor="cashOutAmount"><strong>How Much Cash Do You Need?</strong></label>
 								<input type="number" className="form-control" id="cashOutAmount" name="cashOutAmount" placeholder="$25,000"
 								       value={this.props.cashOutAmount} onChange={ this.handleChange } required/>
 							</div>

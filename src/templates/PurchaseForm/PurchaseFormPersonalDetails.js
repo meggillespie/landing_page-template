@@ -16,64 +16,65 @@ export class PurchaseFormPersonalDetails extends Component {
 			<div>
 				<div className="form-row">
 					<div className="form-group col-md-6">
-						<label htmlFor="inputEmail4">Email</label>
-						<input type="email" className="form-control" id="inputEmail4" name="email" placeholder="Email"  onChange={this.handleChange} />
+						<label htmlFor="inputName"><strong>Name</strong></label>
+						<input type="name" className="form-control" id="inputName" name="name" placeholder="Name"
+						       value={this.props.name} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-6">
-						<label htmlFor="inputPassword4">Password</label>
-						<input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
+						<label htmlFor="inputEmail"><strong>Email</strong></label>
+						<input type="email" className="form-control" id="inputEmail" name="email" placeholder="Email"
+						       value={this.props.email} onChange={ this.handleChange } required/>
 					</div>
 				</div>
-				<div className="form-group">
-					<label htmlFor="inputAddress">Address</label>
-					<input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-				</div>
-				<div className="form-group">
-					<label htmlFor="inputAddress2">Address 2</label>
-					<input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-				</div>
+
 				<div className="form-row">
-					<div className="form-group col-md-6">
-						<label htmlFor="inputCity">City</label>
-						<input type="text" className="form-control" id="inputCity" />
+					<div className="form-group col-md-4">
+						<label htmlFor="inputPhone"><strong>Phone Number</strong></label>
+						<input type="tel" className="form-control" id="inputPhone" name="phone" placeholder="512-555-1234"
+						       value={this.props.phone} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="inputState">State</label>
-						<select id="inputState" className="form-control">
-							<option selected>Choose...</option>
-							<option>...</option>
+						<label htmlFor="zipcode"><strong>Zipcode</strong></label>
+						<input type="number" className="form-control" id="zipcode" name="zipcode" placeholder="78738"
+						       value={this.props.zipcode} onChange={ this.handleChange } required/>
+					</div>
+					<div className="form-group col-md-4">
+						<label htmlFor="creditScore"><strong>FICO Score</strong></label>
+						<select id="creditScore" className="form-control" name="creditScore"
+						        value={this.props.creditScore} onChange={ this.handleChange } required>
+							<option value="choose">Choose...</option>
+							<option value="Excellent 720+">Excellent (720+)</option>
+							<option value="Good 680 - 719">Good 680 - 719</option>
+							<option value="Fair 640 - 680">Fair 640 - 679</option>
+							<option value="Under 640">Under 640</option>
 						</select>
 					</div>
-					<div className="form-group col-md-2">
-						<label htmlFor="inputZip">Zip</label>
-						<input type="text" className="form-control" id="inputZip" />
-					</div>
 				</div>
 
-				<div className="form-group">
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-						<label className="form-check-label" htmlFor="inlineCheckbox1">1</label>
+				<div className="form-row">
+					<div className="form-group col-md-4">
+						<label htmlFor="employmentStatus"><strong>Employment Status</strong></label>
+						<select id="employmentStatus" className="form-control" name="employmentStatus"
+						        value={this.props.employmentStatus} onChange={ this.handleChange } required>
+							<option value="choose">Choose...</option>
+							<option value="salary">Salaried</option>
+							<option value="commission">Commission</option>
+							<option value="self-employ">Self-Employed</option>
+							<option value="retired">Retired</option>
+							<option value="other">Other</option>
+						</select>
 					</div>
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-						<label className="form-check-label" htmlFor="inlineCheckbox2">2</label>
+					<div className="form-group col-md-4">
+						<label htmlFor="monthlyIncome"><strong>Gross Monthly Income</strong></label>
+						<input type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$6,250"
+						       value={this.props.monthlyIncome} onChange={ this.handleChange } required/>
 					</div>
-					<div className="form-check form-check-inline">
-						<input className="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-						<label className="form-check-label" htmlFor="inlineCheckbox3">3</label>
+					<div className="form-group col-md-4">
+						<label htmlFor="monthlyExpenses"><strong>Minimum Monthly Debt Payments</strong></label>
+						<input type="number" className="form-control" id="monthlyExpenses" name="monthlyExpenses" placeholder="$1,150"
+						       value={this.props.monthlyExpenses} onChange={ this.handleChange } required/>
 					</div>
 				</div>
-
-				<div className="row">
-					<div className="col-md-10 offset-md-1" style={{ marginTop: '25vh' }}>
-						<div className="row mb-5 mt-5">
-							<div className="col-md-8 offset-md-2">
-							</div>
-						</div>
-					</div>
-				</div>
-
 			</div>
 		);
 	}

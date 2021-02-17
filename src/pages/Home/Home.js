@@ -41,7 +41,7 @@ export class Home extends Component {
 				</div>
 
 				<div className="row mx-3 my-4">
-					<div className="col-md-10 offset-md-1">
+					<div className="col-md-10 offset-md-1 mb-4">
 						<Button href="/home-purchase" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
 						<Button href="/home-refinance" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
 					</div>
@@ -51,7 +51,7 @@ export class Home extends Component {
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="home" className="text-xs-center mr-1" size="3x"/>
 						<h4>Home Loans</h4>
-						<p className="lead">Stop paying rent, or buy your ideal home. Get a home purchase loan that benefits from today’s low mortgage rates and make your dream a reality.</p>
+						<p className="lead">Stop paying rent, and buy your dream home. Get a home purchase loan that benefits from today’s low mortgage rates and make your dream a reality.</p>
 					</div>
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1" size="3x"/>
@@ -98,7 +98,7 @@ export class Home extends Component {
 						</div>
 
 						<div className="row mx-3">
-							<div className="col-md-10 offset-md-1">
+							<div className="col-md-10 offset-md-1 mb-3">
 								<Button href="/home-purchase" color="light" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
 
 								<Button href="/home-refinance" color="light" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
