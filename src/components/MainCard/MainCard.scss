@@ -1,7 +1,8 @@
 .card-block {
-  position: absolute;
-  transform: translate(-50%, -50%);
   z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   .card-img-top {
     width: 15%;
@@ -10,13 +11,53 @@
   }
 }
 
-/*Medium devices (tablets, 768px and up)*/
-@media (max-width: 768px) {
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1800px) {
   .card-block {
-    position: absolute;
+    .main-card-img {
+      left: 22%;
+      height: 90%;
+    }
+  }
+}
+
+/*Avg Loptop & screen (avg laptop, 1300px and up)*/
+@media (min-width: 1300px) and (max-width: 1800px) {
+  .card-block {
+    .main-card-img {
+      left: 20%;
+      height: 90%;
+    }
+  }
+}
+
+/*Extra small devices (small laptops, 1000px - 1300px)*/
+@media (max-width: 1400px) {
+  .card-block {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    .main-card-img {
+      top: 2%;
+      left: 18%;
+      height: 80%;
+    }
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  .card-block {
+    top: 75%;
+    left: 50%;
+
+    .main-card-img {
+      top: 3%;
+      left: 15%;
+      height: 55%;
+    }
   }
 }
 

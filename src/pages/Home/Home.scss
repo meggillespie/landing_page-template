@@ -94,6 +94,12 @@
   }
 }
 
+.background-container {
+  .anchor-tag {
+    margin-top: -70px;
+  }
+}
+
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {  }
 
@@ -102,13 +108,19 @@
 
 /*Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {
-  .chevron {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 95%;
-    left: 48%;
-    transform: translate(-50%, -50%);
+  .background-container {
+    .chevron {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 95%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+    }
+
+    .anchor-tag {
+      margin-top: 75px;
+    }
   }
 }
 
@@ -116,5 +128,14 @@
 @media (max-width: 576px) {
   .chevron {
     visibility: hidden;
+  }
+}
+
+@media  (min-width: 576px) and (max-width: 768px) {
+  .background-container {
+    
+    .anchor-tag {
+      margin-top: 75px;
+    }
   }
 }

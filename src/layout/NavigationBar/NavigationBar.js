@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from '../../media/brand-logo.png';
+import logo from '../../media/lakewayLendingLogo_NoNMLS.png';
 import './NavigationBar.scss';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink
 } from 'reactstrap'
@@ -18,8 +18,8 @@ class NavigationBar extends Component {
 			},
 			fontWeight: 'bold',
 			fontSize: '16px',
-			logoWidth: '150',
-			logoHeight: '65'
+			logoWidth: '160',
+			logoHeight: 'auto'
 		};
 
 		this.controlNavStyle = this.controlNavStyle.bind(this);
@@ -126,7 +126,7 @@ class NavigationBar extends Component {
 					<Nav className="ml-auto my-md-3" navbar style={{ fontSize: this.state.fontSize, fontWeight: this.state.fontWeight }}>
 
 						<NavItem>
-							<NavLink href="tel:+15126428688" rel="preconnect" className="mr-3">
+							<NavLink href="tel:+15126428688" rel="preconnect" className="mr-3 mb-3">
 									<ul className="list-inline">
 										<li className="list-inline-item">
 											<FontAwesomeIcon icon="phone" className=" text-xs-center mr-1" size="2x" rotation={ 90 } />
@@ -142,7 +142,7 @@ class NavigationBar extends Component {
 						</NavItem>
 
 						<NavItem className="align-middle">
-							<NavLink href="sms:+15126428688" rel="preconnect" className="mr-3">
+							<NavLink href="sms:+15126428688" rel="preconnect" className="mr-3 mb-3">
 									<ul className="list-inline">
 										<li className="list-inline-item">
 											<FontAwesomeIcon icon="comments" className="mr-1" size="2x"/>
@@ -160,12 +160,12 @@ class NavigationBar extends Component {
 						<a href="https://mfi.mymortgage-online.com/?loanapp&siteid=4590388205&lar=mgillespie&workFlowId=30028" rel="noopener noreferrer preconnect" target="_blank">
 							{ this.state.fontSize === '14px' ? (
 								<button
-									className="btn btn-outline-primary btn-sm my-auto mx-4"
+									className="btn btn-outline-primary btn-sm my-auto mx-4 my-2"
 									type="button"
 								>Apply</button>
 							) : (
 								<button
-									className="btn btn-outline-primary btn-lg my-auto mx-4"
+									className="btn btn-outline-primary btn-lg my-auto mx-4 my-2"
 									type="button"
 								>Apply</button>)
 							}

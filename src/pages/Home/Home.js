@@ -11,12 +11,10 @@ export class Home extends Component {
 			<div>
 				<div className="row background-container">
 					<div className="col-md-12">
-						<div className="media-overlay" style={{ height: '100vh', overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
+						<div className="media-overlay" style={{ overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
 							<img src={ homeBckgrd } alt="home page background" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
 							<MainCard
 								textAlignment="text-center"
-								top="45%"
-								left="50%"
 								heading="How Much Can You Save?"
 								text1="Get Your Rate & Qualify Today For Free"
 								text2="Low Rates & Fast Closings"
@@ -32,7 +30,7 @@ export class Home extends Component {
 				</div>
 
 
-				<div className="row mx-3" id="anchorTag" style={{ paddingTop: '100px', marginTop: '-70px' }}>
+				<div className="row mx-3 anchor-tag" style={{ paddingTop: '100px'}}>
 					<div className="col-md-10 offset-md-1">
 						<h2 className="display-4 pt-2">What We Do</h2>
 						<p className="lead text-muted mb-0" style={{ fontWeight: '600' }}>Fast, Easy, Stress Free Mortgage Process</p>

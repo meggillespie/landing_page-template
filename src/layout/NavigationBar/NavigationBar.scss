@@ -25,6 +25,18 @@
 //  pointer-events: none;
 //}
 
+/*Large devices */
+@media (min-width: 2000px) {
+  .navbar {
+
+    .d-inline-block {
+      width: 300px;
+    }
+
+  }
+}
+
+
 /*Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {
   .navbar {

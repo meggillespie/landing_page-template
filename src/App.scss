@@ -6,11 +6,6 @@
   padding-left: 0;
   padding-right: 0;
 
-  .img-fluid {
-    //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    //filter: grayscale(100%);
-  }
-
   a{
     color: $primary_color;
 
@@ -89,9 +84,9 @@
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .navbar {
-    //top: 30px;
-  }
+  //.navbar {
+  //  //top: 30px;
+  //}
 
   .pagewide {
     height: 30px;
@@ -106,4 +101,13 @@
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {  }
+@media (min-width: 2000px) {
+  body, html, a {
+    font: 400 20px Lato, sans-serif;
+  }
+
+  h3 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
