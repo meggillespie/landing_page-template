@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { useForm } from 'react-hook-form';
+
 
 export class RefinanceFormPersonalDetails extends Component {
 	constructor(props) {

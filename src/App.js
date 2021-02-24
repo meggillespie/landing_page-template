@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Main } from './layout/Main';
 import './App.scss';
+import { useForm } from 'react-hook-form';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faChevronDown, faChevronCircleDown, faPhone, faEnvelope, faHome, faPrint, faSearch, faFrown,

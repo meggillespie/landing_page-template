@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import emailjs from 'emailjs-com';
 import { RefinanceFormPersonalDetails } from '../../templates/RefinanceForm/RefinanceFormPersonalDetails';
 import { RefinanceFormLoanDetails } from '../../templates/RefinanceForm/RefinanceFormLoanDetails';
 import { RefinanceFormLoanDetailsCont } from '../../templates/RefinanceForm/RefinanceFormLoanDetailsCont';
@@ -57,6 +58,8 @@ export class LeadForm extends Component {
 		this.setState({ [name]: value })
 	};
 
+
+
 	handleSubmit = e => {
 		e.preventDefault();
 
@@ -95,7 +98,19 @@ export class LeadForm extends Component {
            Late Mortgage Payments: ${lateMortgagePayments} \n
            
            Original Purchase Price: ${originalPurchasePrice} `);
+
+
+
+		emailjs.sendForm('service_8l6p57o','template_w9ypx75', e.target, 'user_C86O0FT0wefYL1wUuSg0L')
+			.then((response) => {
+				console.log('SUCCESS!', response.status, response.text);
+			}, (err) => {
+				console.log('FAILED...', err);
+			});
 	};
+
+	_onSubmit = data => console.log(data);
+	console.log(errors);
 
 	_next = () => {
 		let currentStep = this.state.currentStep;
@@ -181,8 +196,7 @@ export class LeadForm extends Component {
 			)
 		}
 	}
-
-
+	
 	render() {
 		let formSubHeading = '';
 
@@ -203,7 +217,7 @@ export class LeadForm extends Component {
 			<div>
 				<h3 className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</h3>
 
-				<form onSubmit={ this.handleSubmit } style={{ marginBottom: '10vh'}} className="text-left">
+				<form onSubmit={this.handleSubmit(this._onSubmit)} style={{ marginBottom: '10vh'}} className="text-left">
 						{ (() => {
 							if (this.props.formIndicator === 'refinance') {
 								switch(this.state.currentStep) {
