@@ -15,20 +15,24 @@
     }
   }
 
-  .btn-primary {
+  .btn{
+    transition: transform .5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .red-button {
+    background-color: $button_active_background_color;
+    border-color: $button_active_background_color;
+    color: $solid_button_text_color;
+  }
+
+  .blue-button {
     background-color: $primary_color;
     border-color: $primary_color;
     color: $solid_button_text_color;
-
-    &:hover {
-      background-color: $button_active_background_color;
-      border-color: $button_active_background_color;
-      color: $solid_button_text_color;
-    }
-
-    &:not(:disabled):not(.disabled):active {
-      background-color: darken($button_active_background_color, 10%);
-    }
   }
 
   .btn-outline-primary {
@@ -36,11 +40,25 @@
     color: $primary_color;
 
     &:hover {
-      @extend .btn-primary;
+      @extend .red-button;
     }
+  }
 
-    &:not(:disabled):not(.disabled):active {
-      @extend .btn-primary;
+  .btn-outline-primary.blue-background{
+    @extend .blue-button;
+
+    &:hover {
+      @extend .red-button;
+    }
+  }
+
+  .btn-outline-primary.red-outline {
+    background-color: $primary_color;
+    border-color: $button_active_background_color;
+    color: $button_active_background_color;
+
+    &:hover {
+      @extend .red-button;
     }
   }
 

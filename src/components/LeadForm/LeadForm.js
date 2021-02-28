@@ -109,8 +109,11 @@ export class LeadForm extends Component {
 			});
 	};
 
-	_onSubmit = data => console.log(data);
-	console.log(errors);
+	_onSubmit = data => {
+		console.log(data);
+		console.error();
+	};
+
 
 	_next = () => {
 		let currentStep = this.state.currentStep;
@@ -196,7 +199,7 @@ export class LeadForm extends Component {
 			)
 		}
 	}
-	
+
 	render() {
 		let formSubHeading = '';
 

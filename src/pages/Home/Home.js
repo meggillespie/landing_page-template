@@ -20,9 +20,9 @@ export class Home extends Component {
 								text2="Low Rates & Fast Closings"
 								text3="Get Your Quote Now!"
 								numberOfButtons="2"
-							  button1Text="Home Purchase"
+							  button1Text="BUY A HOME"
 								button1Link="/home-purchase"
-								button2Text="Home Refinance"
+								button2Text="REFINANCE"
 								button2Link="/home-refinance"
 							/>
 						</div>
@@ -40,8 +40,8 @@ export class Home extends Component {
 
 				<div className="row mx-3 my-4">
 					<div className="col-md-10 offset-md-1 mb-4">
-						<Button href="/home-purchase" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
-						<Button href="/home-refinance" color="primary" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
+						<Button href="/home-purchase" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>BUY A HOME</Button>
+						<Button href="/home-refinance" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE</Button>
 					</div>
 				</div>
 
@@ -91,15 +91,15 @@ export class Home extends Component {
 								<p className="lead mt-4 mb-0" style={{ fontWeight: '500' }} >A mortgage provides more than four walls and a roof over your head.</p>
 								<p className="lead mt-0 mb-0" style={{ fontWeight: '500' }} >It's a place to call home, to raise your family, make memories with friends, and build communities.</p>
 								<p className="lead mt-0" style={{ fontWeight: '500' }} >It's meeting personal financial goals and an investment in your future.</p>
-								<p className="lead mt-4" style={{ fontWeight: '500' }} >At Lakeway Lending, we tailor your mortgage to uniquely fit your needs and goals.</p>
+								<p className="lead mt-4" style={{ fontWeight: '500' }} >At Lakeway Lending, we tailor your mortgage to fit your unique needs and goals.</p>
 							</div>
 						</div>
 
 						<div className="row mx-3">
 							<div className="col-md-10 offset-md-1 mb-3">
-								<Button href="/home-purchase" color="light" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Purchase</Button>
+								<Button href="/home-purchase" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>BUY A HOME</Button>
 
-								<Button href="/home-refinance" color="light" size="lg" className="mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10' }}>Home Refinance</Button>
+								<Button href="/home-refinance" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE</Button>
 							</div>
 						</div>
 
