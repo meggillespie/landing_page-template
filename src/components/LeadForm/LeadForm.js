@@ -1,11 +1,11 @@
 import React, { Component }  from 'react';
+import { AvForm } from 'availity-reactstrap-validation';
 import emailjs from 'emailjs-com';
 import { RefinanceFormPersonalDetails } from '../../templates/RefinanceForm/RefinanceFormPersonalDetails';
 import { RefinanceFormLoanDetails } from '../../templates/RefinanceForm/RefinanceFormLoanDetails';
 import { RefinanceFormLoanDetailsCont } from '../../templates/RefinanceForm/RefinanceFormLoanDetailsCont';
 import { PurchaseFormPersonalDetails } from '../../templates/PurchaseForm/PurchaseFormPersonalDetails';
 import { PurchaseFormLoanDetails } from '../../templates/PurchaseForm/PurchaseFormLoanDetails';
-import { PurchaseFormLoanDetailsCont } from '../../templates/PurchaseForm/PurchaseFormLoanDetailsCont';
 
 export class LeadForm extends Component {
 	constructor(props) {
@@ -48,9 +48,11 @@ export class LeadForm extends Component {
 		};
 
 		this.handleChange = this.handleChange.bind(this);
+		this.handleInvalidSubmit = this.handleInvalidSubmit.bind(this);
+		this.handleValidSubmit = this.handleValidSubmit.bind(this);
 	}
 
-	handleChange = e => {
+	handleChange(e) {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
 		const name = target.name;
@@ -58,48 +60,52 @@ export class LeadForm extends Component {
 		this.setState({ [name]: value })
 	};
 
+	handleInvalidSubmit(e, errors, values) {
+		const target = e.target;
+		const value = target.type === 'checkbox' ? target.checked : target.value;
+		const name = target.name;
 
+		this.setState({ [name]: value, error: true });
+	}
 
-	handleSubmit = e => {
+	handleValidSubmit(e, values) {
 		e.preventDefault();
 
-		const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
-			propertyType, estimatedValue, currentLoanType, yearPurchased, dateOfLastRefi, originalLoanAmount, cashOutAmount,
-			currentRate, mortgageBalance, currentEscrow, monthlyPI, hoi, tax, escrowFwd, secondMortgage, lateMortgagePayments,
-			foreclosure, originalPurchasePrice, } = this.state;
+		// const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
+		// 	propertyType, estimatedValue, currentLoanType, yearPurchased, dateOfLastRefi, originalLoanAmount, cashOutAmount,
+		// 	currentRate, mortgageBalance, currentEscrow, monthlyPI, hoi, tax, escrowFwd, secondMortgage, lateMortgagePayments,
+		// 	foreclosure, originalPurchasePrice, } = this.state;
 
-		alert(`Your Refinance Details: \n 
-           Email: ${email} \n 
-           Name: ${name} \n
-           Phone Number: ${phone} \n
-           Zipcode: ${zipcode} \n 
-           Credit Score: ${creditScore} \n
-           Employment Status: ${employmentStatus} \n
-           Monthly Income: ${monthlyIncome} \n 
-           Monthly Expenses: ${monthlyExpenses} \n \n 
-           
-           Property Type: ${propertyType} \n
-           Estimated Value: ${estimatedValue} \n
-           Current Loan Type: ${currentLoanType} \n
-           Year Purchased: ${yearPurchased} \n
-           Date of Last Refi: ${dateOfLastRefi} \n
-           Orig. Loan Amount: ${originalLoanAmount} \n
-           Cash Out: ${cashOutAmount} \n\n
-           
-           Current Interest Rate: ${currentRate} \n
-           Mortgage Balance: ${mortgageBalance} \n
-           Second Mortgage: ${secondMortgage} \n
-           Monthly PI: ${monthlyPI} \n
-           HOI: ${hoi} \n
-           TAX: ${tax} \n      
-           Current Escrow Account: ${currentEscrow} \n
-           Escrow Moving Forward: ${escrowFwd} \n
-           Foreclosure: ${foreclosure} \n
-           Late Mortgage Payments: ${lateMortgagePayments} \n
-           
-           Original Purchase Price: ${originalPurchasePrice} `);
-
-
+		// alert(`Your Refinance Details: \n
+     //       Email: ${email} \n
+     //       Name: ${name} \n
+     //       Phone Number: ${phone} \n
+     //       Zipcode: ${zipcode} \n
+     //       Credit Score: ${creditScore} \n
+     //       Employment Status: ${employmentStatus} \n
+     //       Monthly Income: ${monthlyIncome} \n
+     //       Monthly Expenses: ${monthlyExpenses} \n \n
+     //
+     //       Property Type: ${propertyType} \n
+     //       Estimated Value: ${estimatedValue} \n
+     //       Current Loan Type: ${currentLoanType} \n
+     //       Year Purchased: ${yearPurchased} \n
+     //       Date of Last Refi: ${dateOfLastRefi} \n
+     //       Orig. Loan Amount: ${originalLoanAmount} \n
+     //       Cash Out: ${cashOutAmount} \n\n
+     //
+     //       Current Interest Rate: ${currentRate} \n
+     //       Mortgage Balance: ${mortgageBalance} \n
+     //       Second Mortgage: ${secondMortgage} \n
+     //       Monthly PI: ${monthlyPI} \n
+     //       HOI: ${hoi} \n
+     //       TAX: ${tax} \n
+     //       Current Escrow Account: ${currentEscrow} \n
+     //       Escrow Moving Forward: ${escrowFwd} \n
+     //       Foreclosure: ${foreclosure} \n
+     //       Late Mortgage Payments: ${lateMortgagePayments} \n
+     //
+     //       Original Purchase Price: ${originalPurchasePrice} `);
 
 		emailjs.sendForm('service_8l6p57o','template_w9ypx75', e.target, 'user_C86O0FT0wefYL1wUuSg0L')
 			.then((response) => {
@@ -108,12 +114,6 @@ export class LeadForm extends Component {
 				console.log('FAILED...', err);
 			});
 	};
-
-	_onSubmit = data => {
-		console.log(data);
-		console.error();
-	};
-
 
 	_next = () => {
 		let currentStep = this.state.currentStep;
@@ -141,28 +141,15 @@ export class LeadForm extends Component {
 
 		if ( this.state.currentStep === 1 ) {
 			for (let i = 3; i <= 10; i++) {
-				//console.log(formValues[i]);
 				if(	formValues[i] === "" || formValues[i] === "choose" ) {
 					emptyFieldIndicator.empty.push(formValues[i])
 				}
 			}
-
 		}
-			// else if ( this.state.currentStep === 2) {
-			//
-			// } else if ( this.state.currentStep === 3 ) {
-			//
-			// }
-
-		//console.log(emptyFieldIndicator.empty);
-
 		return emptyFieldIndicator.empty.length === 0;
 	};
 
-
-	/*
-	 * form nav/button functions
-	 */
+	// form nav/button functions
 	previousButton() {
 		let currentStep = this.state.currentStep;
 
@@ -220,7 +207,7 @@ export class LeadForm extends Component {
 			<div>
 				<h3 className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</h3>
 
-				<form onSubmit={this.handleSubmit(this._onSubmit)} style={{ marginBottom: '10vh'}} className="text-left">
+				<AvForm onValidSubmit={ this.handleSubmit } onInvalidSubmit={ this.handleInvalidSubmit } style={{ marginBottom: '10vh' }} className="text-left">
 						{ (() => {
 							if (this.props.formIndicator === 'refinance') {
 								switch(this.state.currentStep) {
@@ -267,8 +254,6 @@ export class LeadForm extends Component {
 										return <PurchaseFormPersonalDetails onChange={ this.handleChange } />;
 									case 2:
 										return <PurchaseFormLoanDetails onChange={ this.handleChange } />;
-									case  3:
-										return <PurchaseFormLoanDetailsCont onChange={ this.handleChange } />;
 									default:
 										return null;
 								}
@@ -278,7 +263,7 @@ export class LeadForm extends Component {
 					{ this.previousButton() }
 					{ this.nextButton() }
 					{ this.submitButton() }
-				</form>
+				</AvForm>
 			</div>
 		);
 	}

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Label } from 'reactstrap';
+import { AvField } from 'availity-reactstrap-validation';
 
 export class RefinanceFormLoanDetailsCont extends Component {
 	constructor(props) {
@@ -16,37 +18,37 @@ export class RefinanceFormLoanDetailsCont extends Component {
 			<div>
 				<div className="form-row">
 					<div className="form-group col-md-4">
-						<label htmlFor="currentRate"><strong>Current Interest Rate</strong></label>
-						<input type="number" className="form-control" id="currentRate" name="currentRate" placeholder="4.5"
-						       value={this.props.currentRate} onChange={ this.handleChange } required/>
+						<Label htmlFor="currentRate"><strong>Current Interest Rate</strong></Label>
+						<AvField type="number" className="form-control" id="currentRate" name="currentRate" placeholder="4.5"
+						         value={this.props.currentRate} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="mortgageBalance"><strong>Mortgage Balance</strong></label>
-						<input type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
-						       value={this.props.mortgageBalance} onChange={ this.handleChange } />
+						<Label htmlFor="mortgageBalance"><strong>Mortgage Balance</strong></Label>
+						<AvField type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
+						         value={this.props.mortgageBalance} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="secondMortgage"><strong>Second Mortgage Balance</strong></label>
-						<input type="number" className="form-control" id="secondMortgage" name="secondMortgage" placeholder="$0"
-						       value={this.props.secondMortgage} onChange={ this.handleChange } />
+						<Label htmlFor="secondMortgage"><strong>Second Mortgage Balance</strong></Label>
+						<AvField type="number" className="form-control" id="secondMortgage" name="secondMortgage" placeholder="$0"
+						         value={this.props.secondMortgage} onChange={ this.handleChange } />
 					</div>
 				</div>
 
 				<div className="form-row">
 					<div className="form-group col-md-4">
-						<label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></label>
-						<input type="number" className="form-control" id="monthlyPI" name="monthlyPI" placeholder="$2,700"
-						       value={this.props.monthlyPI} onChange={ this.handleChange } required/>
+						<Label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></Label>
+						<AvField type="number" className="form-control" id="monthlyPI" name="monthlyPI" placeholder="$2,700"
+						         value={this.props.monthlyPI} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></label>
-						<input type="number" className="form-control" id="hoi" name="hoi" placeholder="$125"
-						       value={this.props.hoi} onChange={ this.handleChange } required/>
+						<Label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></Label>
+						<AvField type="number" className="form-control" id="hoi" name="hoi" placeholder="$125"
+						          value={this.props.hoi} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<label htmlFor="tax"><strong>Annual Property Tax</strong></label>
-						<input type="number" className="form-control" id="tax" name="tax" placeholder="$6,000"
-						       value={this.props.tax} onChange={ this.handleChange } required/>
+						<Label htmlFor="tax"><strong>Annual Property Tax</strong></Label>
+						<AvField type="number" className="form-control" id="tax" name="tax" placeholder="$6,000"
+						         value={this.props.tax} onChange={ this.handleChange } required/>
 					</div>
 				</div>
 
