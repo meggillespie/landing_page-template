@@ -166,7 +166,7 @@ export class LeadForm extends Component {
 	nextButton() {
 		let currentStep = this.state.currentStep;
 
-		if (currentStep < 3) {
+		if (( currentStep === 1 && this.props.formIndicator === 'purchase') || (currentStep <= 2 && this.props.formIndicator === 'refinance')) {
 			return (
 				<button className="btn btn-primary float-right" type="button" onClick={ this._next }>
 					Next
@@ -180,7 +180,7 @@ export class LeadForm extends Component {
 	submitButton() {
 		let currentStep = this.state.currentStep;
 
-		if (currentStep > 2) {
+		if (( currentStep === 2 && this.props.formIndicator === 'purchase') || (currentStep === 3 && this.props.formIndicator === 'refinance')) {
 			return (
 				<button className="btn btn-primary float-right">Submit</button>
 			)

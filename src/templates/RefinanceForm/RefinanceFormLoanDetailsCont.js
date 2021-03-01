@@ -23,7 +23,7 @@ export class RefinanceFormLoanDetailsCont extends Component {
 						         value={this.props.currentRate} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
-						<Label htmlFor="mortgageBalance"><strong>Mortgage Balance</strong></Label>
+						<Label htmlFor="mortgageBalance"><strong>Current Mortgage Balance</strong></Label>
 						<AvField type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
 						         value={this.props.mortgageBalance} onChange={ this.handleChange } required/>
 					</div>
