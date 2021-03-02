@@ -35,8 +35,9 @@ export class Footer extends Component {
 							<p>
 								<FontAwesomeIcon icon="phone" className="mr-3"/> (512) 642 8688</p>
 							<p className="mb-0">
-								<FontAwesomeIcon icon="home" className="mr-3"/> 2802 Flintrock Trace, #212</p>
-							<p className="ml-4 pl-3">Lakeway, TX 78738</p>
+								<FontAwesomeIcon icon="home" className="mr-3"/> 14425 Falcon Head Blvd</p>
+							<p className="ml-4 mb-0 pl-3">Bldg. E, Ste. 130</p>
+							<p className="ml-4 pl-3">Austin, TX 78738</p>
 						</div>
 					</div>
 

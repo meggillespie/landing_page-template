@@ -68,8 +68,30 @@ export class LeadForm extends Component {
 		this.setState({ [name]: value, error: true });
 	}
 
+	// function sendEmail(e) {
+	// 	e.preventDefault();
+	//
+	// 	emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+	// 		.then((result) => {
+	// 			console.log(result.text);
+	// 		}, (error) => {
+	// 			console.log(error.text);
+	// 		});
+	// }
+
 	handleValidSubmit(e, values) {
 		e.preventDefault();
+
+		// console.log('TARGET ');
+		// console.log(e.target);
+		console.log('\n');
+		console.log('STATE');
+		console.log(this.state);
+		console.log('\n');
+
+		let leadParams = this.state;
+
+
 
 		// const { email, name, phone, zipcode, creditScore, employmentStatus, monthlyIncome, monthlyExpenses,
 		// 	propertyType, estimatedValue, currentLoanType, yearPurchased, dateOfLastRefi, originalLoanAmount, cashOutAmount,
@@ -107,11 +129,11 @@ export class LeadForm extends Component {
      //
      //       Original Purchase Price: ${originalPurchasePrice} `);
 
-		emailjs.sendForm('service_8l6p57o','template_w9ypx75', e.target, 'user_C86O0FT0wefYL1wUuSg0L')
-			.then((response) => {
+		emailjs.send('service_8l6p57o','template_w9ypx75', leadParams, 'user_C86O0FT0wefYL1wUuSg0L')
+			.then(function(response) {
 				console.log('SUCCESS!', response.status, response.text);
-			}, (err) => {
-				console.log('FAILED...', err);
+			}, function(error) {
+				console.log('FAILED...', error);
 			});
 	};
 
@@ -203,11 +225,15 @@ export class LeadForm extends Component {
 			}
 		})();
 
+
+		// console.log('STATE');
+		// console.log(this.state);
+
 		return (
 			<div>
 				<h3 className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</h3>
 
-				<AvForm onValidSubmit={ this.handleSubmit } onInvalidSubmit={ this.handleInvalidSubmit } style={{ marginBottom: '10vh' }} className="text-left">
+				<AvForm onValidSubmit={ this.handleValidSubmit } onInvalidSubmit={ this.handleInvalidSubmit } id="lead-form" style={{ marginBottom: '10vh' }} className="text-left">
 						{ (() => {
 							if (this.props.formIndicator === 'refinance') {
 								switch(this.state.currentStep) {
