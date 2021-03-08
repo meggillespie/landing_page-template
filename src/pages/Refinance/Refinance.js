@@ -10,6 +10,8 @@ export class Refinance extends Component {
 			<div className="row" style={{ backgroundColor: '#fff' }}>
 				<div className="col-md-10 offset-md-1" style={{ marginTop: '21vh'}}>
 					<h2 className="display-4 pt-2">Refinance Rate Checker</h2>
+					<h3 className="lead text-muted mb-5">Get Your Free Online Estimate</h3>
+
 					<div className="row mb-2 mt-3 ">
 						<div className="col-md-10 offset-md-1"
 						     style={{

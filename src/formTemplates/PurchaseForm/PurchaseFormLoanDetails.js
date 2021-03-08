@@ -54,13 +54,13 @@ export class PurchaseFormLoanDetails extends Component {
 				<div className="form-row">
 					<div className="form-group col-md-4">
 						<Label htmlFor="purchasePrice"><strong>Purchase Price</strong></Label>
-						<AvField type="number" className="form-control" id="purchasePrice" name="purchasePrice" placeholder="$305,000"
+						<AvField type="number" className="form-control" id="purchasePrice" name="purchasePrice" placeholder="$350,000"
 						         value={this.props.purchasePrice} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="estimatedDownPayment"><strong>Estimated Down Payment</strong></Label>
 						<AvField type="number" className="form-control" id="estimatedDownPayment" name="estimatedDownPayment"
-						         value={this.props.estimatedDownPayment} placeholder="$40,000" onChange={ this.handleChange } required/>
+						         value={this.props.estimatedDownPayment} placeholder="$12,500" onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="ratePreference"><strong>Rate Preference</strong></Label>

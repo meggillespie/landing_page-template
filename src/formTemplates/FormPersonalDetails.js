@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Label } from 'reactstrap';
 import { AvField } from 'availity-reactstrap-validation';
 
-export class PurchaseFormPersonalDetails extends Component {
+export class FormPersonalDetails extends Component {
 	constructor(props) {
 		super(props);
 
@@ -32,8 +32,8 @@ export class PurchaseFormPersonalDetails extends Component {
 				<div className="form-row">
 					<div className="form-group col-md-4">
 						<Label htmlFor="inputPhone"><strong>Phone Number</strong></Label>
-						<AvField type="number" className="form-control" id="inputPhone" name="phone" placeholder="5125551234"
-						         value={this.props.phone} onChange={ this.handleChange } required/>
+						<AvField type="text" className="form-control" id="inputPhone" name="phone" placeholder="(512) 555-1234"
+						         value={this.props.phone} onChange={ this.handleChange } required helpMessage="Numbers Only" />
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="zipcode"><strong>Zipcode</strong></Label>
@@ -44,7 +44,7 @@ export class PurchaseFormPersonalDetails extends Component {
 						<Label htmlFor="creditScore"><strong>FICO Score</strong></Label>
 						<AvField type="select" id="creditScore" className="form-control" name="creditScore"
 						         value={this.props.creditScore} onChange={ this.handleChange } required
-						         helpMessage="Best Estimate.">
+						         helpMessage="Estimate">
 							<option value="">Choose...</option>
 							<option value="Excellent (720+)">Excellent (720+)</option>
 							<option value="Good (680 - 719)">Good (680 - 719)</option>
@@ -69,12 +69,12 @@ export class PurchaseFormPersonalDetails extends Component {
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="monthlyIncome"><strong>Gross Monthly Income</strong></Label>
-						<AvField type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$6,250"
+						<AvField type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$7,250"
 						         value={this.props.monthlyIncome} onChange={ this.handleChange } required/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="monthlyExpenses"><strong>Minimum Monthly Debt Payments</strong></Label>
-						<AvField type="number" className="form-control" id="monthlyExpenses" name="monthlyExpenses" placeholder="$1,150"
+						<AvField type="number" className="form-control" id="monthlyExpenses" name="monthlyExpenses" placeholder="$750"
 						         value={this.props.monthlyExpenses} onChange={ this.handleChange } required/>
 					</div>
 				</div>

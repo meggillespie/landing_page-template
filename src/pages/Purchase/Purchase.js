@@ -10,6 +10,8 @@ export class Purchase extends Component {
 			<div className="row" >
 				<div className="col-md-10 offset-md-1" style={{ marginTop: '21vh' }}>
 					<h2 className="display-4 pt-2">Home Purchase Qualifier</h2>
+					<h3 className="lead text-muted mb-5">Get Pre-Qualified Online Now</h3>
+
 					<div className="row mb-2 mt-3 ">
 						<div className="col-md-10 offset-md-1"
 						     style={{

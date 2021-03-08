@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Label } from 'reactstrap';
 import { AvField } from 'availity-reactstrap-validation';
-// import { useForm } from 'react-hook-form';
-
-
 
 export class RefinanceFormPersonalDetails extends Component {
 	constructor(props) {
@@ -35,7 +32,7 @@ export class RefinanceFormPersonalDetails extends Component {
 			<div className="form-row">
 				<div className="form-group col-md-4">
 					<Label htmlFor="inputPhone"><strong>Phone Number</strong></Label>
-					<AvField type="number" className="form-control" id="inputPhone" name="phone" placeholder="5125551234"
+					<AvField type="text" className="form-control" id="inputPhone" name="phone" placeholder="5125551234"
 					         value={this.props.phone} onChange={ this.handleChange } required/>
 				</div>
 				<div className="form-group col-md-4">

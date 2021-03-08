@@ -67,9 +67,9 @@ export class RefinanceFormLoanDetailsCont extends Component {
 
 				<div className="form-row">
 					<div className="form-check form-check-inline mx-auto my-4">
-						<input className="form-check-input" type="checkbox" id="foreclosure" name="foreclosure"
-						       checked={ this.props.foreclosure } onChange={ this.handleChange }  />
-						<label className="form-check-label" htmlFor="foreclosure"><strong><u>Check If You've Foreclosed Since 2018</u></strong></label>
+						<input className="form-check-input" type="checkbox" id="bankruptcyShortsaleForeclosure" name="bankruptcyShortsaleForeclosure"
+						       checked={ this.props.bankruptcyShortsaleForeclosure } onChange={ this.handleChange }  />
+						<label className="form-check-label" htmlFor="bankruptcyShortsaleForeclosure"><strong><u>Check For Bankruptcy/Foreclosure/Short Sale in Last 3yrs?</u></strong></label>
 					</div>
 					<div className="form-check form-check-inline mx-auto my-4">
 						<input className="form-check-input" type="checkbox" id="lateMortgagePayments" name="lateMortgagePayments"
