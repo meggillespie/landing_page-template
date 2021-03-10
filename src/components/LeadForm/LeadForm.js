@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import { AvForm } from 'availity-reactstrap-validation';
 import emailjs from 'emailjs-com';
+import { toFixedDecimals, formatDollarValues, phoneNumberFilter } from '../../filters/filters'
 import { FormPersonalDetails } from '../../formTemplates/FormPersonalDetails';
 import { PurchaseFormLoanDetails } from '../../formTemplates/PurchaseForm/PurchaseFormLoanDetails';
 import { RefinanceFormLoanDetails } from '../../formTemplates/RefinanceForm/RefinanceFormLoanDetails';
@@ -63,52 +64,10 @@ export class LeadForm extends Component {
 		let value = target.type === 'checkbox' ? target.checked : target.value;
 		const name = target.name;
 
-		value = name === 'phone' ? this._phoneNumberFilter(value) : value;
+		value = name === 'monthlyIncome' ? formatDollarValues(value) : value;
+		value = name === 'phone' ? phoneNumberFilter(value) : value;
 
 		this.setState({ [name]: value })
-	};
-
-	_phoneNumberFilter = (val) => {
-		let formattedNumber, number, areaCode, phoneNumberFirstSet, phoneNumberSecondSet;
-
-		if (val && val.length > 0) {
-			let digits = val.replace(/[^0-9]/g, '');
-
-			number = digits.charAt(0) === '1' ? digits.substr(1) : digits;
-
-			number = digits.length > 9 ? digits.substr(0, 10) : digits;
-
-			if (number.length <= 2) {
-				areaCode = number.slice(0,3);
-				formattedNumber = '(' + areaCode;
-			}
-
-			if (number.length > 2 && number.length <= 3) {
-				areaCode = number.slice(0,3);
-
-				formattedNumber = '(' + areaCode + ')' ;
-			}
-
-			if (number.length > 3 && number.length <= 5) {
-				areaCode = number.slice(0,3);
-				phoneNumberFirstSet = number.slice(3,6);
-
-				formattedNumber = '(' + areaCode + ') ' + phoneNumberFirstSet;
-			}
-
-			if (number.length > 5) {
-				areaCode = number.slice(0,3);
-				phoneNumberFirstSet = number.slice(3,6);
-				phoneNumberSecondSet = number.slice(6,10);
-
-				formattedNumber = '(' + areaCode + ') ' + phoneNumberFirstSet + '-' + phoneNumberSecondSet;
-			}
-		}
-		else {
-			formattedNumber = ''
-		}
-
-		return formattedNumber;
 	};
 
 	handleInvalidSubmit(e, errors, values) {
@@ -172,28 +131,6 @@ export class LeadForm extends Component {
 		return emptyFieldIndicator.empty.length === 0;
 	};
 
-
-	// _prev = () => {
-	// 	let currentStep = this.state.currentStep;
-	// 	currentStep = currentStep <= 1 ? 1 : currentStep - 1;
-	//
-	// 	this.setState({ currentStep: currentStep })
-	// };
-
-	// form nav/button functions
-	// previousButton() {
-	// 	let currentStep = this.state.currentStep;
-	//
-	// 	if (currentStep !==1) {
-	// 		return (
-	// 			<button className="btn btn-secondary" type="button" onClick={ this._prev }>
-	// 				Previous
-	// 			</button>
-	// 		)
-	// 	}
-	// 	return null;
-	// }
-
 	nextButton() {
 		let currentStep = this.state.currentStep;
 
@@ -217,6 +154,28 @@ export class LeadForm extends Component {
 		}
 	}
 
+	// _prev = () => {
+	// 	let currentStep = this.state.currentStep;
+	// 	currentStep = currentStep <= 1 ? 1 : currentStep - 1;
+	//
+	// 	this.setState({ currentStep: currentStep })
+	// };
+
+	// form nav/button functions
+	// previousButton() {
+	// 	let currentStep = this.state.currentStep;
+	//
+	// 	if (currentStep !==1) {
+	// 		return (
+	// 			<button className="btn btn-secondary" type="button" onClick={ this._prev }>
+	// 				Previous
+	// 			</button>
+	// 		)
+	// 	}
+	// 	return null;
+	// }
+
+
 	render() {
 		let formSubHeading = '';
 
@@ -237,7 +196,9 @@ export class LeadForm extends Component {
 			<div>
 				<h4 className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</h4>
 
-				<AvForm onValidSubmit={ this.handleValidSubmit } onInvalidSubmit={ this.handleInvalidSubmit } id="lead-form" style={{ marginBottom: '10vh' }} className="text-left">
+				<AvForm action="/" target="_self" autocomplete="on" onValidSubmit={ this.handleValidSubmit }
+				        onInvalidSubmit={ this.handleInvalidSubmit } id="lead-form" style={{ marginBottom: '10vh' }}
+				        className="text-left">
 						{ (() => {
 							if (this.props.formIndicator === 'refinance') {
 								switch(this.state.currentStep) {
