@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6ec744c-6f3b-451c-a59b-3804a29d9630" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/Thanks/Thanks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" afterPath="$PROJECT_DIR$/src/components/LeadForm/LeadForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/formTemplates/FormPersonalDetails.js" afterPath="$PROJECT_DIR$/src/formTemplates/FormPersonalDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/formTemplates/PurchaseForm/PurchaseFormLoanDetails.js" afterPath="$PROJECT_DIR$/src/formTemplates/PurchaseForm/PurchaseFormLoanDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/formTemplates/RefinanceForm/RefinanceFormLoanDetails.js" afterPath="$PROJECT_DIR$/src/formTemplates/RefinanceForm/RefinanceFormLoanDetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/formTemplates/RefinanceForm/RefinanceFormLoanDetailsCont.js" afterPath="$PROJECT_DIR$/src/formTemplates/RefinanceForm/RefinanceFormLoanDetailsCont.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layout/Router.js" afterPath="$PROJECT_DIR$/src/layout/Router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/NoMatch/NoMatch.js" afterPath="$PROJECT_DIR$/src/pages/NoMatch/NoMatch.js" />
-    </list>
+    <list default="true" id="d6ec744c-6f3b-451c-a59b-3804a29d9630" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -43,8 +32,8 @@
           <file leaf-file-name="LeadForm.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1220">
-                  <caret line="132" column="41" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
+                <state relative-caret-position="340">
+                  <caret line="252" column="60" lean-forward="false" selection-start-line="252" selection-start-column="60" selection-end-line="252" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#42#0" expanded="true" />
                   </folding>
@@ -658,12 +647,12 @@
       <workItem from="1614643928344" duration="4022000" />
       <workItem from="1615154598070" duration="13855000" />
       <workItem from="1615345325837" duration="5007000" />
-      <workItem from="1615429186826" duration="5793000" />
+      <workItem from="1615429186826" duration="5905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431097000" />
+    <option name="totallyTimeSpent" value="431209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,16 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1220">
-          <caret line="132" column="41" lean-forward="false" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/formTemplates/FormPersonalDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -1001,6 +980,16 @@
         <state relative-caret-position="175">
           <caret line="50" column="106" lean-forward="false" selection-start-line="50" selection-start-column="106" selection-end-line="50" selection-end-column="106" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LeadForm/LeadForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="252" column="60" lean-forward="false" selection-start-line="252" selection-start-column="60" selection-end-line="252" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
