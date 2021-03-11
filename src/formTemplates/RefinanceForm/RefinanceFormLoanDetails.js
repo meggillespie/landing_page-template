@@ -22,7 +22,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-4">
 						<Label htmlFor="propertyType"><strong>Property Type</strong></Label>
 						<AvField type="select" id="propertyType" className="form-control" name="propertyType"
-						         value={this.props.propertyType} onChange={ this.handleChange } required>
+						         value={this.props.propertyType} onChange={ this.handleChange } required helpMessage="Required">
 							<option value="">Choose...</option>
 							<option value="SFR">Single Family</option>
 							<option value="townhome">Townhome</option>
@@ -33,7 +33,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-4">
 						<Label htmlFor="currentLoanType"><strong>Current Loan Type</strong></Label>
 						<AvField type="select" id="currentLoanType" className="form-control" name="currentLoanType"
-						         value={this.props.currentLoanType} onChange={ this.handleChange } required>
+						         value={this.props.currentLoanType} onChange={ this.handleChange } required helpMessage="Required">
 							<option value="">Choose...</option>
 							<option value="CONV">Conventional</option>
 							<option value="FHA">FHA</option>
@@ -45,7 +45,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-4">
 						<Label htmlFor="estimatedValue"><strong>Estimated Home Value</strong></Label>
 						<AvField type="number" className="form-control" id="estimatedValue" name="estimatedValue"
-						         value={this.props.estimatedValue} placeholder="$350,000" onChange={ this.handleChange } required/>
+						         value={this.props.estimatedValue} placeholder="$350,000" onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 				</div>
 
@@ -53,7 +53,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-3">
 						<Label htmlFor="yearPurchased"><strong>Year Purchased</strong></Label>
 						<AvField type="number" className="form-control" id="yearPurchased" name="yearPurchased" placeholder="1999"
-						         value={this.props.yearPurchased} onChange={ this.handleChange } required/>
+						         value={this.props.yearPurchased} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 
 					<div className="form-check form-check-inline mx-auto">
@@ -66,7 +66,7 @@ export class RefinanceFormLoanDetails extends Component {
 							<div className="form-group col-md-3">
 								<label htmlFor="dateOfLastRefi"><strong>Year of Last Refinance</strong></label>
 								<input type="number" className="form-control" id="dateOfLastRefi" name="dateOfLastRefi" placeholder="2005"
-								       value={this.props.dateOfLastRefi} onChange={ this.handleChange } required/>
+								       value={this.props.dateOfLastRefi} onChange={ this.handleChange } />
 							</div>
 						) : (
 							<div className="form-group col-md-3"></div>
@@ -78,7 +78,7 @@ export class RefinanceFormLoanDetails extends Component {
 					<div className="form-group col-md-3">
 						<Label htmlFor="originalLoanAmount"><strong>Orig. Loan Amount for { loanType }</strong></Label>
 						<AvField type="number" className="form-control" id="originalLoanAmount" name="originalLoanAmount" placeholder="$305,000"
-						         value={this.props.originalLoanAmount} onChange={ this.handleChange } required/>
+						         value={this.props.originalLoanAmount} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 
 					<div className="form-check form-check-inline mx-auto">
@@ -91,7 +91,7 @@ export class RefinanceFormLoanDetails extends Component {
 							<div className="form-group col-md-3">
 								<label htmlFor="cashOutAmount"><strong>How Much Cash Do You Need?</strong></label>
 								<input type="number" className="form-control" id="cashOutAmount" name="cashOutAmount" placeholder="$25,000"
-								       value={this.props.cashOutAmount} onChange={ this.handleChange } required/>
+								       value={this.props.cashOutAmount} onChange={ this.handleChange } />
 							</div>
 						) : (
 							<div className="form-group col-md-3"></div>

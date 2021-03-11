@@ -20,12 +20,12 @@ export class RefinanceFormLoanDetailsCont extends Component {
 					<div className="form-group col-md-4">
 						<Label htmlFor="currentRate"><strong>Current Interest Rate</strong></Label>
 						<AvField type="number" className="form-control" id="currentRate" name="currentRate" placeholder="4.5"
-						         value={this.props.currentRate} onChange={ this.handleChange } required/>
+						         value={this.props.currentRate} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="mortgageBalance"><strong>Current Mortgage Balance</strong></Label>
 						<AvField type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
-						         value={this.props.mortgageBalance} onChange={ this.handleChange } required/>
+						         value={this.props.mortgageBalance} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="secondMortgage"><strong>Second Mortgage Balance</strong></Label>
@@ -38,17 +38,17 @@ export class RefinanceFormLoanDetailsCont extends Component {
 					<div className="form-group col-md-4">
 						<Label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></Label>
 						<AvField type="number" className="form-control" id="monthlyPI" name="monthlyPI" placeholder="$2,700"
-						         value={this.props.monthlyPI} onChange={ this.handleChange } required/>
+						         value={this.props.monthlyPI} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></Label>
 						<AvField type="number" className="form-control" id="hoi" name="hoi" placeholder="$125"
-						          value={this.props.hoi} onChange={ this.handleChange } required/>
+						          value={this.props.hoi} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="tax"><strong>Annual Property Tax</strong></Label>
 						<AvField type="number" className="form-control" id="tax" name="tax" placeholder="$6,000"
-						         value={this.props.tax} onChange={ this.handleChange } required/>
+						         value={this.props.tax} onChange={ this.handleChange } required helpMessage="Required"/>
 					</div>
 				</div>
 

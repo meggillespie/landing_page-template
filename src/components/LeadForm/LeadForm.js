@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import { Redirect } from 'react-router-dom';
 import { AvForm } from 'availity-reactstrap-validation';
 import emailjs from 'emailjs-com';
 import { toFixedDecimals, formatDollarValues, phoneNumberFilter } from '../../filters/filters'
@@ -30,14 +31,12 @@ export class LeadForm extends Component {
 			firstTimeHomeBuyer: '',
 
 			propertyType: '',
-			bankruptcyShortsaleForeclosure: '',
-
 			currentLoanType: '',
 			estimatedValue: '',
 			yearPurchased: '',
+			originalLoanAmount: '',
 			refinancedBefore: false,
 			dateOfLastRefi: '',
-			originalLoanAmount: '',
 			cashOut: false,
 			cashOutAmount: '',
 
@@ -51,7 +50,9 @@ export class LeadForm extends Component {
 			escrowFwd: '',
 			lateMortgagePayments: '',
 
-			currentStep: 1
+			bankruptcyShortsaleForeclosure: '',
+			currentStep: 1,
+			redirect: false
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -72,10 +73,15 @@ export class LeadForm extends Component {
 
 	handleInvalidSubmit(e, errors, values) {
 		const target = e.target;
-		const value = target.type === 'checkbox' ? target.checked : target.value;
-		const name = target.name;
 
-		this.setState({ [name]: value, error: true });
+		if (target) {
+			const value = target.type === 'checkbox' ? target.checked : target.value;
+			const name = target.name;
+
+			this.setState({ [name]: value, error: true });
+		}
+
+		alert(`All Fields Must Be Completed`);
 	}
 
 	handleValidSubmit(e, values) {
@@ -83,25 +89,36 @@ export class LeadForm extends Component {
 		let leadParams = this.state;
 
 		if (this.props.formIndicator === 'refinance') {
+			let self = this;
 			emailjs.send('service_8l6p57o','template_w9ypx75', leadParams, 'user_C86O0FT0wefYL1wUuSg0L')
 				.then(function(response) {
-					console.log('SUCCESS!', response.status, response.text);
+					self._setRedirect();
+
 				}, function(error) {
-					console.log('FAILED...', error);
+					alert('FAILED...', error);
 				});
-		} else {
+		} else if ( this.props.formIndicator === 'purchase' ){
+			let self = this;
 			emailjs.send('service_8l6p57o','template_q9urm78', leadParams, 'user_C86O0FT0wefYL1wUuSg0L')
 				.then(function(response) {
-					console.log('SUCCESS!', response.status, response.text);
+					self._setRedirect();
+
 				}, function(error) {
-					console.log('FAILED...', error);
+					alert('FAILED...', error);
 				});
 		}
+	};
 
-		//
-		//GO TO THANK YOU PAGE
-		//
+	_setRedirect = () => {
+		this.setState({
+			redirect: true
+		})
+	};
 
+	_renderRedirect = () => {
+		if ( this.state.redirect ) {
+			return <Redirect to='/thanks' />
+		}
 	};
 
 	_next = () => {
@@ -113,7 +130,7 @@ export class LeadForm extends Component {
 
 			this.setState({ currentStep: currentStep })
 		} else {
-			alert(`All Fields Must Be Completed`);
+			alert(`Complete All Required Fields`);
 		}
 	};
 
@@ -123,6 +140,13 @@ export class LeadForm extends Component {
 
 		if ( this.state.currentStep === 1 ) {
 			for (let i = 0; i <= 7; i++) {
+				if(	formValues[i] === "" || formValues[i] === "choose" ) {
+					emptyFieldIndicator.empty.push(formValues[i])
+				}
+			}
+		} else if ( this.state.currentStep === 2 && this.props.formIndicator === 'refinance') {
+			console.log(formValues)
+			for (let i = 15; i <= 19; i++) {
 				if(	formValues[i] === "" || formValues[i] === "choose" ) {
 					emptyFieldIndicator.empty.push(formValues[i])
 				}
@@ -149,7 +173,10 @@ export class LeadForm extends Component {
 
 		if (( currentStep === 2 && this.props.formIndicator === 'purchase') || (currentStep === 3 && this.props.formIndicator === 'refinance')) {
 			return (
+			<div>
+				{ this._renderRedirect() }
 				<button className="btn btn-primary float-right">Submit</button>
+			</div>
 			)
 		}
 	}
@@ -196,7 +223,7 @@ export class LeadForm extends Component {
 			<div>
 				<h4 className="lead text-muted mb-5" style={{ marginTop: '5vh', fontWeight: '600' }}>{ formSubHeading }</h4>
 
-				<AvForm action="/" target="_self" autocomplete="on" onValidSubmit={ this.handleValidSubmit }
+				<AvForm autoComplete="on" onValidSubmit={ this.handleValidSubmit }
 				        onInvalidSubmit={ this.handleInvalidSubmit } id="lead-form" style={{ marginBottom: '10vh' }}
 				        className="text-left">
 						{ (() => {
@@ -245,27 +272,27 @@ export class LeadForm extends Component {
 								switch(this.state.currentStep) {
 									case  1:
 										return <FormPersonalDetails
-											name={ this.state.name }
-											email={ this.state.email }
-											phone={ this.state.phone }
-											zipcode={ this.state.zipcode }
-											creditScore={ this.state.creditScore }
-											employmentStatus={ this.state.employmentStatus }
-											monthlyIncome={ this.state.monthlyIncome }
-											monthlyExpenses={ this.state.monthlyExpenses }
-											onChange={ this.handleChange } />;
+															name={ this.state.name }
+															email={ this.state.email }
+															phone={ this.state.phone }
+															zipcode={ this.state.zipcode }
+															creditScore={ this.state.creditScore }
+															employmentStatus={ this.state.employmentStatus }
+															monthlyIncome={ this.state.monthlyIncome }
+															monthlyExpenses={ this.state.monthlyExpenses }
+															onChange={ this.handleChange } />;
 									case 2:
 										return <PurchaseFormLoanDetails
-											purchaseStage={ this.state.purchaseStage }
-											propertyType={ this.state.propertyType }
-											propertyUse={ this.state.propertyUse }
-											purchasePrice={ this.state.purchasePrice }
-											estimatedDownPayment={ this.state.estimatedDownPayment }
-											ratePreference={ this.state.ratePreference }
-											firstTimeHomeBuyer={ this.state.firstTimeHomeBuyer }
-											realEstateAgent={ this.state.realEstateAgent }
-											bankruptcyShortsaleForeclosure={ this.state.bankruptcyShortsaleForeclosure }
-											onChange={ this.handleChange } />;
+															purchaseStage={ this.state.purchaseStage }
+															propertyType={ this.state.propertyType }
+															propertyUse={ this.state.propertyUse }
+															purchasePrice={ this.state.purchasePrice }
+															estimatedDownPayment={ this.state.estimatedDownPayment }
+															ratePreference={ this.state.ratePreference }
+															firstTimeHomeBuyer={ this.state.firstTimeHomeBuyer }
+															realEstateAgent={ this.state.realEstateAgent }
+															bankruptcyShortsaleForeclosure={ this.state.bankruptcyShortsaleForeclosure }
+															onChange={ this.handleChange } />;
 									default:
 										return null;
 								}

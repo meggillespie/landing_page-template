@@ -104,9 +104,9 @@ export class Home extends Component {
 						</div>
 
 						<div className="row mt-4">
-							<div className="col-md-8 offset-md-2">
-								<div className="embed-responsive embed-responsive-16by9 border border-light rounded-sm">
-									<iframe title="intro-video" className="embed-responsive-item" src="https://www.youtube.com/embed/Z5bVH4vvsyk?version=3&loop=0&playlist=Z5bVH4vvsyk"></iframe>
+							<div className="col-md-10 offset-md-1">
+								<div className="embed-responsive embed-responsive-21by9 border border-light rounded-sm">
+									<iframe width="60vh" height="auto" title="intro-video" className="embed-responsive-item" src="https://www.youtube.com/embed/Z5bVH4vvsyk?version=3&loop=0&playlist=Z5bVH4vvsyk"></iframe>
 								</div>
 							</div>
 						</div>
