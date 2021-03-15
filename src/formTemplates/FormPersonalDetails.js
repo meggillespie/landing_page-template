@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Label } from 'reactstrap';
 import { AvField } from 'availity-reactstrap-validation';
+import CurrencyFormat from 'react-currency-format';
 
 export class FormPersonalDetails extends Component {
 	constructor(props) {
@@ -69,8 +70,10 @@ export class FormPersonalDetails extends Component {
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="monthlyIncome"><strong>Gross Monthly Income</strong></Label>
-						<AvField type="number" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$7,250"
-						         value={this.props.monthlyIncome} onChange={ this.handleChange } required helpMessage="Required"/>
+						<AvField type="text" className="form-control" id="monthlyIncome" name="monthlyIncome" placeholder="$7,250"
+						         value={this.props.monthlyIncome} onChange={ this.handleChange }
+						         validate={{ required: {value: true} }}
+						         helpMessage="Required"/>
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="monthlyExpenses"><strong>Minimum Monthly Debt Payments</strong></Label>

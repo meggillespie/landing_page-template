@@ -2,7 +2,7 @@ import React, { Component }  from 'react';
 import { Redirect } from 'react-router-dom';
 import { AvForm } from 'availity-reactstrap-validation';
 import emailjs from 'emailjs-com';
-import { toFixedDecimals, formatDollarValues, phoneNumberFilter } from '../../filters/filters'
+import { formatDollarValues, phoneNumberFilter } from '../../filters/filters'
 import { FormPersonalDetails } from '../../formTemplates/FormPersonalDetails';
 import { PurchaseFormLoanDetails } from '../../formTemplates/PurchaseForm/PurchaseFormLoanDetails';
 import { RefinanceFormLoanDetails } from '../../formTemplates/RefinanceForm/RefinanceFormLoanDetails';

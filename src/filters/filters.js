@@ -1,4 +1,6 @@
-import numeral from 'numeral';
+// import CurrencyFormat from 'react-currency-format';
+// import accounting from 'accounting-js';
+
 
 function toFixedDecimals(num) {
 	let digits = num.replace(/[^0-9.]/g, '');
@@ -8,8 +10,18 @@ function toFixedDecimals(num) {
 }
 
 function formatDollarValues(val) {
-	return numeral(val).format('$ 0,0');
+	//return val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 
+	// console.log(formatDollarValues(2665)) // 2,665
+	// console.log(formatDollarValues(102665)) // 102,665
+	// console.log(formatDollarValues(111102665)) // 111,102,665
+
+	// return '$' + val.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+	// console.info(currencyFormat(2665)); // $2,665.00
+	// console.info(currencyFormat(102665)); // $102,665.00
+
+	//return accounting.formatNumber(val);
+	//return accounting.formatMoney(val, "$ ", 0)
 }
 
 function phoneNumberFilter (val) {
