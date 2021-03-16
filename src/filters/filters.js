@@ -1,5 +1,5 @@
 // import CurrencyFormat from 'react-currency-format';
-// import accounting from 'accounting-js';
+import accounting from 'accounting-js';
 
 
 function toFixedDecimals(num) {
@@ -10,18 +10,35 @@ function toFixedDecimals(num) {
 }
 
 function formatDollarValues(val) {
-	//return val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+	let formattedDollars, dollars, firstSet, secondSet, thirdSet;
 
-	// console.log(formatDollarValues(2665)) // 2,665
-	// console.log(formatDollarValues(102665)) // 102,665
-	// console.log(formatDollarValues(111102665)) // 111,102,665
+	if (val && val.length > 0) {
+		let placeValues = val.replace(/[^0-9]/g, '');
 
-	// return '$' + val.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-	// console.info(currencyFormat(2665)); // $2,665.00
-	// console.info(currencyFormat(102665)); // $102,665.00
+		dollars = placeValues.length > 7 ? placeValues.substr(0, 7) : placeValues;
 
-	//return accounting.formatNumber(val);
-	//return accounting.formatMoney(val, "$ ", 0)
+		if (dollars.length <= 3) {
+			formattedDollars = dollars.slice(0,3);
+		}
+
+		if (dollars.length > 3 && dollars.length <= 6) {
+			firstSet = dollars.slice(0,3);
+			secondSet = dollars.slice(3,6);
+			formattedDollars = firstSet +','+ secondSet;
+		}
+
+		if (dollars.length > 6 && dollars.length <= 7) {
+			firstSet = dollars.slice(0,1);
+			secondSet = dollars.slice(1,4);
+			thirdSet = dollars.slice(4,7);
+			formattedDollars = firstSet +','+ secondSet +','+ thirdSet;
+		}
+	}
+	else {
+		formattedDollars = '';
+	}
+
+	return formattedDollars;
 }
 
 function phoneNumberFilter (val) {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import noPageBackground from '../../media/pnf.png';
 
 export class NoMatch extends Component {
 	render () {
