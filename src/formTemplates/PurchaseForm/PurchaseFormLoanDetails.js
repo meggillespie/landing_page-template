@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Label } from 'reactstrap';
-import { AvField } from 'availity-reactstrap-validation';
+import { Label, InputGroup, InputGroupText, InputGroupAddon } from 'reactstrap';
+import { AvGroup, AvField, AvInput, AvFeedback } from 'availity-reactstrap-validation';
 
 export class PurchaseFormLoanDetails extends Component {
 	constructor(props) {
@@ -19,8 +19,13 @@ export class PurchaseFormLoanDetails extends Component {
 				<div className="form-row">
 					<div className="form-group col-md-4">
 						<Label htmlFor="purchaseStage"><strong>Current Stage of Purchase</strong></Label>
-						<AvField type="select" id="purchaseStage" className="form-control" name="purchaseStage"
-						         value={this.props.purchaseStage} onChange={ this.handleChange } required helpMessage="Required">
+						<AvField
+							type="select" id="purchaseStage" className="form-control" name="purchaseStage"
+							value={this.props.purchaseStage} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
 							<option value="">Choose...</option>
 							<option value="Signed Purchase Contract">Signed Purchase Contract</option>
 							<option value="Offer Pending/Found Property">Offer Pending/Found Property</option>
@@ -30,8 +35,13 @@ export class PurchaseFormLoanDetails extends Component {
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="propertyType"><strong>Property Type</strong></Label>
-						<AvField type="select" id="propertyType" className="form-control" name="propertyType"
-						         value={this.props.propertyType} onChange={ this.handleChange } required helpMessage="Required">
+						<AvField
+							type="select" id="propertyType" className="form-control" name="propertyType"
+							value={this.props.propertyType} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
 							<option value="">Choose...</option>
 							<option value="SFR">Single Family</option>
 							<option value="Townhome">Townhome</option>
@@ -41,8 +51,13 @@ export class PurchaseFormLoanDetails extends Component {
 					</div>
 					<div className="form-group col-md-4">
 						<Label htmlFor="propertyUse"><strong>Property Use</strong></Label>
-						<AvField type="select" id="propertyUse" className="form-control" name="propertyUse"
-						         value={this.props.propertyUse} onChange={ this.handleChange } required helpMessage="Required">
+						<AvField
+							type="select" id="propertyUse" className="form-control" name="propertyUse"
+							value={this.props.propertyUse} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
 							<option value="">Choose...</option>
 							<option value="Primary Home">Primary Home</option>
 							<option value="Secondary Home">Secondary Home</option>
@@ -52,23 +67,47 @@ export class PurchaseFormLoanDetails extends Component {
 				</div>
 
 				<div className="form-row">
-					<div className="form-group col-md-4">
+					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="purchasePrice"><strong>Purchase Price</strong></Label>
-						<AvField type="number" className="form-control" id="purchasePrice" name="purchasePrice" placeholder="$350,000"
-						         value={this.props.purchasePrice} onChange={ this.handleChange } required helpMessage="Required"/>
-					</div>
-					<div className="form-group col-md-4">
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="purchase-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="purchasePrice" name="purchasePrice" placeholder="550,000"
+								type="text" className="form-control" maxlength="8" required
+								value={this.props.purchasePrice || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+
+					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="estimatedDownPayment"><strong>Estimated Down Payment</strong></Label>
-						<AvField type="number" className="form-control" id="estimatedDownPayment" name="estimatedDownPayment"
-						         value={this.props.estimatedDownPayment} placeholder="$12,500" onChange={ this.handleChange } required helpMessage="Required"/>
-					</div>
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="estimated-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="estimatedDownPayment" name="estimatedDownPayment" placeholder="55,000"
+								type="text" className="form-control" maxlength="8" required
+								value={this.props.estimatedDownPayment || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+
 					<div className="form-group col-md-4">
-						<Label htmlFor="ratePreference"><strong>Rate Preference</strong></Label>
-						<AvField type="select" id="ratePreference" className="form-control" name="ratePreference"
-						         value={this.props.ratePreference} onChange={ this.handleChange } required helpMessage="Required">
+						<Label htmlFor="purchaseLoanTerm"><strong>Preferred Loan Term</strong></Label>
+						<AvField
+							type="select" id="purchaseLoanTerm" className="form-control" name="purchaseLoanTerm"
+							value={this.props.purchaseLoanTerm} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
 							<option value="">Choose...</option>
-							<option value="Fixed">Fixed</option>
-							<option value="Variable">Variable</option>
+							<option value="30">30 Year</option>
+							<option value="20">20 Year</option>
+							<option value="15">15 Year</option>
 						</AvField>
 					</div>
 				</div>

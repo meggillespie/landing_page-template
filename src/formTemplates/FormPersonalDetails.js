@@ -32,29 +32,44 @@ export class FormPersonalDetails extends Component {
 				<div className="form-row">
 					<div className="form-group col-md-6">
 						<Label htmlFor="inputName"><strong>Name</strong></Label>
-						<AvField type="name" className="form-control" id="inputName" name="name" placeholder="Name"
-						         value={this.props.name || ''} onChange={ this.handleChange } required />
+						<AvField
+							type="name" className="form-control" id="inputName" name="name" placeholder="Name"
+							value={this.props.name || ''} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						/>
 					</div>
 					<div className="form-group col-md-6">
 						<Label htmlFor="inputEmail"><strong>Email</strong></Label>
-						<AvField type="email" className="form-control" id="inputEmail" name="email" placeholder="Email"
-						         value={this.props.email || ''} onChange={ this.handleChange } required />
+						<AvField
+							type="email" className="form-control" id="inputEmail" name="email" placeholder="Email"
+							value={this.props.email || ''} onChange={ this.handleChange }
+		          validate={{
+			          required: {value: true, errorMessage: 'Required Field'}
+		          }}
+						/>
 					</div>
 				</div>
 
 				<div className="form-row">
 					<div className="form-group col-md-4">
 						<Label htmlFor="inputPhone"><strong>Phone Number</strong></Label>
-						<AvField type="text" className="form-control" id="inputPhone" name="phone" placeholder="(512) 555-1234"
-						         value={this.props.phone || ''} onChange={ this.handleChange } required />
+						<AvField
+							type="text" className="form-control" id="inputPhone" name="phone" placeholder="(512) 555-1234"
+		          value={this.props.phone || ''} onChange={ this.handleChange } maxlength="14"
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						/>
 					</div>
 
 					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="zipcode"><strong>Zipcode</strong></Label>
 						<InputGroup>
-							<AvInput type="text" className="form-control" id="zipcode" name="zipcode" placeholder="78738"
-							         value={this.props.zipcode || ''} onChange={ this.handleChange } maxlength="5" required
-							         pattern="[^0-9,]{3}"
+							<AvInput
+								type="text" className="form-control" id="zipcode" name="zipcode" placeholder="78738"
+								value={this.props.zipcode || ''} onChange={ this.handleChange } maxlength="5" required
 							/>
 							<AvFeedback>Required Field</AvFeedback>
 						</InputGroup>
@@ -62,8 +77,13 @@ export class FormPersonalDetails extends Component {
 
 					<div className="form-group col-md-4">
 						<Label htmlFor="creditScore"><strong>FICO Score</strong></Label>
-						<AvField type="select" id="creditScore" className="form-control" name="creditScore" required
-						         value={this.props.creditScore || ''} onChange={ this.handleChange } helpMessage="Best Estimate">
+						<AvField
+							type="select" id="creditScore" className="form-control" name="creditScore"
+							value={this.props.creditScore || ''} onChange={ this.handleChange } helpMessage="Best Estimate"
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
 							<option value="">Choose...</option>
 							<option value="Excellent (720+)">Excellent (720+)</option>
 							<option value="Good (680 - 719)">Good (680 - 719)</option>
@@ -76,8 +96,13 @@ export class FormPersonalDetails extends Component {
 				<div className="form-row">
 					<div className="form-group col-md-4">
 						<Label htmlFor="employmentStatus"><strong>Employment Status</strong></Label>
-						<AvField type="select" id="employmentStatus" className="form-control" name="employmentStatus"
-						         value={this.props.employmentStatus} onChange={ this.handleChange } required >
+						<AvField
+							type="select" id="employmentStatus" className="form-control" name="employmentStatus"
+							value={this.props.employmentStatus} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
 							<option value="">Choose...</option>
 							<option value="salary">Salaried</option>
 							<option value="commission">Commission</option>
@@ -93,9 +118,10 @@ export class FormPersonalDetails extends Component {
 							<InputGroupAddon addonType="prepend">
 								<InputGroupText id="income-addon">$</InputGroupText>
 							</InputGroupAddon>
-							<AvInput id="monthlyIncome" name="monthlyIncome" placeholder="7,250"
-							         type="text" className="form-control" maxlength="8" required
-							         value={this.props.monthlyIncome || ''} onChange={ this.handleChange }/>
+							<AvInput
+								id="monthlyIncome" name="monthlyIncome" placeholder="7,250"
+								type="text" className="form-control" maxlength="8" required
+								value={this.props.monthlyIncome || ''} onChange={ this.handleChange }/>
 							<AvFeedback>Required Field</AvFeedback>
 						</InputGroup>
 					</AvGroup>
@@ -106,10 +132,11 @@ export class FormPersonalDetails extends Component {
 							<InputGroupAddon addonType="prepend">
 								<InputGroupText id="expense-addon">$</InputGroupText>
 							</InputGroupAddon>
-							<AvInput id="monthlyExpenses" name="monthlyExpenses" placeholder="750"
-							         type="text" className="form-control" maxlength="8" required
-							         // onkeypress={ this.onlyNumberKey }
-							         value={this.props.monthlyExpenses || ''} onChange={ this.handleChange }/>
+							<AvInput
+								id="monthlyExpenses" name="monthlyExpenses" placeholder="750"
+								type="text" className="form-control" maxlength="8" required
+								// onkeypress={ this.onlyNumberKey }
+								value={this.props.monthlyExpenses || ''} onChange={ this.handleChange }/>
 							<AvFeedback>Required Field</AvFeedback>
 						</InputGroup>
 					</AvGroup>

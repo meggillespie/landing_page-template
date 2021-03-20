@@ -9,7 +9,7 @@ function formatDollarValues(val) {
 	let formattedDollars, dollars, firstSet, secondSet, thirdSet;
 
 	if (val && val.length > 0) {
-		let nonLetters = val.replace(/[^0-9.,]+/, '');
+		let nonLetters = val.replace(/[^0-9,]+/, '');
 		// console.log(nonLetters);
 		let placeValues = nonLetters.replace(/[^0-9]/g, '');
 		//[A-Z]*(\d*)[A-Z]*

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Label } from 'reactstrap';
-import { AvField } from 'availity-reactstrap-validation';
+import { Label, InputGroup, InputGroupText, InputGroupAddon } from 'reactstrap';
+import { AvGroup, AvField, AvInput, AvFeedback } from 'availity-reactstrap-validation';
 
 export class RefinanceFormLoanDetailsCont extends Component {
 	constructor(props) {
@@ -17,38 +17,110 @@ export class RefinanceFormLoanDetailsCont extends Component {
 		return(
 			<div>
 				<div className="form-row">
-					<div className="form-group col-md-4">
+					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="currentRate"><strong>Current Interest Rate</strong></Label>
-						<AvField type="number" className="form-control" id="currentRate" name="currentRate" placeholder="4.5"
-						         value={this.props.currentRate} onChange={ this.handleChange } required helpMessage="Required"/>
-					</div>
-					<div className="form-group col-md-4">
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="rate-addon">%</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="currentRate" name="currentRate" placeholder="3.125"
+								type="text" className="form-control" maxlength="5" required
+								value={this.props.currentRate || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+
+					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="mortgageBalance"><strong>Current Mortgage Balance</strong></Label>
-						<AvField type="number" className="form-control" id="mortgageBalance" name="mortgageBalance" placeholder="$250,000"
-						         value={this.props.mortgageBalance} onChange={ this.handleChange } required helpMessage="Required"/>
-					</div>
-					<div className="form-group col-md-4">
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="mortgaged-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="mortgageBalance" name="mortgageBalance" placeholder="450,500"
+								type="text" className="form-control" maxlength="8" required
+								value={this.props.mortgageBalance || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+
+					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="secondMortgage"><strong>Second Mortgage Balance</strong></Label>
-						<AvField type="number" className="form-control" id="secondMortgage" name="secondMortgage" placeholder="$0"
-						         value={this.props.secondMortgage} onChange={ this.handleChange } />
-					</div>
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="second-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="secondMortgage" name="secondMortgage" placeholder="0"
+								type="text" className="form-control" maxlength="8" required
+								value={this.props.secondMortgage || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+				</div>
+
+				<div className="form-row">
+					<AvGroup className="form-group col-md-4">
+						<Label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></Label>
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="payment-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="monthlyPI" name="monthlyPI" placeholder="2,700"
+								type="text" className="form-control" maxlength="8" required
+								value={this.props.monthlyPI || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+
+					<AvGroup className="form-group col-md-4">
+						<Label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></Label>
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="hoi-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="hoi" name="hoi" placeholder="150"
+								type="text" className="form-control" maxlength="6" required
+								value={this.props.hoi || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
+
+					<AvGroup className="form-group col-md-4">
+						<Label htmlFor="tax"><strong>Annual Property Tax</strong></Label>
+						<InputGroup>
+							<InputGroupAddon addonType="prepend">
+								<InputGroupText id="tax-addon">$</InputGroupText>
+							</InputGroupAddon>
+							<AvInput
+								id="tax" name="tax" placeholder="6,500"
+								type="text" className="form-control" maxlength="6" required
+								value={this.props.tax || ''} onChange={ this.handleChange }/>
+							<AvFeedback>Required Field</AvFeedback>
+						</InputGroup>
+					</AvGroup>
 				</div>
 
 				<div className="form-row">
 					<div className="form-group col-md-4">
-						<Label htmlFor="monthlyPI"><strong>Monthly Principal + Interest</strong></Label>
-						<AvField type="number" className="form-control" id="monthlyPI" name="monthlyPI" placeholder="$2,700"
-						         value={this.props.monthlyPI} onChange={ this.handleChange } required helpMessage="Required"/>
-					</div>
-					<div className="form-group col-md-4">
-						<Label htmlFor="hoi"><strong>Monthly Homeowner's Insr.</strong></Label>
-						<AvField type="number" className="form-control" id="hoi" name="hoi" placeholder="$125"
-						          value={this.props.hoi} onChange={ this.handleChange } required helpMessage="Required"/>
-					</div>
-					<div className="form-group col-md-4">
-						<Label htmlFor="tax"><strong>Annual Property Tax</strong></Label>
-						<AvField type="number" className="form-control" id="tax" name="tax" placeholder="$6,000"
-						         value={this.props.tax} onChange={ this.handleChange } required helpMessage="Required"/>
+						<Label htmlFor="refiLoanTerm"><strong>Preferred Loan Term</strong></Label>
+						<AvField
+							type="select" id="refiLoanTerm" className="form-control" name="refiLoanTerm"
+							value={this.props.refiLoanTerm} onChange={ this.handleChange }
+							validate={{
+								required: {value: true, errorMessage: 'Required Field'}
+							}}
+						>
+							<option value="">Choose...</option>
+							<option value="30">30 Year</option>
+							<option value="25">25 Year</option>
+							<option value="20">20 Year</option>
+							<option value="15">15 Year</option>
+							<option value="10">10 Year</option>
+						</AvField>
 					</div>
 				</div>
 

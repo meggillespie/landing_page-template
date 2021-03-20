@@ -8,7 +8,7 @@ import './MainCard.scss';
 export class MainCard extends Component {
 	render () {
 		return (
-			<div className="card-block px-4 w-40" style={{ position: 'absolute' }}>
+			<div className="card-block px-4 w-40" style={{ position: 'absolute' }} >
 				<Card style={{ boxShadow: '0 30px 40px rgba(0,0,0,4)' }} >
 					<img src={ logoImg } className="mt-3 main-card-img" alt="embossed logo background"
 					     style={{ position: 'absolute', width: 'auto', zIndex: '1', opacity: '0.1' }}/>

@@ -26,7 +26,7 @@ export class LeadForm extends Component {
 			propertyUse: '',
 			purchasePrice: '',
 			estimatedDownPayment: '',
-			ratePreference: '',
+			refiLoanTerm: '',
 			realEstateAgent: '',
 			firstTimeHomeBuyer: '',
 
@@ -39,6 +39,7 @@ export class LeadForm extends Component {
 			dateOfLastRefi: '',
 			cashOut: false,
 			cashOutAmount: '',
+			originalLoanTerm: '',
 
 			currentRate: '',
 			mortgageBalance: '',
@@ -46,6 +47,7 @@ export class LeadForm extends Component {
 			monthlyPI: '',
 			hoi: '',
 			tax: '',
+			purchaseLoanTerm: '',
 			currentEscrow: '',
 			escrowFwd: '',
 			lateMortgagePayments: '',
@@ -67,9 +69,18 @@ export class LeadForm extends Component {
 
 		value = name === 'monthlyIncome' ? formatDollarValues(value) : value;
 		value = name === 'monthlyExpenses' ? formatDollarValues(value) : value;
-		value = name === 'phone' ? phoneNumberFilter(value) : value;
+		value = name === 'purchasePrice' ? formatDollarValues(value) : value;
+		value = name === 'estimatedDownPayment' ? formatDollarValues(value) : value;
+		value = name === 'estimatedValue' ? formatDollarValues(value) : value;
+		value = name === 'originalLoanAmount' ? formatDollarValues(value) : value;
+		value = name === 'cashOutAmount' ? formatDollarValues(value) : value;
+		value = name === 'mortgageBalance' ? formatDollarValues(value) : value;
+		value = name === 'secondMortgage' ? formatDollarValues(value) : value;
+		value = name === 'monthlyPI' ? formatDollarValues(value) : value;
+		value = name === 'hoi' ? formatDollarValues(value) : value;
+		value = name === 'tax' ? formatDollarValues(value) : value;
 
-		console.log(value);
+		value = name === 'phone' ? phoneNumberFilter(value) : value;
 
 		this.setState({ [name]: value })
 	};
@@ -194,7 +205,7 @@ export class LeadForm extends Component {
 				case  1:
 					return formSubHeading = 'PERSONAL DETAILS';
 				case 2:
-					return formSubHeading = 'CURRENT LOAN DETAILS';
+					return formSubHeading = 'LOAN DETAILS';
 				case  3:
 					return formSubHeading = 'LOAN DETAILS CONT...';
 				default:
@@ -234,6 +245,7 @@ export class LeadForm extends Component {
 															originalLoanAmount = { this.state.originalLoanAmount }
 															cashOut={ this.state.cashOut }
 															cashOutAmount={ this.state.cashOutAmount }
+															originalLoanTerm={ this.state.originalLoanTerm }
 															onChange={ this.handleChange } />;
 									case  3:
 										return <RefinanceFormLoanDetailsCont
@@ -242,6 +254,7 @@ export class LeadForm extends Component {
 															monthlyPI={ this.state.monthlyPI }
 															hoi={ this.state.hoi }
 															tax={ this.state.tax }
+															refiLoanTerm={ this.state.refiLoanTerm }
 															secondMortgage={ this.state.secondMortgage }
 															currentEscrow={ this.state.currentEscrow }
 															escrowFwd={ this.state.escrowFwd }
@@ -271,7 +284,7 @@ export class LeadForm extends Component {
 															propertyUse={ this.state.propertyUse }
 															purchasePrice={ this.state.purchasePrice }
 															estimatedDownPayment={ this.state.estimatedDownPayment }
-															ratePreference={ this.state.ratePreference }
+															purchaseLoanTerm={ this.state.purchaseLoanTerm }
 															firstTimeHomeBuyer={ this.state.firstTimeHomeBuyer }
 															realEstateAgent={ this.state.realEstateAgent }
 															bankruptcyShortsaleForeclosure={ this.state.bankruptcyShortsaleForeclosure }
