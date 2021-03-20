@@ -1,7 +1,3 @@
-// import CurrencyFormat from 'react-currency-format';
-import accounting from 'accounting-js';
-
-
 function toFixedDecimals(num) {
 	let digits = num.replace(/[^0-9.]/g, '');
 	let rate = digits + '%';
@@ -13,7 +9,11 @@ function formatDollarValues(val) {
 	let formattedDollars, dollars, firstSet, secondSet, thirdSet;
 
 	if (val && val.length > 0) {
-		let placeValues = val.replace(/[^0-9]/g, '');
+		let nonLetters = val.replace(/[^0-9.,]+/, '');
+		// console.log(nonLetters);
+		let placeValues = nonLetters.replace(/[^0-9]/g, '');
+		//[A-Z]*(\d*)[A-Z]*
+		//.replace(/\D/, '');
 
 		dollars = placeValues.length > 7 ? placeValues.substr(0, 7) : placeValues;
 
@@ -21,22 +21,33 @@ function formatDollarValues(val) {
 			formattedDollars = dollars.slice(0,3);
 		}
 
-		if (dollars.length > 3 && dollars.length <= 6) {
+		if (dollars.length > 3 && dollars.length < 5) {
+			firstSet = dollars.slice(0,1);
+			secondSet = dollars.slice(1,4);
+			formattedDollars = firstSet +','+ secondSet;
+		}
+
+		if (dollars.length > 4 && dollars.length <= 5) {
+			firstSet = dollars.slice(0,2);
+			secondSet = dollars.slice(2,5);
+			formattedDollars = firstSet +','+ secondSet;
+		}
+
+		if (dollars.length > 5 && dollars.length <= 6) {
 			firstSet = dollars.slice(0,3);
 			secondSet = dollars.slice(3,6);
 			formattedDollars = firstSet +','+ secondSet;
 		}
 
-		if (dollars.length > 6 && dollars.length <= 7) {
+		if (dollars.length > 6) {
 			firstSet = dollars.slice(0,1);
 			secondSet = dollars.slice(1,4);
 			thirdSet = dollars.slice(4,7);
 			formattedDollars = firstSet +','+ secondSet +','+ thirdSet;
 		}
 	}
-	else {
-		formattedDollars = '';
-	}
+
+	console.log(typeof formattedDollars)
 
 	return formattedDollars;
 }

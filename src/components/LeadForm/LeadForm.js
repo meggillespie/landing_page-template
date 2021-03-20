@@ -66,7 +66,10 @@ export class LeadForm extends Component {
 		const name = target.name;
 
 		value = name === 'monthlyIncome' ? formatDollarValues(value) : value;
+		value = name === 'monthlyExpenses' ? formatDollarValues(value) : value;
 		value = name === 'phone' ? phoneNumberFilter(value) : value;
+
+		console.log(value);
 
 		this.setState({ [name]: value })
 	};
@@ -90,6 +93,7 @@ export class LeadForm extends Component {
 
 		if (this.props.formIndicator === 'refinance') {
 			let self = this;
+
 			emailjs.send('service_8l6p57o','template_w9ypx75', leadParams, 'user_C86O0FT0wefYL1wUuSg0L')
 				.then(function(response) {
 					self._setRedirect();
@@ -99,6 +103,7 @@ export class LeadForm extends Component {
 				});
 		} else if ( this.props.formIndicator === 'purchase' ){
 			let self = this;
+
 			emailjs.send('service_8l6p57o','template_q9urm78', leadParams, 'user_C86O0FT0wefYL1wUuSg0L')
 				.then(function(response) {
 					self._setRedirect();
@@ -180,28 +185,6 @@ export class LeadForm extends Component {
 			)
 		}
 	}
-
-	// _prev = () => {
-	// 	let currentStep = this.state.currentStep;
-	// 	currentStep = currentStep <= 1 ? 1 : currentStep - 1;
-	//
-	// 	this.setState({ currentStep: currentStep })
-	// };
-
-	// form nav/button functions
-	// previousButton() {
-	// 	let currentStep = this.state.currentStep;
-	//
-	// 	if (currentStep !==1) {
-	// 		return (
-	// 			<button className="btn btn-secondary" type="button" onClick={ this._prev }>
-	// 				Previous
-	// 			</button>
-	// 		)
-	// 	}
-	// 	return null;
-	// }
-
 
 	render() {
 		let formSubHeading = '';
@@ -299,7 +282,6 @@ export class LeadForm extends Component {
 							}
 						}) () }
 
-					{/*{ this.previousButton() }*/}
 					{ this.nextButton() }
 					{ this.submitButton() }
 				</AvForm>

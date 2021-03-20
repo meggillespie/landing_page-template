@@ -22,7 +22,7 @@ export class Footer extends Component {
 						</div>
 
 						<div className="col-md-4 col-lg-4 col-xl-4 ml-0 my-auto">
-							<p>Buy a home, or refinance with Lakeway Lending, Powered by The Mortgage Firm. Your online resource for personalized mortgage solutions, fast customized quotes, great rates,
+							<p>Buy a home, or refinance with Lakeway Lending. Your online resource for personalized mortgage solutions, fast customized quotes, great rates,
 								& service with integrity.</p>
 						</div>
 
