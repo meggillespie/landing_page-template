@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
 import { Label, InputGroup, InputGroupText, InputGroupAddon } from 'reactstrap';
 import { AvGroup, AvField, AvInput, AvFeedback } from 'availity-reactstrap-validation';
+import InfoIcon from '../components/InfoIcon/InfoIcon';
 
 export class FormPersonalDetails extends Component {
 	constructor(props) {
 		super(props);
 
 		this.handleChange = this.handleChange.bind(this);
-		// this.onlyNumberKey = this.onlyNumberKey.bind(this)
 	}
 
 	handleChange(e) {
 		this.props.onChange(e);
 	}
-
-	// onlyNumberKey(evt) {
-	//
-	// 	let ASCIICode = (evt.which) ? evt.which : evt.keyCode;
-	// 	if ( ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57) ) {
-	// 		return false;
-	//
-	// 	} else {
-	// 		return true;
-	// 	}
-	//
-	// }
 
 	render () {
 		return(
@@ -114,6 +102,7 @@ export class FormPersonalDetails extends Component {
 
 					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="monthlyIncome"><strong>Gross Monthly Income</strong></Label>
+						<InfoIcon id="income" text="Your total monthly income before taxes." />
 						<InputGroup>
 							<InputGroupAddon addonType="prepend">
 								<InputGroupText id="income-addon">$</InputGroupText>
@@ -128,6 +117,8 @@ export class FormPersonalDetails extends Component {
 
 					<AvGroup className="form-group col-md-4">
 						<Label htmlFor="monthlyExpenses"><strong>Minimum Monthly Debt Payments</strong></Label>
+						<InfoIcon id="debt" text="The total monthly minimum due on your credit report each month.
+							(ie. Car Payments, Credit Cards, Personal Loans). Do not include housing expense." />
 						<InputGroup>
 							<InputGroupAddon addonType="prepend">
 								<InputGroupText id="expense-addon">$</InputGroupText>

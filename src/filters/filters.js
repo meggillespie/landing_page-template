@@ -10,10 +10,7 @@ function formatDollarValues(val) {
 
 	if (val && val.length > 0) {
 		let nonLetters = val.replace(/[^0-9,]+/, '');
-		// console.log(nonLetters);
 		let placeValues = nonLetters.replace(/[^0-9]/g, '');
-		//[A-Z]*(\d*)[A-Z]*
-		//.replace(/\D/, '');
 
 		dollars = placeValues.length > 7 ? placeValues.substr(0, 7) : placeValues;
 

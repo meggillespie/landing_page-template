@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Label, InputGroup, InputGroupText, InputGroupAddon } from 'reactstrap';
 import { AvGroup, AvField, AvInput, AvFeedback } from 'availity-reactstrap-validation';
+import InfoIcon from '../../components/InfoIcon/InfoIcon';
 
 export class PurchaseFormLoanDetails extends Component {
 	constructor(props) {
@@ -82,7 +83,8 @@ export class PurchaseFormLoanDetails extends Component {
 					</AvGroup>
 
 					<AvGroup className="form-group col-md-4">
-						<Label htmlFor="estimatedDownPayment"><strong>Estimated Down Payment</strong></Label>
+						<Label htmlFor="estimatedDownPayment"><strong>Down Payment</strong></Label>
+						<InfoIcon id="down" text="Max amount of money you will put down on purhcase." />
 						<InputGroup>
 							<InputGroupAddon addonType="prepend">
 								<InputGroupText id="estimated-addon">$</InputGroupText>
@@ -106,8 +108,10 @@ export class PurchaseFormLoanDetails extends Component {
 						>
 							<option value="">Choose...</option>
 							<option value="30">30 Year</option>
+							<option value="25">25 Year</option>
 							<option value="20">20 Year</option>
 							<option value="15">15 Year</option>
+							<option value="10">10 Year</option>
 						</AvField>
 					</div>
 				</div>
