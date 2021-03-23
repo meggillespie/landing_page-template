@@ -1,5 +1,6 @@
 {
   "name": "lakeway-lending",
+  "homepage": "https://www.texasloanshome.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,7 +8,6 @@
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "accounting-js": "^1.1.1",
     "availity-reactstrap-validation": "^2.7.0",
     "bootstrap": "^4.3.1",
     "emailjs-com": "^2.6.4",
@@ -41,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/helper-define-map": "^7.12.13"
   }
 }

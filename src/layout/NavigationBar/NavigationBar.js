@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from '../../media/lakewayLendingLogo_NoNMLS.png';
+import logo from '../../media/lakewayLendingLogo_NoNMLS-min.png';
 import './NavigationBar.scss';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink
 } from 'reactstrap'

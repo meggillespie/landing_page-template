@@ -13,20 +13,20 @@
 
 
 /*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1800px) {
-  .card-block {
-    .main-card-img {
-      left: 22%;
-      height: 90%;
-    }
-  }
-}
+//@media (min-width: 1800px) {
+//  .card-block {
+//    .main-card-img {
+//      left: 22%;
+//      height: 90%;
+//    }
+//  }
+//}
 
 /*Avg Loptop & screen (avg laptop, 1300px and up)*/
 @media (min-width: 1300px) and (max-width: 1800px) {
   .card-block {
     .main-card-img {
-      left: 21%;
+      left: 22%;
       height: 90%;
     }
   }

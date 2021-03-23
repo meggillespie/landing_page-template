@@ -12,7 +12,7 @@ export class Home extends Component {
 				<div className="row background-container">
 					<div className="col-md-12">
 						<div className="media-overlay" style={{ overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
-							<img src={ homeBckgrd } alt="home page background" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
+							<img src={ homeBckgrd } alt="home background image" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
 							<MainCard
 								textAlignment="text-center"
 								heading="How Much Can You Save?"
