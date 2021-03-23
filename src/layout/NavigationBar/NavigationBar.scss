@@ -16,15 +16,6 @@
   background-color: $primary_color;
 }
 
-//.dropdown:hover > .dropdown-menu {
-//  display: block;
-//}
-//
-//.dropdown > .dropdown-toggle:active {
-//  /*Without this, clicking will make it sticky*/
-//  pointer-events: none;
-//}
-
 /*Large devices */
 @media (min-width: 2000px) {
   .navbar {
@@ -35,7 +26,6 @@
 
   }
 }
-
 
 /*Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {

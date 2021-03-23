@@ -116,7 +116,7 @@ export class FormPersonalDetails extends Component {
 					</AvGroup>
 
 					<AvGroup className="form-group col-md-4">
-						<Label htmlFor="monthlyExpenses"><strong>Minimum Monthly Debt Payments</strong></Label>
+						<Label htmlFor="monthlyExpenses"><strong>Monthly Min. Debt Payments</strong></Label>
 						<InfoIcon id="debt" text="The total monthly minimum due on your credit report each month.
 							(ie. Car Payments, Credit Cards, Personal Loans). Do not include housing expense." />
 						<InputGroup>
