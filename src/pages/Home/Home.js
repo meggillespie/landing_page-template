@@ -20,7 +20,7 @@ export class Home extends Component {
 								text2="Low Rates & Fast Closings"
 								text3="Get Your Quote Now!"
 								numberOfButtons="2"
-							  button1Text="BUY A HOME"
+							  button1Text="PURCHASE"
 								button1Link="/home-purchase"
 								button2Text="REFINANCE"
 								button2Link="/home-refinance"
@@ -40,12 +40,12 @@ export class Home extends Component {
 
 				<div className="row mx-3 my-4">
 					<div className="col-md-10 offset-md-1 mb-4">
-						<Button href="/home-purchase" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>BUY A HOME</Button>
+						<Button href="/home-purchase" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE</Button>
 						<Button href="/home-refinance" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE</Button>
 					</div>
 				</div>
 
-				<div className="row mx-3 my-4">
+				<div className="row mx-3 my-5">
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="home" className="text-xs-center mr-1" size="3x"/>
 						<h4>Home Loans</h4>
@@ -63,7 +63,7 @@ export class Home extends Component {
 					</div>
 				</div>
 
-				<div className="row mx-3 my-4">
+				<div className="row mx-3 my-5 pb-5">
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="vote-yea" className="text-xs-center mr-1" size="3x" />
 						<h4>Quick Approvals</h4>
@@ -84,7 +84,6 @@ export class Home extends Component {
 
 				<div className="jumbotron jumbotron-fluid mb-0"  style={{ backgroundColor: '#0b143d', color: '#f5f5f5' }}>
 					<div className="container-fluid">
-
 						<div className="row mb-3">
 							<div className="col-md-10 offset-md-1">
 								<h2 className="display-4">Our Mission</h2>
@@ -96,17 +95,17 @@ export class Home extends Component {
 						</div>
 
 						<div className="row mx-3">
-							<div className="col-md-10 offset-md-1 mb-3">
-								<Button href="/home-purchase" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>BUY A HOME</Button>
+							<div className="col-md-10 offset-md-1 my-3">
+								<Button href="/home-purchase" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE</Button>
 
 								<Button href="/home-refinance" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE</Button>
 							</div>
 						</div>
 
 						<div className="row mt-4">
-							<div className="col-md-10 offset-md-1">
+							<div className="col-md-8 offset-md-2">
 								<div className="embed-responsive embed-responsive-21by9 border border-light rounded-sm">
-									<iframe width="60vh" height="auto" title="intro-video" className="embed-responsive-item" src="https://www.youtube.com/embed/Z5bVH4vvsyk?version=3&loop=0&playlist=Z5bVH4vvsyk"></iframe>
+									<iframe title="intro-video" className="embed-responsive-item" loading="lazy" src="https://www.youtube.com/embed/Z5bVH4vvsyk?version=3&loop=0&playlist=Z5bVH4vvsyk"></iframe>
 								</div>
 							</div>
 						</div>

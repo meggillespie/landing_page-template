@@ -6,9 +6,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faChevronDown, faChevronCircleDown, faPhone, faEnvelope, faHome, faPrint, faSearch, faFrown,
 					faNotEqual, faComments, faBolt, faSmile, faAsterisk, faUserTie, faHandshake, faHandsHelping, faPercentage,
-					faCogs, faMapMarkedAlt, faDollarSign, faVoteYea, faSearchLocation, faMoneyCheckAlt, faPercent, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+					faCogs, faMapMarkedAlt, faDollarSign, faVoteYea, faSearchLocation, faMoneyCheckAlt, faPercent, faInfoCircle, faSpinner } from '@fortawesome/free-solid-svg-icons'
 library.add(fab, faCheckSquare, faChevronCircleDown, faChevronDown, faPhone, faEnvelope, faHome, faPrint, faSearch,
-						faFrown, faNotEqual, faComments, faBolt, faSmile, faAsterisk, faUserTie, faHandshake, faHandsHelping,
+						faFrown, faNotEqual, faComments, faBolt, faSmile, faAsterisk, faUserTie, faHandshake, faHandsHelping, faSpinner,
 						faPercentage, faCogs, faMapMarkedAlt, faDollarSign, faVoteYea, faSearchLocation, faMoneyCheckAlt, faPercent, faInfoCircle );
 
 class App extends Component {
