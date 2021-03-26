@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import { MainCard } from '../../components/MainCard/MainCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import homeBckgrd from '../../media/home-min.jpeg';
+import logoImg from '../../media/logo-iconOnly-black-min.png';
 import './Home.scss';
 
 export class Home extends Component {
@@ -13,6 +14,8 @@ export class Home extends Component {
 					<div className="col-md-12">
 						<div className="media-overlay" style={{ overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
 							<img src={ homeBckgrd } alt="home background image" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
+							<img src={ logoImg } className="mt-3 main-card-img" alt="embossed company logo image"
+							     style={{ position: 'absolute', width: 'auto', zIndex: '1' }}/>
 							<MainCard
 								textAlignment="text-center"
 								heading="How Much Can You Save?"
@@ -28,7 +31,6 @@ export class Home extends Component {
 						</div>
 					</div>
 				</div>
-
 
 				<div className="row mx-3 anchor-tag" style={{ paddingTop: '100px'}}>
 					<div className="col-md-10 offset-md-1">
@@ -47,17 +49,17 @@ export class Home extends Component {
 
 				<div className="row mx-3 my-5">
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="home" className="text-xs-center mr-1" size="3x"/>
+						<FontAwesomeIcon icon="home" className="text-xs-center mr-1 my-2" size="3x"/>
 						<h4>Home Loans</h4>
 						<p className="lead">Stop paying rent, and buy your dream home. Get a home purchase loan that benefits from today’s low mortgage rates and make your dream a reality.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1" size="3x"/>
+						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1 my-2" size="3x"/>
 						<h4>Low Rates</h4>
 						<p className="lead">Secure great terms with today's interest rates to guarantee your home remains budget-friendly, and builds equity faster over a shorter span.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="dollar-sign" className="text-xs-center mr-1" size="3x"/>
+						<FontAwesomeIcon icon="dollar-sign" className="text-xs-center mr-1 my-2" size="3x"/>
 						<h4>Home Refinance</h4>
 						<p className="lead">Lower your rate to save money. Payoff debt at historically low rates, or just take advantage of your home’s equity with a cash-out refinance.</p>
 					</div>
@@ -65,17 +67,17 @@ export class Home extends Component {
 
 				<div className="row mx-3 my-5 pb-5">
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="vote-yea" className="text-xs-center mr-1" size="3x" />
+						<FontAwesomeIcon icon="vote-yea" className="text-xs-center mr-1 my-2" size="3x" />
 						<h4>Quick Approvals</h4>
 						<p className="lead">Our process is fully digital, and user friendly. We can secure your loan approval in the same day - What are you waiting for?</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="search-location" className="text-xs-center mr-1" size="3x" />
+						<FontAwesomeIcon icon="search-location" className="text-xs-center mr-1 my-2" size="3x" />
 						<h4>Property Evaluation</h4>
 						<p className="lead">Having a home value report puts you in the best position to assess all your options before moving forward.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="money-check-alt" className="text-xs-center mr-1" size="3x" />
+						<FontAwesomeIcon icon="money-check-alt" className="text-xs-center mr-1 my-2" size="3x" />
 						<h4>Fast Funding</h4>
 						<p className="lead">Seize opportunity as soon as you can with our fast funding options, giving you the freedom to cure that house fever.</p>
 					</div>
