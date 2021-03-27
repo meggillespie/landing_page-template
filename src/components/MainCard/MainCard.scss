@@ -10,13 +10,20 @@
     border-radius: 0;
   }
 
-  .red-graphic {
-    font-size: 0px;
-    line-height: 0%;
-    width: 50vh;
-    border-top: 20px solid red;
-    border-right: 20px solid #ffffff;
-    border-bottom: 0px solid #ffffff;
+  .card {
+    overflow: hidden;
+
+    .parallelogram {
+      width: 35vh;
+      height: 20px;
+      margin: 0 0 0 -20px;
+      -webkit-transform: skew(45deg);
+      -moz-transform: skew(20deg);
+      -o-transform: skew(20deg);
+      background: #ed1c22;
+      overflow: hidden;
+      position: relative;
+    }
   }
 }
 

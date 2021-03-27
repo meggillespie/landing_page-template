@@ -13,8 +13,8 @@ export class Home extends Component {
 				<div className="row background-container">
 					<div className="col-md-12">
 						<div className="media-overlay" style={{ overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
-							<img src={ homeBckgrd } alt="home background image" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
-							<img src={ logoImg } className="mt-3 main-card-img" alt="embossed company logo image"
+							<img src={ homeBckgrd } alt="home background" className="img-fluid" style={{ marginTop: '-10%', width: '100%' }} />
+							<img src={ logoImg } className="mt-3 main-card-img" alt="embossed company logo"
 							     style={{ position: 'absolute', width: 'auto', zIndex: '1' }}/>
 							<MainCard
 								textAlignment="text-center"

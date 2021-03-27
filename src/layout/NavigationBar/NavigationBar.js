@@ -18,7 +18,7 @@ class NavigationBar extends Component {
 			},
 			fontWeight: 'bold',
 			fontSize: '16px',
-			logoWidth: '160',
+			logoWidth: '190',
 			logoHeight: 'auto'
 		};
 

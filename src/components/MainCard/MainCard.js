@@ -8,10 +8,7 @@ export class MainCard extends Component {
 		return (
 			<div className="card-block px-4 w-40" style={{ position: 'absolute' }} >
 				<Card style={{ boxShadow: '0 30px 40px rgba(0,0,0,4)' }} >
-					{/*<img src={ logoImg } className="mt-3 main-card-img" alt="embossed company logo image"*/}
-					     {/*style={{ position: 'absolute', width: 'auto', zIndex: '1', opacity: '0.1' }}/>*/}
-					{/*<CardImg top src={ graphic } style={{ borderRadius: '4px 0px 0px 0px' }} className="mt-3 ml-4" alt="abstract graphic"/>*/}
-					<div className="red-graphic"></div>
+					<div className="parallelogram"></div>
 					<CardBody className="mx-2">
 						<CardTitle className='mb-2 text-center'>
 							<h1 style={{ fontWeight: 'bold' }}>
