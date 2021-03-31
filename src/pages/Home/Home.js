@@ -23,9 +23,9 @@ export class Home extends Component {
 								text2="Low Rates & Fast Closings"
 								text3="Get Your Quote Now!"
 								numberOfButtons="2"
-							  button1Text="PURCHASE"
+							  button1Text="HOME PURCHASE QUALIFIER"
 								button1Link="/home-purchase"
-								button2Text="REFINANCE"
+								button2Text="REFINANCE RATE CHECKER"
 								button2Link="/home-refinance"
 							/>
 						</div>
@@ -42,8 +42,8 @@ export class Home extends Component {
 
 				<div className="row mx-3 my-4">
 					<div className="col-md-10 offset-md-1 mb-4">
-						<Button href="/home-purchase" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE</Button>
-						<Button href="/home-refinance" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE</Button>
+						<Button href="/home-purchase" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>HOME PURCHASE QUALIFIER</Button>
+						<Button href="/home-refinance" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE RATE CHECKER</Button>
 					</div>
 				</div>
 
@@ -98,9 +98,9 @@ export class Home extends Component {
 
 						<div className="row mx-3">
 							<div className="col-md-10 offset-md-1 my-3">
-								<Button href="/home-purchase" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE</Button>
+								<Button href="/home-purchase" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>HOME PURCHASE QUALIFIER</Button>
 
-								<Button href="/home-refinance" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE</Button>
+								<Button href="/home-refinance" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE RATE CHECKER</Button>
 							</div>
 						</div>
 
