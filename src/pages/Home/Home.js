@@ -23,10 +23,10 @@ export class Home extends Component {
 								text2="Low Rates & Fast Closings"
 								text3="Get Your Quote Now!"
 								numberOfButtons="2"
-							  button1Text="PURCHASE QUALIFIER"
-								button1Link="/home-purchase"
-								button2Text="REFINANCE QUALIFIER"
-								button2Link="/home-refinance"
+							  button1Text="BUY A HOME"
+								button1Link="https://conv-purchase-11482-mg.secure-clix.com/"
+								button2Text="REFINANCE"
+								button2Link="https://conv-refi-11482-mg.secure-clix.com/"
 							/>
 						</div>
 					</div>
@@ -42,43 +42,47 @@ export class Home extends Component {
 
 				<div className="row mx-3 my-4">
 					<div className="col-md-10 offset-md-1 mb-4">
-						<Button href="/home-purchase" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE QUALIFIER</Button>
-						<Button href="/home-refinance" outline color="primary" size="lg" className="blue-background mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE QUALIFIER</Button>
+						<Button href="https://conv-purchase-11482-mg.secure-clix.com/" color="primary" size="lg"
+						        className="blue-button mx-5 my-3 py-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>HOME PURCHASE</Button>
+						<Button href="https://home-valuation-11482-mg.secure-clix.com/" color="primary" size="lg"
+						        className="red-button mx-5 my-3 p-3" style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>HOME VALUE ESTIMATOR</Button>
+						<Button href="https://conv-refi-11482-mg.secure-clix.com/" color="primary" size="lg"
+						        className="blue-button mx-5 my-3 py-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>HOME REFINANCE</Button>
 					</div>
 				</div>
 
 				<div className="row mx-3 my-5">
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="home" className="text-xs-center mr-1 mt-2 mb-3" size="3x"/>
-						<h4>Home Loans</h4>
+						<FontAwesomeIcon icon="home" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
+						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Home Loans</h4>
 						<p className="lead">Stop paying rent, and buy your dream home. Get a home purchase loan that benefits from today’s low mortgage rates and make your dream a reality.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1 mt-2 mb-3" size="3x"/>
-						<h4>Low Rates</h4>
-						<p className="lead">Secure your terms with today's low interest rates to guarantee your home remains budget-friendly, and builds equity faster over a shorter span.</p>
+						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
+						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Low Rates</h4>
+						<p className="lead">Secure your terms with today's low interest rates to guarantee your home remains budget-friendly, and builds more equity over a shorter span.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="dollar-sign" className="text-xs-center mr-1 mt-2 mb-3" size="3x"/>
-						<h4>Home Refinance</h4>
-						<p className="lead">Lower your rate to save money. Payoff debt at historically low rates, or just take advantage of your home’s equity with a cash-out refinance.</p>
+						<FontAwesomeIcon icon="dollar-sign" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
+						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Home Refinance</h4>
+						<p className="lead">Use your equity to your advantage...Payoff debt at low rates. Make home improvements & increase your value...What can your equity do for you?</p>
 					</div>
 				</div>
 
 				<div className="row mx-3 my-5 pb-5">
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="search-location" className="text-xs-center mr-1 mt-2 mb-3" size="3x" />
-						<h4>Property Evaluation</h4>
+						<FontAwesomeIcon icon="search-location" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
+						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Property Evaluation</h4>
 						<p className="lead">Having a home value report puts you in the best position to assess all your options before moving forward.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="money-check-alt" className="text-xs-center mr-1 mt-2 mb-3" size="3x" />
-						<h4>Fast Funding</h4>
+						<FontAwesomeIcon icon="money-check-alt" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }}  />
+						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Fast Fundings</h4>
 						<p className="lead">Our process and technology simplify the mortgage process, and get you from start to finish in a flash.</p>
 					</div>
 					<div className="col-md-4">
-						<FontAwesomeIcon icon="vote-yea" className="text-xs-center mr-1 mt-2 mb-3" size="3x" />
-						<h4>Quick Approvals</h4>
+						<FontAwesomeIcon icon="vote-yea" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
+						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Quick Approvals</h4>
 						<p className="lead">Our process is fully digital, and user friendly. We can secure your loan approval in the same day - What are you waiting for?</p>
 					</div>
 				</div>
@@ -98,9 +102,9 @@ export class Home extends Component {
 
 						<div className="row mx-3">
 							<div className="col-md-10 offset-md-1 my-3">
-								<Button href="/home-purchase" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE QUALIFIER</Button>
+								<Button href="https://conv-purchase-11482-mg.secure-clix.com/" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>PURCHASE QUALIFIER</Button>
 
-								<Button href="/home-refinance" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE QUALIFIER</Button>
+								<Button href="https://conv-refi-11482-mg.secure-clix.com/" outline size="lg" color="primary" className="red-outline mx-5 my-3 px-5" style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>REFINANCE QUALIFIER</Button>
 							</div>
 						</div>
 

@@ -17,7 +17,7 @@ export class MainCard extends Component {
 						</CardTitle>
 						<CardText className="lead mb-0" style={{ fontWeight: '800' }}> {this.props.text1} </CardText>
 						<CardText className="lead mb-0" style={{ fontWeight: 'bold' }}> {this.props.text2} </CardText>
-						<CardText className="lead my-2" style={{ fontWeight: 'bold' }}> {this.props.text3} </CardText>
+						<CardText className="lead my-2" style={{ fontWeight: 'bolder', textShadow: '1px 1px 1px #595959' }}> {this.props.text3} </CardText>
 
 						<Button href={ this.props.button1Link } size="lg" className="red-button mx-4 my-3" style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>{ this.props.button1Text }</Button>
 						<Button href={ this.props.button2Link } size="lg" className="blue-button mx-4 my-3" style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>{ this.props.button2Text }</Button>
