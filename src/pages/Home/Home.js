@@ -55,7 +55,7 @@ export class Home extends Component {
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="home" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
 						<h4 style={{ textShadow: '1px 1px 2px #595959' }} >Home Loans</h4>
-						<p className="lead">Stop paying rent, and buy your dream home. Conventional, VA, FHA & USDA loans that benefit from today’s low mortgage rates and can make your dream a reality.</p>
+						<p className="lead">Conventional, VA, FHA & USDA loans that benefit from today’s low mortgage rates so you can stop wasting money on rent, and buy your dream home.</p>
 					</div>
 					<div className="col-md-4">
 						<FontAwesomeIcon icon="percent" className="text-xs-center mr-1 mt-2 mb-3" size="3x" style={{ color: '#ed1c22' }} />
