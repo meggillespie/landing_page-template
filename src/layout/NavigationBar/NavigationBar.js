@@ -18,8 +18,8 @@ class NavigationBar extends Component {
 			},
 			fontWeight: 'bold',
 			fontSize: '16px',
-			logoWidth: '190',
-			logoHeight: 'auto'
+			logoWidth: 'auto',
+			logoHeight: '90px'
 		};
 
 		this.controlNavStyle = this.controlNavStyle.bind(this);
@@ -77,10 +77,10 @@ class NavigationBar extends Component {
 						background: 'rgba(255, 255, 255)',
 						boxShadow: '0px 5px 5px grey',
 						WebkitTransitionProperty: 'background',
-						WebkitTransitionDuration: '1s',
+						WebkitTransitionDuration: '.5s',
 						WebkitTransitionTimingFunction: 'linear',
 						transitionProperty: 'background',
-						transitionDuration: '1s',
+						transitionDuration: '.5s',
 						transitionTimingFunction: 'linear'
 					},
 					scrollTopArr: this.state.scrollTopArr.concat(e.target.scrollTop)
@@ -92,10 +92,10 @@ class NavigationBar extends Component {
 						background: 'rgba(255, 255, 255, 0)',
 						boxShadow: 'none',
 						WebkitTransitionProperty: 'background',
-						WebkitTransitionDuration: '1s',
+						WebkitTransitionDuration: '.5s',
 						WebkitTransitionTimingFunction: 'linear',
 						transitionProperty: 'background',
-						transitionDuration: '1s',
+						transitionDuration: '.5s',
 						transitionTimingFunction: 'linear'
 					}
 				});
@@ -112,7 +112,7 @@ class NavigationBar extends Component {
 	render () {
 		return(
 			<Navbar style={ this.state.navStyle } expand="lg" fixed={`top`}>
-				<NavbarBrand href="/" rel="preconnect" className="my-2">
+				<NavbarBrand href="/" rel="preconnect" className="my-0">
 					<img
 						alt="Lakeway Lending Logo"
 						src={ logo }
@@ -123,13 +123,13 @@ class NavigationBar extends Component {
 				</NavbarBrand>
 				<NavbarToggler className="custom-toggler" onClick={this.toggleNav} />
 				<Collapse navbar isOpen={ this.state.isOpen } style={{ 'backgroundColor': this.state.isOpen && this.state.navStyle.backgroundColor === 'rgba(255, 255, 255)' ? '#fff' : 'transparent' }} >
-					<Nav className="ml-auto my-md-3" navbar style={{ fontSize: this.state.fontSize, fontWeight: this.state.fontWeight }}>
+					<Nav className="ml-auto my-md-1" navbar style={{ fontSize: this.state.fontSize, fontWeight: this.state.fontWeight }}>
 
 						<NavItem>
 							<NavLink href="tel:+15126428688" rel="preconnect" className="mr-3 mb-3">
 									<ul className="list-inline">
 										<li className="list-inline-item">
-											<FontAwesomeIcon icon="phone" className=" text-xs-center mr-1" size="2x" rotation={ 90 } />
+											<FontAwesomeIcon icon="phone" className="icon-shadow text-xs-center mr-1" size="2x" rotation={ 90 }  />
 										</li>
 
 										<li className="list-inline-item">
@@ -145,7 +145,7 @@ class NavigationBar extends Component {
 							<NavLink href="sms:+15126428688" rel="preconnect" className="mr-3 mb-3">
 									<ul className="list-inline">
 										<li className="list-inline-item">
-											<FontAwesomeIcon icon="comments" className="mr-1" size="2x"/>
+											<FontAwesomeIcon icon="comments" className="icon-shadow mr-1" size="2x"/>
 										</li>
 
 										<li className="list-inline-item">

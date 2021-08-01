@@ -1,33 +1,12 @@
 @import "../../variables";
 
-.background-container {
-  .anchor-tag {
-    margin-top: -70px;
-  }
-
-  .main-card-img {
-    top: 6%;
-    left: 22%;
-    height: 90%;
-    opacity: 0.2;
-  }
-}
 
 /*Avg Loptop & screen (sml laptop, 1300px and smaller)*/
 @media (max-width: 1300px) {
-  .background-container {
-    .main-card-img {
-      top: 10%;
-      left: 20%;
-      height: 96%;
-      opacity: 0.2;
-    }
-  }
+
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (max-width: 900px) {
-  .main-card-img {
-    visibility: hidden;
-  }
+
 }

@@ -1,29 +1,11 @@
 .card-block {
   z-index: 2;
-  top: 40%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  .card-img-top {
-    width: 15%;
-    height: 2%;
-    border-radius: 0;
-  }
-
   .card {
     overflow: hidden;
-
-    .parallelogram {
-      width: 35vh;
-      height: 20px;
-      margin: 0 0 0 -20px;
-      -webkit-transform: skew(45deg);
-      -moz-transform: skew(20deg);
-      -o-transform: skew(20deg);
-      background: #ed1c22;
-      overflow: hidden;
-      position: relative;
-    }
   }
 }
 

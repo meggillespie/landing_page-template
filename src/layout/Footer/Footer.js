@@ -31,11 +31,11 @@ export class Footer extends Component {
 						<div className="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 border-left">
 							<h5 className="text-uppercase mb-4 font-weight-bold">Contact</h5>
 							<p>
-								<FontAwesomeIcon icon="envelope" className="mr-3"/><a href="mailto:megan@lakewaylending.com">megan@lakewaylending.com</a></p>
+								<FontAwesomeIcon icon="envelope" className="icon-shadow mr-3"/><a href="mailto:megan@lakewaylending.com">megan@lakewaylending.com</a></p>
 							<p>
-								<FontAwesomeIcon icon="phone" className="mr-3"/> <a href="tel:+15126428688">(512) 642 8688</a></p>
+								<FontAwesomeIcon icon="phone" className="icon-shadow mr-3"/> <a href="tel:+15126428688">(512) 642 8688</a></p>
 							<p className="mb-0">
-								<FontAwesomeIcon icon="home" className="mr-3"/> 14425 Falcon Head Blvd</p>
+								<FontAwesomeIcon icon="home" className="icon-shadow mr-3"/> 14425 Falcon Head Blvd</p>
 							<p className="ml-4 mb-0 pl-3">Bldg. E, Ste. 130</p>
 							<p className="ml-4 pl-3">Austin, TX 78738</p>
 						</div>
