@@ -1,19 +1,42 @@
+@import "../../variables.scss";
+
 .card-block {
   z-index: 2;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  //transform: translate(-33%, -5%);
+  top: 30%;
+  left: 25%;
 
   .card {
     overflow: hidden;
   }
 }
 
+//.main-block-1 {
+//  //transform: translate(-33%, -5%);
+//  top: 30%;
+//  left: 25%;
+//  position:absolute;
+//  z-index: 2;
+//
+//  .card {
+//    overflow: hidden;
+//  }
+//}
+
+.pic-position {
+  transform: translateY(-33%, -66%);
+  top: 33%;
+  left: 66%;
+  position:absolute;
+  z-index: 2;
+  background-image: linear-gradient(to bottom, $light_color, rgba(0, 0, 0, 0));
+}
+
 /*Extra small devices (small laptops, 1000px - 1300px)*/
 @media (max-width: 1400px) {
   .card-block {
     top: 55%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
   }
 }
@@ -22,7 +45,7 @@
 @media (max-width: 768px) {
   .card-block {
     top: 75%;
-    left: 50%;
+    left: 25%;
   }
 }
 

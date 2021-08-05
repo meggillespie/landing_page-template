@@ -12,19 +12,27 @@ export class Home extends Component {
 				<div className="row background-container">
 					<div className="col-md-12">
 						<div className="media-overlay" style={{ overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
-							<img src={ homeBckgrd } alt="home background" className="img-fluid" style={{ marginTop: '-14%', height: '100 vh' }} />
-							<MainCard
-								textAlignment="text-center"
-								heading="How Much Can You Save?"
-								text1="GREAT RATES - FAST CLOSINGS"
-								text2="See what you qualify for now."
-								text3=""
-								numberOfButtons="2"
-							  button1Text="PURCHASE"
-								button1Link="https://conv-purchase-11482-mg.secure-clix.com/"
-								button2Text="REFINANCE"
-								button2Link="https://conv-refi-11482-mg.secure-clix.com/"
-							/>
+						<img src={ homeBckgrd } alt="home page picture" className="img-fluid" style={{ marginTop: '-14%', height: '100 vh', zIndex: '1' }} />
+							{/*<div className="row">*/}
+								{/*<div className="col-md-5 offset-md-1">*/}
+						<MainCard
+							textAlignment="text-center"
+							heading="How Much Can You Save?"
+							text1="GREAT RATES - FAST CLOSINGS"
+							text2="See what you qualify for now."
+							text3=""
+							numberOfButtons="2"
+							button1Text="PURCHASE"
+							button1Link="https://conv-purchase-11482-mg.secure-clix.com/"
+							button2Text="REFINANCE"
+							button2Link="https://conv-refi-11482-mg.secure-clix.com/"
+						/>
+								{/*</div>*/}
+								{/*<div className="col-md-5 offset-md-1">*/}
+									{/*<img src={ mtgPic } className="rounded-circle float-right" alt="Megan's Picture"/>*/}
+								{/*</div>*/}
+							{/*</div>*/}
+
 						</div>
 					</div>
 				</div>
