@@ -12,27 +12,18 @@ export class Home extends Component {
 				<div className="row background-container">
 					<div className="col-md-12">
 						<div className="media-overlay" style={{ overflowY: 'hidden', boxShadow: '0px 5px 5px grey' }}>
-						<img src={ homeBckgrd } alt="home page picture" className="img-fluid" style={{ marginTop: '-14%', height: '100 vh', zIndex: '1' }} />
-							{/*<div className="row">*/}
-								{/*<div className="col-md-5 offset-md-1">*/}
+						<img src={ homeBckgrd } alt="home page picture" className="img-fluid"
+						     style={{ marginTop: '-14%', height: '100 vh', zIndex: '1' }} />
 						<MainCard
 							textAlignment="text-center"
 							heading="How Much Can You Save?"
-							text1="GREAT RATES - FAST CLOSINGS"
-							text2="See what you qualify for now."
-							text3=""
-							numberOfButtons="2"
-							button1Text="PURCHASE"
+							text1="LOW RATES | FAST CLOSINGS"
+							text2="See what you qualify for online."
+							button1Text="HOME QUALIFIER"
 							button1Link="https://conv-purchase-11482-mg.secure-clix.com/"
-							button2Text="REFINANCE"
+							button2Text="REFI QUALIFIER"
 							button2Link="https://conv-refi-11482-mg.secure-clix.com/"
 						/>
-								{/*</div>*/}
-								{/*<div className="col-md-5 offset-md-1">*/}
-									{/*<img src={ mtgPic } className="rounded-circle float-right" alt="Megan's Picture"/>*/}
-								{/*</div>*/}
-							{/*</div>*/}
-
 						</div>
 					</div>
 				</div>
@@ -50,7 +41,7 @@ export class Home extends Component {
 						<Button href="https://conv-purchase-11482-mg.secure-clix.com/" color="primary" size="lg"
 						        className="blue-button mx-5 my-3 py-3 px-5"
 						        style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>
-							HOME PURCHASE
+							HOME QUALIFIER
 						</Button>
 						<Button href="https://home-valuation-11482-mg.secure-clix.com/" color="primary" size="lg"
 						        className="blue-button mx-5 my-3 p-3"
@@ -60,7 +51,7 @@ export class Home extends Component {
 						<Button href="https://conv-refi-11482-mg.secure-clix.com/" color="primary" size="lg"
 						        className="blue-button mx-5 my-3 py-3 px-5"
 						        style={{ position: 'relative', zIndex: '10', fontWeight: '600', color: '#fff' }}>
-							HOME REFINANCE
+							REFI QUALIFIER
 						</Button>
 					</div>
 				</div>
@@ -158,13 +149,13 @@ export class Home extends Component {
 								<Button href="https://conv-purchase-11482-mg.secure-clix.com/" outline size="lg" color="primary"
 								        className="red-outline mx-5 my-3 px-5"
 								        style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>
-									PURCHASE QUALIFIER
+									HOME QUALIFIER
 								</Button>
 
 								<Button href="https://conv-refi-11482-mg.secure-clix.com/" outline size="lg" color="primary"
 								        className="red-outline mx-5 my-3 px-5"
 								        style={{ position: 'relative', zIndex: '10', fontWeight: '600' }}>
-									REFINANCE QUALIFIER
+									REFI QUALIFIER
 								</Button>
 							</div>
 						</div>

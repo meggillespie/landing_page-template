@@ -12,6 +12,21 @@
   text-align: left;
 }
 
+li {
+  .icon-shadow {
+    transition: transform .5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  span {
+    //text-shadow: 4px 4px 3px rgba(0,0,0,0.5);
+    -webkit-filter:drop-shadow(6px 6px 3px rgba(0,0,0,0.5));
+  }
+}
+
 .dropdown-item:active {
   background-color: $primary_color;
 }

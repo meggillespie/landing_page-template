@@ -19,7 +19,7 @@ class NavigationBar extends Component {
 			fontWeight: 'bold',
 			fontSize: '16px',
 			logoWidth: 'auto',
-			logoHeight: '90px'
+			logoHeight: '130px'
 		};
 
 		this.controlNavStyle = this.controlNavStyle.bind(this);
@@ -111,8 +111,8 @@ class NavigationBar extends Component {
 
 	render () {
 		return(
-			<Navbar style={ this.state.navStyle } expand="lg" fixed={`top`}>
-				<NavbarBrand href="/" rel="preconnect" className="my-0">
+			<Navbar className="pt-0" style={ this.state.navStyle } expand="lg" fixed={`top`}>
+				<NavbarBrand href="/" rel="preconnect" className="my-0 py-0">
 					<img
 						alt="Lakeway Lending Logo"
 						src={ logo }
@@ -123,7 +123,7 @@ class NavigationBar extends Component {
 				</NavbarBrand>
 				<NavbarToggler className="custom-toggler" onClick={this.toggleNav} />
 				<Collapse navbar isOpen={ this.state.isOpen } style={{ 'backgroundColor': this.state.isOpen && this.state.navStyle.backgroundColor === 'rgba(255, 255, 255)' ? '#fff' : 'transparent' }} >
-					<Nav className="ml-auto my-md-1" navbar style={{ fontSize: this.state.fontSize, fontWeight: this.state.fontWeight }}>
+					<Nav className="ml-auto my-auto pt-2 " navbar style={{ fontSize: this.state.fontSize, fontWeight: this.state.fontWeight }}>
 
 						<NavItem>
 							<NavLink href="tel:+15126428688" rel="preconnect" className="mr-3 mb-3">
@@ -135,7 +135,7 @@ class NavigationBar extends Component {
 										<li className="list-inline-item">
 											<span>Call Now</span>
 											<br/>
-											<span style={{ fontWeight: '400' }}>(512) 642-8688</span>
+											<span className="" style={{ fontWeight: '400' }}>(512) 642-8688</span>
 										</li>
 									</ul>
 							</NavLink>
