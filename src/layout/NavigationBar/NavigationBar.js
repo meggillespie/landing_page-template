@@ -19,7 +19,7 @@ class NavigationBar extends Component {
 			fontWeight: 'bold',
 			fontSize: '16px',
 			logoWidth: 'auto',
-			logoHeight: '130px'
+			logoHeight: '125px'
 		};
 
 		this.controlNavStyle = this.controlNavStyle.bind(this);

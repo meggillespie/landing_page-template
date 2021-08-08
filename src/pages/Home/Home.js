@@ -17,7 +17,7 @@ export class Home extends Component {
 						<MainCard
 							textAlignment="text-center"
 							heading="How Much Can You Save?"
-							text1="LOW RATES | FAST CLOSINGS"
+							text1="GREAT RATES - FAST CLOSINGS"
 							text2="See what you qualify for online."
 							button1Text="HOME QUALIFIER"
 							button1Link="https://conv-purchase-11482-mg.secure-clix.com/"
